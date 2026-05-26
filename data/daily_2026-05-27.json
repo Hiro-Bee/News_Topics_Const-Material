@@ -1,7 +1,7 @@
 {
   "date": "2026-05-27",
   "label": "2026年05月27日号",
-  "generatedAt": "2026-05-26T20:29:02.702Z",
+  "generatedAt": "2026-05-26T20:36:32.469Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -166,11 +166,25 @@
       "summary": "日刊工業新聞が「国交省、建設資材など供給不安 一人親方に情報提供」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
       "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
       "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
-      "imageUrl": "",
+      "imageUrl": "https://d3ukgu32nhw07o.cloudfront.net/article/img1_file6a0eebe7c91ff.jpg",
       "imageLabel": "官公庁・公的統計"
     },
     {
       "id": "2026-05-27-官公庁-公的統計-3",
+      "category": "官公庁・公的統計",
+      "title": "建築資材など流通の目詰まり解消へ 国交省（ABEMA TIMES）",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/articles/2c94ff70d7cd7279a032c663a4d7f96ae3927df7",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTFByQnZOVjdBaEtqSTRENUtic29ldVdZQkJUWXZabGp1bDRiYm1WMTZ0azFvcUZ0ZW5wT3VIR2w2UlJxUEl0Snd1S3lWcDdRS0s0aW9XUWpZVEZwT3pTWnpFSzh2UXJlQzBkamJFdTB4aFVXYzUwRlVZU05wSzVHVlU?oc=5",
+      "publishedAt": "2026-05-21T23:24:19.000Z",
+      "summary": "Yahoo!ニュースが「建築資材など流通の目詰まり解消へ 国交省（ABEMA TIMES）」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20260522-10247316-abemav-000-1-view.jpg?exp=10800",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-05-27-官公庁-公的統計-4",
       "category": "官公庁・公的統計",
       "title": "東京都が国交省に「都営住宅用資材の安定供給・高騰対策」で緊急要望",
       "source": "jutaku-s.com",
@@ -181,20 +195,6 @@
       "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
       "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
       "imageUrl": "https://www.jutaku-s.com/media/news/6a0e5ac62443c_20260521100718.jpg",
-      "imageLabel": "官公庁・公的統計"
-    },
-    {
-      "id": "2026-05-27-官公庁-公的統計-4",
-      "category": "官公庁・公的統計",
-      "title": "金子国交相 資材供給「中小の声聞く」 全建総連と情報収集体制",
-      "source": "建通新聞",
-      "url": "https://digital.kentsu.co.jp/articles/artcl_rglr/01KS4J8FEM6C9SWG20C51Z7KER",
-      "googleNewsUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNZU1kLUxuZ0lLQTNua2lqa1JJUFRLdzJKOHB4NnRKUHJFanQ3T1N1X0xJcFhDY0xncUF6MnNWMXMtWmtPWVM4S1hDeUt2dHY3dU01RjVNd0NPTEF2dU5Za1hla0xfWE1JX1dQZ0dfNkxpS3p2djB5MEg3dWw4V0c5Qw?oc=5",
-      "publishedAt": "2026-05-22T15:49:03.000Z",
-      "summary": "建通新聞が「金子国交相 資材供給「中小の声聞く」 全建総連と情報収集体制」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
-      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
-      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
-      "imageUrl": "https://digital.kentsu.co.jp/api/image?src=rglr%2F01KS4J8FEM6C9SWG20C51Z7KER_m1.jpg&v=1779343572",
       "imageLabel": "官公庁・公的統計"
     },
     {
@@ -242,20 +242,6 @@
     {
       "id": "2026-05-27-競合メーカー-1",
       "category": "競合メーカー",
-      "title": "【市況】LIXIL：建材・設備機器を平均8〜15％値上げ、中東情勢や物流高騰で8月以降順次改定",
-      "source": "みんなの広報宣伝部",
-      "url": "https://xn--q9ji3c6d676qnnlo0fgmgrr6k.com/2026/05/20/news-21454/",
-      "googleNewsUrl": "https://news.google.com/rss/articles/CBMickFVX3lxTFB1MHZQZWpEejM4dnRMekotT2NidEVtcjYxWm1MMHZxUVZQQUJQM2RoZXVyOTB0RVdNZnRjZnIzS00yTEMtelF1MlV4aTFTTUxkbmFDRjNWamx0VmdMT0ZUczhWdUFNQXdFWC0ycXp2WWR5dw?oc=5",
-      "publishedAt": "2026-05-20T05:23:06.000Z",
-      "summary": "みんなの広報宣伝部が「【市況】LIXIL：建材・設備機器を平均8〜15％値上げ、中東情勢や物流高騰で8月以降順次改定」を報じています。 これは価格改定・原価上昇、商品・メーカー動向に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
-      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
-      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
-      "imageUrl": "https://xn--q9ji3c6d676qnnlo0fgmgrr6k.com/wp-content/themes/office-n/img/icon/ogp.png",
-      "imageLabel": "競合メーカー"
-    },
-    {
-      "id": "2026-05-27-競合メーカー-2",
-      "category": "競合メーカー",
       "title": "ノダ、建具・収納など建材製品を値上げ 7月1日出荷分から",
       "source": "新建ハウジング",
       "url": "https://www.s-housing.jp/archives/420630",
@@ -268,7 +254,7 @@
       "imageLabel": "競合メーカー"
     },
     {
-      "id": "2026-05-27-競合メーカー-3",
+      "id": "2026-05-27-競合メーカー-2",
       "category": "競合メーカー",
       "title": "トイレ紙・納豆・建材など値上げ続々、中東影響 5月企業動向まとめ",
       "source": "朝日新聞",
@@ -279,6 +265,20 @@
       "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
       "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
       "imageUrl": "https://imgopt.asahi.com/ogp/AS20260512003397_comm.jpg",
+      "imageLabel": "競合メーカー"
+    },
+    {
+      "id": "2026-05-27-競合メーカー-3",
+      "category": "競合メーカー",
+      "title": "ケイミュー、パナソニック雨といなど値上げ 7月1日納入分から",
+      "source": "新建ハウジング",
+      "url": "https://www.s-housing.jp/archives/420645",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB5QmlaU2UzMFpFbzBRRWVzajd1UU5ya3JUbWw0czVDWTZGVzBtNFBBVUFCYTk4QVlVZXVfYUQyS1EwbzBRX0ZmS3Y3ZU9UUjVQWEE?oc=5",
+      "publishedAt": "2026-05-22T09:00:00.000Z",
+      "summary": "新建ハウジングが「ケイミュー、パナソニック雨といなど値上げ 7月1日納入分から」を報じています。 これは価格改定・原価上昇に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
       "imageLabel": "競合メーカー"
     },
     {
