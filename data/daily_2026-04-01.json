@@ -1,0 +1,389 @@
+{
+  "date": "2026-04-01",
+  "label": "2026年04月01日号",
+  "generatedAt": "2026-05-25T21:26:27.243Z",
+  "timezone": "Asia/Tokyo",
+  "sources": [
+    {
+      "category": "官公庁・公的統計",
+      "query": "建設資材 供給 国土交通省"
+    },
+    {
+      "category": "業界団体・技術団体",
+      "query": "建設資材 高騰 全建総連"
+    },
+    {
+      "category": "競合メーカー",
+      "query": "LIXIL 建材 値上げ OR 永大産業 建材 値上げ"
+    },
+    {
+      "category": "競合EC",
+      "query": "モノタロウ 建材 納期 OR AUN WORKS 建材 OR 建デポ 建材"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "ナフサ 建材 価格 OR 住宅資材 納期"
+    }
+  ],
+  "categories": [
+    "すべて",
+    "官公庁・公的統計",
+    "業界団体・技術団体",
+    "競合メーカー",
+    "競合EC",
+    "お客様SNS",
+    "チャッピーおすすめ"
+  ],
+  "trafficRows": [
+    {
+      "site": "モノタロウ",
+      "domain": "monotaro.com",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 16920000,
+      "pagesPerVisit": 3.92,
+      "visits": [
+        3350000,
+        3480000,
+        3620000,
+        3570000,
+        3740000,
+        3890000,
+        3820000,
+        3970000,
+        3900000
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 16.92M、pages/visit 3.92 を起点に週次換算。"
+    },
+    {
+      "site": "AUN WORKS",
+      "domain": "aunworks.jp",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 185550,
+      "pagesPerVisit": 3.07,
+      "visits": [
+        28500,
+        30200,
+        31800,
+        33500,
+        36100,
+        38400,
+        40200,
+        42700,
+        43800
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 185.55K、pages/visit 3.07 を起点に週次換算。"
+    },
+    {
+      "site": "建デポ",
+      "domain": "kendepot.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 420000,
+      "pagesPerVisit": 2.4,
+      "visits": [
+        83000,
+        86500,
+        89000,
+        92200,
+        94800,
+        97100,
+        100500,
+        97300,
+        96200
+      ],
+      "note": "店舗検索、キャンペーン閲覧、ブランド指名検索を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "ミラタップ",
+      "domain": "miratap.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 1250000,
+      "pagesPerVisit": 3.1,
+      "visits": [
+        246000,
+        258000,
+        271000,
+        289000,
+        301000,
+        296000,
+        310000,
+        322000,
+        316000
+      ],
+      "note": "住宅設備・建材ECとしての指名検索、商品閲覧、カタログ閲覧を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "きりいーね",
+      "domain": "kirii-net.jp",
+      "source": "予測モデル / GA4差替推奨",
+      "confidence": "予測",
+      "monthlyVisits": 32000,
+      "pagesPerVisit": 2.2,
+      "visits": [
+        6100,
+        6450,
+        6900,
+        7200,
+        7350,
+        7600,
+        7900,
+        8200,
+        8050
+      ],
+      "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
+    }
+  ],
+  "articles": [
+    {
+      "id": "2026-04-01-官公庁-公的統計-3",
+      "category": "官公庁・公的統計",
+      "title": "原油不足懸念安定確保へタスクフォース初会合物資の供給網など総点検指示",
+      "source": "朝日放送",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52NUZ3MGpaZE1SOV9CWnpjV1ZPTDZEV0dxSl9UZVJLaDdnSzJkY1U4UGNKMGY5MGpFMWlyRmprTEQzSmE4X0tfdFpBUkN6blVRV0hrRV9pU2tPRktjTGdRanBIQ1lnQlU?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52NUZ3MGpaZE1SOV9CWnpjV1ZPTDZEV0dxSl9UZVJLaDdnSzJkY1U4UGNKMGY5MGpFMWlyRmprTEQzSmE4X0tfdFpBUkN6blVRV0hrRV9pU2tPRktjTGdRanBIQ1lnQlU?oc=5",
+      "publishedAt": "2026-04-01T07:00:00.000Z",
+      "summary": "朝日放送が「原油不足懸念安定確保へタスクフォース初会合物資の供給網など総点検指示」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-04-01-官公庁-公的統計-2",
+      "category": "官公庁・公的統計",
+      "title": "中東情勢／重要物資安定供給で連携 関係省庁初会合",
+      "source": "日刊工業新聞",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1sTUZDTE5Jc1Vha09XZWF6QTVyYWpzUkREdDhPLU5rcGNUd1RTTVg3dTdIbDdfb1V3bENfTk94WGFvQnhlUFRYLWZQd0t2Ul85amx1RElodmxNeW8?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1sTUZDTE5Jc1Vha09XZWF6QTVyYWpzUkREdDhPLU5rcGNUd1RTTVg3dTdIbDdfb1V3bENfTk94WGFvQnhlUFRYLWZQd0t2Ul85amx1RElodmxNeW8?oc=5",
+      "publishedAt": "2026-04-02T07:00:00.000Z",
+      "summary": "日刊工業新聞が「中東情勢／重要物資安定供給で連携 関係省庁初会合」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-04-01-官公庁-公的統計-1",
+      "category": "官公庁・公的統計",
+      "title": "「億ション」さらに高騰1000万円アップも 中東危機で資材高、建設費5％増",
+      "source": "日経ビジネス電子版",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oYjRzbTJSdGFfcjUtVjNRbDRhaVFhTFlUZl9lNTNWcXdxUGR1RzRzeGV2aEk2SXMzdlY4ekJCZjdBaDc0SmQtTF9JdUtiZnZHdEt0MzJ3eTN5Rk0xU2gtX1hZRy1WZms?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oYjRzbTJSdGFfcjUtVjNRbDRhaVFhTFlUZl9lNTNWcXdxUGR1RzRzeGV2aEk2SXMzdlY4ekJCZjdBaDc0SmQtTF9JdUtiZnZHdEt0MzJ3eTN5Rk0xU2gtX1hZRy1WZms?oc=5",
+      "publishedAt": "2026-04-02T07:00:00.000Z",
+      "summary": "日経ビジネス電子版が「「億ション」さらに高騰1000万円アップも 中東危機で資材高、建設費5％増」を報じています。 これは価格改定・原価上昇に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-04-01-crawl-2-国土交通省-建築",
+      "category": "官公庁・公的統計",
+      "title": "住宅・建築トップ",
+      "source": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/index.html",
+      "publishedAt": "2026-05-25T21:26:27.324Z",
+      "summary": "国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。",
+      "analysis": "リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。",
+      "action": "リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。",
+      "imageUrl": "",
+      "imageLabel": "巡回リンク"
+    },
+    {
+      "id": "2026-04-01-crawl-3-国土交通省-建築",
+      "category": "官公庁・公的統計",
+      "title": "建築基準法施行令の一部を改正する政令（令和5年政令第34号）について",
+      "source": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000175.html",
+      "publishedAt": "2026-05-25T21:26:27.324Z",
+      "summary": "国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。",
+      "analysis": "リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。",
+      "action": "リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。",
+      "imageUrl": "",
+      "imageLabel": "巡回リンク"
+    },
+    {
+      "id": "2026-04-01-crawl-4-国土交通省-建築",
+      "category": "官公庁・公的統計",
+      "title": "脱炭素社会の実現に資するための建築物のエネルギー消費性能の向上に関する法律等の一部を改正する法律（令和４年法律第６９号）について",
+      "source": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000163.html",
+      "publishedAt": "2026-05-25T21:26:27.324Z",
+      "summary": "国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。",
+      "analysis": "リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。",
+      "action": "リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。",
+      "imageUrl": "",
+      "imageLabel": "巡回リンク"
+    },
+    {
+      "id": "2026-04-01-競合メーカー-4",
+      "category": "競合メーカー",
+      "title": "「LIXILメンバーズコンテスト2025」受賞作決定",
+      "source": "新建ハウジング",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9FZkhpSF85a2YzS3pZek5WbS0ta3lwdVRVRWYyTmI2OHZRc1NCRWt4d0U3aU14SVVLM0I4c01Ka1pBclZKLVI2VWdtZEdYX1JhS1E?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9FZkhpSF85a2YzS3pZek5WbS0ta3lwdVRVRWYyTmI2OHZRc1NCRWt4d0U3aU14SVVLM0I4c01Ka1pBclZKLVI2VWdtZEdYX1JhS1E?oc=5",
+      "publishedAt": "2026-04-01T07:00:00.000Z",
+      "summary": "新建ハウジングが「「LIXILメンバーズコンテスト2025」受賞作決定」を報じています。 これは商品・メーカー動向に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "競合メーカー"
+    },
+    {
+      "id": "2026-04-01-競合メーカー-1",
+      "category": "競合メーカー",
+      "title": "「ネオマフォーム」などの供給に遅れ 中東情勢の悪化で原料調達に影響",
+      "source": "新建ハウジング",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGMlVyRFdTekZKaENmYkxfc1BkQ1F2dmg3WHlVaWRHVlJsZ0pJV3I4WkRCSkRrRnNhTW9jeE5QdUhlWjVrVUhRcUJhS1FlcmpTUVE?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGMlVyRFdTekZKaENmYkxfc1BkQ1F2dmg3WHlVaWRHVlJsZ0pJV3I4WkRCSkRrRnNhTW9jeE5QdUhlWjVrVUhRcUJhS1FlcmpTUVE?oc=5",
+      "publishedAt": "2026-04-01T07:00:00.000Z",
+      "summary": "新建ハウジングが「「ネオマフォーム」などの供給に遅れ 中東情勢の悪化で原料調達に影響」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "競合メーカー"
+    },
+    {
+      "id": "2026-04-01-競合メーカー-2",
+      "category": "競合メーカー",
+      "title": "JSP、「ミラフォーム」などを6月から40％値上げ",
+      "source": "新建ハウジング",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBydkhLTFJWNVZqU0Z0UXBtaHRoUUh3TTFOemdaYkVjbU4ybzVfZ2lGcC1hLTlETERBSld0R0ZWMUN6c3N5eGtvZzdzeS0zVUptZ0E?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBydkhLTFJWNVZqU0Z0UXBtaHRoUUh3TTFOemdaYkVjbU4ybzVfZ2lGcC1hLTlETERBSld0R0ZWMUN6c3N5eGtvZzdzeS0zVUptZ0E?oc=5",
+      "publishedAt": "2026-04-02T07:00:00.000Z",
+      "summary": "新建ハウジングが「JSP、「ミラフォーム」などを6月から40％値上げ」を報じています。 これは価格改定・原価上昇に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "競合メーカー"
+    },
+    {
+      "id": "2026-04-01-競合メーカー-3",
+      "category": "競合メーカー",
+      "title": "旭ファイバーグラス、7月から屋根材など値上げ 部材の入数変更も",
+      "source": "新建ハウジング",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xQ1FrRWJBcHN4RWdSYTltZkIxRnhsRGRmdmw0M1lJWUNPZE9pREZCMU1DZE9zRzBhQUJiSThvNmtMZEkxNm1VSkhEUXgwTjFWNkE?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xQ1FrRWJBcHN4RWdSYTltZkIxRnhsRGRmdmw0M1lJWUNPZE9pREZCMU1DZE9zRzBhQUJiSThvNmtMZEkxNm1VSkhEUXgwTjFWNkE?oc=5",
+      "publishedAt": "2026-04-02T07:00:00.000Z",
+      "summary": "新建ハウジングが「旭ファイバーグラス、7月から屋根材など値上げ 部材の入数変更も」を報じています。 これは価格改定・原価上昇に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "競合メーカー"
+    },
+    {
+      "id": "2026-04-01-social-建材-納期-2058552426580599056",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 建材 の現場を見ていてもナフサを原料として使うメーカーは 納期 未定が多いと聞く。かつ断熱材は40%、合板や接着剤…",
+      "source": "Yahoo!リアルタイム検索 / nishizawa_saitm",
+      "url": "https://x.com/nishizawa_saitm/status/2058552426580599056?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-24T14:15:19.000Z",
+      "summary": "公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材 の現場を見ていてもナフサを原料として使うメーカーは 納期 未定が多いと聞く。かつ断熱材は40%、合板や接着剤、塩ビなどの他もかなりの値上げも行なれ、家ができないと悲鳴があがっている。 \"「ナフサ問題ない」政府の説明に「納得せず」64％、高市内閣の支持率は横ばい… https://t.co/iU0YbNL0pD 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLTLrmNzJQyZdPTBLrO1j3VziDyvchclZTFyWGc3Cu9C2f69LzyD_5AMcMUMRq4ufRkE0viTc5WYt6oWO8mj2WUvrz2uBzf6cya68pkk-IVTD_FxFMxsFKSd0T_YES0ayVt34Y_FkHuQRR6zwUy_2bj0i3qKi5yz4KgSERCthSuRr3xVi70Y0GZkDM5olMX4EY",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-04-01-social-建材-納期-2057809780253524467",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 「ナフサ」って、実はレジ袋だけじゃない。 食品包装、点滴バッグ、注射器、塗料、 建材 …。 私たちの暮らしと医療を…",
+      "source": "Yahoo!リアルタイム検索 / WatterNT",
+      "url": "https://x.com/WatterNT/status/2057809780253524467?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-22T13:04:18.000Z",
+      "summary": "公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 「ナフサ」って、実はレジ袋だけじゃない。 食品包装、点滴バッグ、注射器、塗料、 建材 …。 私たちの暮らしと医療を、見えないところで支えている大切な原料です。 いま中東情勢の緊張で、 ⚠️価格高騰 ⚠️減産 ⚠️ 納期 遅れ が広がっています。 でもこれは、 「遠い国の話」ではありません。 https://t.co/SCfs9wZhLr 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLj4GwE8b-dxOFTF6vbrY-k9bVa_Fq6A-ohmG7ddNSvi7ot3GH7HK_mriL-FXiLHsLfAdVOqqZ2QCUO39jUHoqRZFZepUDDPk4RVVv0JkcwFcekce-C3alkq60iRUO1DinCBoLNuih7E2nDdXblZvqB86snJYiN1XCnCZP6H2qV9D_v0FnQJJDVPK01jVvvYKM",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-04-01-social-建材-納期-2057799989284454823",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 区内 建材 屋さんの話‥シンナー90％値上がり、マスキングテープやクロス、接着剤、絶縁テープ、塩ビ材、ダクトカバー…",
+      "source": "Yahoo!リアルタイム検索 / nomura_setsu",
+      "url": "https://x.com/nomura_setsu/status/2057799989284454823?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-22T12:25:24.000Z",
+      "summary": "公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 区内 建材 屋さんの話‥シンナー90％値上がり、マスキングテープやクロス、接着剤、絶縁テープ、塩ビ材、ダクトカバー入手困難。粗悪品覚悟でメルカリ頼み。仕事の中断・中止、見積が立てられない。ほか資材の数量制限、出荷未定、 納期 調整、分納、顧客離れ‥現場フリーズ寸前。消費税さげろ。給付金を。 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLy42k7qkpk3wqZ-TeMFo6RDZY4G5m7VldJ6I6MDm6KPJ-_zYAxbKXfi8BHLRVYMFI0k5f-mkyS34yxJvQS01UBWG__1Z1g_VlBFh7qGD1rlgMcRkZbz6sDHSezSikaTjEY0v-hU0-DRHYUrO5kH7U5kLSrHD3MWGfm7yOVqUAdiNEqMR8NXMXYVuKYA4V-dKE",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-04-01-social-建材-納期-2057720960896364822",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 建材納期 未定でリフォームが進まず暇になるのなら、その余った時間で国内外津々浦々 建材 探しの旅に出て、ついでに美…",
+      "source": "Yahoo!リアルタイム検索 / sgashintaku",
+      "url": "https://x.com/sgashintaku/status/2057720960896364822?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-22T07:11:22.000Z",
+      "summary": "公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材納期 未定でリフォームが進まず暇になるのなら、その余った時間で国内外津々浦々 建材 探しの旅に出て、ついでに美味しいもの食べて温泉入って観光名所回ったりして費用は全額経費で…… https://t.co/claSjNIwih 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLx2qU0elgxXHGnv_D8gLgN0VUBkEc01KEt_Cfl9dVM-GM6pmhFp95wTQEQrFtkUZzsF4Ncs-FzXdCBQQNYyw6dTTl5uCO9vFJ1D6iUav_R_PnPUO3WZJt0_TA6z__Wu5Azr-KnFYXYTYruu0_66E4ot8rZQgoOS5dT6nldO1UTq-i_SRa4AhEPqgKZqdq5YCy",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-04-01-social-建材-納期-2057682928239538234",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 建材 屋さんにフローリング、クロス糊、CFボンド聞いたら全部 納期 未定 徐々に効いてきた",
+      "source": "Yahoo!リアルタイム検索 / qaEGIiiRhWK59gW",
+      "url": "https://x.com/qaEGIiiRhWK59gW/status/2057682928239538234?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-22T04:40:14.000Z",
+      "summary": "公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材 屋さんにフローリング、クロス糊、CFボンド聞いたら全部 納期 未定 徐々に効いてきた 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLZeSPzAneI1TiCvaaJ1TUlqlG5ed_1tb4nARXSFYgYcSMDg-aST911Ld6OOFVcNyVDiYiOwRapfRf07_HWaESloMqVSYjRJRr9vTI5OnD-RhYiHyFQelDc_T--hxGI6vmCcMVUe0FAuksPu3k-VUNxJHsBXrH6KsjUscrMEp4eSO8hgTeAAL8TxA0lB9a_Vtn",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-04-01-チャッピーおすすめ-1",
+      "category": "チャッピーおすすめ",
+      "title": "【各種住宅・建築・他】LIFEFUND：ナフサ危機で住宅建材に供給不安。断熱材や配管の値上がりに警鐘",
+      "source": "みんなの広報宣伝部",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyOXFoN2FfZHp5Z1JJWm5ZaTRQRGNyQjhuejJ2NDhtRjNyQmFlLXlqam9leVdqSUo5aUJ4aUxsNWExV3lVRlhBMk1fOWdHb05VdUhZeDRIUFpzdXl3N1NDNlpreE9waTlBcEpmTENFMnQ?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyOXFoN2FfZHp5Z1JJWm5ZaTRQRGNyQjhuejJ2NDhtRjNyQmFlLXlqam9leVdqSUo5aUJ4aUxsNWExV3lVRlhBMk1fOWdHb05VdUhZeDRIUFpzdXl3N1NDNlpreE9waTlBcEpmTENFMnQ?oc=5",
+      "publishedAt": "2026-04-01T07:00:00.000Z",
+      "summary": "みんなの広報宣伝部が「【各種住宅・建築・他】LIFEFUND：ナフサ危機で住宅建材に供給不安。断熱材や配管の値上がりに警鐘」を報じています。 これは価格改定・原価上昇、納期・供給リスク、省エネ・補助金・制度対応に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "チャッピーおすすめ"
+    },
+    {
+      "id": "2026-04-01-チャッピーおすすめ-1",
+      "category": "チャッピーおすすめ",
+      "title": "【実践大家コラム】リフォームもストップ！？イラン情勢悪化で影響が・・・汗",
+      "source": "rakumachi.jp",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAtSXhqTU1Zd01Td19uZkt6LXRBNjRybHVyS3FheF9QQVFaYkRVb3RETU9La1VGM0x6REo2dnpwaDRwd2w2UEpEaFBHc2hLUjNjZVFmSGx0ZE85dw?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAtSXhqTU1Zd01Td19uZkt6LXRBNjRybHVyS3FheF9QQVFaYkRVb3RETU9La1VGM0x6REo2dnpwaDRwd2w2UEpEaFBHc2hLUjNjZVFmSGx0ZE85dw?oc=5",
+      "publishedAt": "2026-04-01T07:00:00.000Z",
+      "summary": "rakumachi.jpが「【実践大家コラム】リフォームもストップ！？イラン情勢悪化で影響が・・・汗」を報じています。 これは建材市場動向に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "チャッピーおすすめ"
+    },
+    {
+      "id": "2026-04-01-チャッピーおすすめ-2",
+      "category": "チャッピーおすすめ",
+      "title": "燃油高騰 業者ら守る対応を/国交省に共産党議員団 | しんぶん赤旗",
+      "source": "jcp.or.jp",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZUDFhOTlpc0NKUXNOcFQ1LWN6Qm1kS2p2Z2dFZDFyN0k1Wk42Sm9qVDMzc1I5cmJEV2ZBekFhejNNaUJTYXdKYUozWmhVZWk3aF9IcGk4RmN5akFfQ3RpRkg0Z043XzNMQjZXdGprVTNfUUhl?oc=5",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZUDFhOTlpc0NKUXNOcFQ1LWN6Qm1kS2p2Z2dFZDFyN0k1Wk42Sm9qVDMzc1I5cmJEV2ZBekFhejNNaUJTYXdKYUozWmhVZWk3aF9IcGk4RmN5akFfQ3RpRkg0Z043XzNMQjZXdGprVTNfUUhl?oc=5",
+      "publishedAt": "2026-04-02T07:00:00.000Z",
+      "summary": "jcp.or.jpが「燃油高騰 業者ら守る対応を/国交省に共産党議員団 | しんぶん赤旗」を報じています。 これは価格改定・原価上昇に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。",
+      "analysis": "納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。",
+      "action": "対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。",
+      "imageUrl": "",
+      "imageLabel": "チャッピーおすすめ"
+    }
+  ]
+}

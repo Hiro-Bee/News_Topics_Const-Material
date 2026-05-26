@@ -1,0 +1,31 @@
+name: Generate daily construction-material news
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions cron is UTC. 22:00 UTC is 07:00 JST.
+    - cron: "0 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate daily HTML and JSON
+        run: node scripts/generate-daily.mjs
+
+      - name: Commit generated daily news
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generate daily construction-material news"
+          file_pattern: "index.html daily_*.html data/*.json"

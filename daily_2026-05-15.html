@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirii Daily News 2026-05-15</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #17466e;
+      --primary-soft: #e8f1f8;
+      --accent: #0f766e;
+      --accent-soft: #e7f8f5;
+      --danger: #b45309;
+      --danger-soft: #fff7ed;
+      --pink: #be185d;
+      --pink-soft: #fce7f3;
+      --shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #0f2f4d, #17466e 54%, #0f766e);
+      color: #fff;
+      padding: 34px 24px 42px;
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .eyebrow {
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: 12px;
+      opacity: .86;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .lead {
+      margin: 0;
+      max-width: 860px;
+      opacity: .93;
+      font-size: 15px;
+    }
+    .control-card {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+    .control-card label { display: block; font-size: 12px; opacity: .88; margin-bottom: 6px; }
+    .control-card select, .control-card a {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      background: #fff;
+    }
+    .control-card a {
+      display: inline-flex;
+      justify-content: center;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    main {
+      max-width: 1280px;
+      margin: -22px auto 64px;
+      padding: 0 22px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      min-height: 112px;
+    }
+    .kpi-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .kpi-value { font-size: 30px; line-height: 1; font-weight: 900; color: var(--primary); }
+    .kpi-note { margin-top: 8px; color: var(--muted); font-size: 12px; }
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    h2, h3 { margin: 0; letter-spacing: 0; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    button, .link-button {
+      border: none;
+      cursor: pointer;
+      border-radius: 11px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+    }
+    .category-tabs button { background: #fff; color: #374151; border: 1px solid var(--line); }
+    .category-tabs button.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .article-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #fff;
+    }
+    .article-card.no-thumb { grid-template-columns: 1fr; }
+    .article-card.liked {
+      border: 2px solid var(--pink);
+      background: linear-gradient(180deg, #fff, #fff7fb);
+    }
+    .photo {
+      min-height: 180px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 18px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #17466e, #0f766e);
+      overflow: hidden;
+    }
+    .photo.has-image { padding: 0; background: #e5e7eb; }
+    .photo.has-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .photo .icon { display: block; font-size: 28px; margin-bottom: 8px; }
+    .photo .sub { display: block; opacity: .9; font-size: 12px; margin-top: 4px; }
+    .meta-row { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tag {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .tag.cat { background: var(--accent-soft); color: var(--accent); }
+    .tag.hot { background: var(--danger-soft); color: var(--danger); }
+    .source-name { color: var(--muted); font-size: 12px; margin: 6px 0 10px; }
+    .source-summary-box {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .source-summary-box strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    .analysis-box, .action-box {
+      border-radius: 14px;
+      padding: 11px 13px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .analysis-box { background: #f8fafc; border-left: 4px solid var(--primary); }
+    .action-box { background: var(--danger-soft); border-left: 4px solid var(--danger); }
+    .analysis-box strong, .action-box strong { display: block; margin-bottom: 4px; }
+    .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .btn-like { background: var(--pink-soft); color: var(--pink); border: 1px solid #fbcfe8; }
+    .btn-like.active { background: var(--pink); color: #fff; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-muted { background: #f3f4f6; color: #374151; border: 1px solid var(--line); }
+    .link-button { background: var(--accent); color: #fff; }
+    .side-list { list-style: none; padding: 0; margin: 0; }
+    .side-list li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .side-list li:last-child { border-bottom: none; }
+    .side-list strong { display: block; margin-bottom: 4px; }
+    .side-list span { color: var(--muted); font-size: 13px; }
+    .liked-list { display: grid; gap: 10px; }
+    .liked-item { border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: #fff; font-size: 13px; }
+    .liked-item strong { display: block; margin-bottom: 4px; }
+    .traffic-wrap { overflow-x: auto; }
+    .chart-box { min-width: 760px; }
+    svg { max-width: 100%; height: auto; display: block; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      padding: 9px;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: var(--muted); background: #f8fafc; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
+    @media (max-width: 980px) {
+      .header-inner, .layout, .kpi-grid, .article-card { grid-template-columns: 1fr; }
+      main { margin-top: -14px; }
+    }
+    @media print {
+      header, .kpi-grid, .category-tabs, aside, .button-row, .footer { display: none !important; }
+      body { background: #fff; }
+      main { margin: 0; max-width: none; }
+      .section { box-shadow: none; border: none; padding: 0; }
+      .article-card { break-inside: avoid; grid-template-columns: 1fr; }
+      .photo { display: none; }
+      body.print-liked .article-card:not(.liked) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="eyebrow">Daily Market Intelligence for Kirii / Kiriine</div>
+        <h1>桐井製作所・きりいーね<br />建材市場デイリーニュース</h1>
+        <p class="lead">官公庁、公的統計、業界団体、競合メーカー、競合EC、SNS、顧客投稿、その他おすすめ記事を毎日収集し、サマリー、分析コメント、アクションプラン、情報元リンク付きで保存します。</p>
+      </div>
+      <div class="control-card">
+        <label for="issueSelect">バックナンバー</label>
+        <select id="issueSelect"><option value="daily_2026-05-26.html">2026年05月26日号</option><option value="daily_2026-05-25.html">2026年05月25日号</option><option value="daily_2026-05-24.html">2026年05月24日号</option><option value="daily_2026-05-23.html">2026年05月23日号</option><option value="daily_2026-05-22.html">2026年05月22日号</option><option value="daily_2026-05-21.html">2026年05月21日号</option><option value="daily_2026-05-20.html">2026年05月20日号</option><option value="daily_2026-05-19.html">2026年05月19日号</option><option value="daily_2026-05-18.html">2026年05月18日号</option><option value="daily_2026-05-17.html">2026年05月17日号</option><option value="daily_2026-05-16.html">2026年05月16日号</option><option value="daily_2026-05-15.html" selected>2026年05月15日号</option><option value="daily_2026-05-14.html">2026年05月14日号</option><option value="daily_2026-05-13.html">2026年05月13日号</option><option value="daily_2026-05-12.html">2026年05月12日号</option><option value="daily_2026-05-11.html">2026年05月11日号</option><option value="daily_2026-05-10.html">2026年05月10日号</option><option value="daily_2026-05-09.html">2026年05月09日号</option><option value="daily_2026-05-08.html">2026年05月08日号</option><option value="daily_2026-05-07.html">2026年05月07日号</option><option value="daily_2026-05-06.html">2026年05月06日号</option><option value="daily_2026-05-05.html">2026年05月05日号</option><option value="daily_2026-05-04.html">2026年05月04日号</option><option value="daily_2026-05-03.html">2026年05月03日号</option><option value="daily_2026-05-02.html">2026年05月02日号</option><option value="daily_2026-05-01.html">2026年05月01日号</option><option value="daily_2026-04-30.html">2026年04月30日号</option><option value="daily_2026-04-29.html">2026年04月29日号</option><option value="daily_2026-04-28.html">2026年04月28日号</option><option value="daily_2026-04-27.html">2026年04月27日号</option><option value="daily_2026-04-26.html">2026年04月26日号</option><option value="daily_2026-04-25.html">2026年04月25日号</option><option value="daily_2026-04-24.html">2026年04月24日号</option><option value="daily_2026-04-23.html">2026年04月23日号</option><option value="daily_2026-04-22.html">2026年04月22日号</option><option value="daily_2026-04-21.html">2026年04月21日号</option><option value="daily_2026-04-20.html">2026年04月20日号</option><option value="daily_2026-04-19.html">2026年04月19日号</option><option value="daily_2026-04-18.html">2026年04月18日号</option><option value="daily_2026-04-17.html">2026年04月17日号</option><option value="daily_2026-04-16.html">2026年04月16日号</option><option value="daily_2026-04-15.html">2026年04月15日号</option><option value="daily_2026-04-14.html">2026年04月14日号</option><option value="daily_2026-04-13.html">2026年04月13日号</option><option value="daily_2026-04-12.html">2026年04月12日号</option><option value="daily_2026-04-11.html">2026年04月11日号</option><option value="daily_2026-04-10.html">2026年04月10日号</option><option value="daily_2026-04-09.html">2026年04月09日号</option><option value="daily_2026-04-08.html">2026年04月08日号</option><option value="daily_2026-04-07.html">2026年04月07日号</option><option value="daily_2026-04-06.html">2026年04月06日号</option><option value="daily_2026-04-05.html">2026年04月05日号</option><option value="daily_2026-04-04.html">2026年04月04日号</option><option value="daily_2026-04-03.html">2026年04月03日号</option><option value="daily_2026-04-02.html">2026年04月02日号</option><option value="daily_2026-04-01.html">2026年04月01日号</option><option value="daily_2026-03-31.html">2026年03月31日号</option><option value="daily_2026-03-30.html">2026年03月30日号</option><option value="daily_2026-03-29.html">2026年03月29日号</option><option value="daily_2026-03-28.html">2026年03月28日号</option><option value="daily_2026-03-27.html">2026年03月27日号</option><option value="daily_2026-03-26.html">2026年03月26日号</option></select>
+        <a href="data/daily_2026-05-15.json">JSONを開く</a>
+        <div class="note" style="color:#fff;opacity:.9;">毎朝7時に daily_YYYY-MM-DD.html と JSON を生成します。</div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-label">本日の記事数</div><div class="kpi-value" id="articleCount">0</div><div class="kpi-note">カテゴリ別に整理</div></div>
+      <div class="kpi"><div class="kpi-label">いいね済み</div><div class="kpi-value" id="likedCount">0</div><div class="kpi-note">PDF出力対象</div></div>
+      <div class="kpi"><div class="kpi-label">収集カテゴリ</div><div class="kpi-value">6</div><div class="kpi-note">公的情報からSNSまで</div></div>
+      <div class="kpi"><div class="kpi-label">更新時刻</div><div class="kpi-value">7:00</div><div class="kpi-note">JST / GitHub Actions</div></div>
+      <div class="kpi"><div class="kpi-label">PDF出力</div><div class="kpi-value">OK</div><div class="kpi-note">いいね記事を保存</div></div>
+    </section>
+    <div class="layout">
+      <div>
+        <section class="section">
+          <div class="section-title"><h2>カテゴリ別ニュース</h2><span class="badge">2026-05-15</span></div>
+          <div class="category-tabs" id="categoryTabs"></div>
+          <div id="articleList"></div>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>競合EC 来訪ボリューム</h2><span class="badge">公開推定値</span></div>
+          <div class="traffic-wrap"><div class="chart-box" id="trafficChart"></div></div>
+          <div id="trafficTable"></div>
+          <div class="note">公開で確認できるSemrush等の推定値を表示します。競合他社の実PV、実セッション、実ユーザー数は通常公開されないため、数値は方向感の把握用です。きりいーねはGA4/Search Console連携で実数に差し替えてください。</div>
+        </section>
+      </div>
+      <aside>
+        <section class="section">
+          <div class="section-title"><h2>いいね記事</h2><span class="badge">PDF対象</span></div>
+          <div id="likedList" class="liked-list"></div>
+          <div class="button-row">
+            <button class="btn-primary" id="exportPdfButton">いいね記事をPDF出力</button>
+            <button class="btn-muted" id="clearLikesButton">いいねを全解除</button>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>収集カテゴリ</h2></div>
+          <ul class="side-list" id="categoryList"></ul>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>運用メモ</h2></div>
+          <ul class="side-list">
+            <li><strong>GitHub Pages</strong><span>index.html は最新号、daily_YYYY-MM-DD.html は日次保存版です。</span></li>
+            <li><strong>自動生成</strong><span>Actions が RSS を取得し、JSON と HTML をコミットします。</span></li>
+            <li><strong>PDF</strong><span>ハートを押した記事だけを印刷画面から PDF 保存できます。</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+    <div class="footer">Generated at 2026-05-25T21:55:29.727Z / Asia/Tokyo</div>
+  </main>
+  <script id="dailyData" type="application/json">{"date":"2026-05-15","label":"2026年05月15日号","generatedAt":"2026-05-25T21:55:29.727Z","timezone":"Asia/Tokyo","sources":[{"category":"官公庁・公的統計","query":"建設資材 供給 国土交通省"},{"category":"業界団体・技術団体","query":"建設資材 高騰 全建総連"},{"category":"競合メーカー","query":"LIXIL 建材 値上げ OR 永大産業 建材 値上げ"},{"category":"競合EC","query":"モノタロウ 建材 納期 OR AUN WORKS 建材 OR 建デポ 建材"},{"category":"チャッピーおすすめ","query":"建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰"},{"category":"チャッピーおすすめ","query":"ナフサ 建材 価格 OR 住宅資材 納期"}],"categories":["すべて","官公庁・公的統計","業界団体・技術団体","競合メーカー","競合EC","お客様SNS","チャッピーおすすめ"],"trafficRows":[{"site":"モノタロウ","domain":"monotaro.com","source":"Semrush公開推定 + 60日週次予測","confidence":"公開推定","monthlyVisits":16920000,"pagesPerVisit":3.92,"visits":[3350000,3480000,3620000,3570000,3740000,3890000,3820000,3970000,3900000],"note":"Semrush公開推定値 March 2026 visits 16.92M、pages/visit 3.92 を起点に週次換算。"},{"site":"AUN WORKS","domain":"aunworks.jp","source":"Semrush公開推定 + 60日週次予測","confidence":"公開推定","monthlyVisits":185550,"pagesPerVisit":3.07,"visits":[28500,30200,31800,33500,36100,38400,40200,42700,43800],"note":"Semrush公開推定値 March 2026 visits 185.55K、pages/visit 3.07 を起点に週次換算。"},{"site":"建デポ","domain":"kendepot.co.jp","source":"予測モデル","confidence":"予測","monthlyVisits":420000,"pagesPerVisit":2.4,"visits":[83000,86500,89000,92200,94800,97100,100500,97300,96200],"note":"店舗検索、キャンペーン閲覧、ブランド指名検索を想定した予測値。実測ではありません。"},{"site":"ミラタップ","domain":"miratap.co.jp","source":"予測モデル","confidence":"予測","monthlyVisits":1250000,"pagesPerVisit":3.1,"visits":[246000,258000,271000,289000,301000,296000,310000,322000,316000],"note":"住宅設備・建材ECとしての指名検索、商品閲覧、カタログ閲覧を想定した予測値。実測ではありません。"},{"site":"きりいーね","domain":"kirii-net.jp","source":"予測モデル / GA4差替推奨","confidence":"予測","monthlyVisits":32000,"pagesPerVisit":2.2,"visits":[6100,6450,6900,7200,7350,7600,7900,8200,8050],"note":"自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"}],"articles":[{"id":"2026-05-15-官公庁-公的統計-2","category":"官公庁・公的統計","title":"日塗装広島県支部 広島市に対して緊急要望","source":"建通新聞","url":"https://news.google.com/rss/articles/CBMigAFBVV95cUxPRTVyZmpITlN2YmFtMVN0amJjY1RhZWptaDJyLTRlNW5mNmE5cmIzU29CVGNGM0IwaVFtSnB2dlJKMUZxZWs0WnVJcjREd3NUbWF2ZGUzckcwTnBIdF9xaGxhLVpuLUNXdVBtMXE0cnVfWVZGR0Qtc0ZwYlhvTnZDcg?oc=5","googleNewsUrl":"https://news.google.com/rss/articles/CBMigAFBVV95cUxPRTVyZmpITlN2YmFtMVN0amJjY1RhZWptaDJyLTRlNW5mNmE5cmIzU29CVGNGM0IwaVFtSnB2dlJKMUZxZWs0WnVJcjREd3NUbWF2ZGUzckcwTnBIdF9xaGxhLVpuLUNXdVBtMXE0cnVfWVZGR0Qtc0ZwYlhvTnZDcg?oc=5","publishedAt":"2026-05-15T07:00:00.000Z","summary":"建通新聞が「日塗装広島県支部 広島市に対して緊急要望」を報じています。 これは建材市場動向に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"","imageLabel":"官公庁・公的統計"},{"id":"2026-05-15-官公庁-公的統計-3","category":"官公庁・公的統計","title":"【中東情勢の影響】LIXIL瀬戸社長、受注対応や今後の値上げに言及=タカラスタンダード・小森社長、業界の取り組み状況説明","source":"住宅産業新聞","url":"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1RZmNzRDI0VDVCTkV1MUU0enYwX19vWUxCZDFWYjRZUUF6bVd4ZGFtMXVib3h0OFBFa2IxdXg1TmEwSTRhZjEyM2xyLUxQaXVmQVHSAVJBVV95cUxNUWZjc0QyNFQ1Qk5FdTFFNHp2MF9fb1lMQmQxVmI0WVFBem1XeGRhbTF1Ym94dDhQRWtiMXV4NU5hMEk0YWYxMjNsci1MUGl1ZkFR?oc=5","googleNewsUrl":"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1RZmNzRDI0VDVCTkV1MUU0enYwX19vWUxCZDFWYjRZUUF6bVd4ZGFtMXVib3h0OFBFa2IxdXg1TmEwSTRhZjEyM2xyLUxQaXVmQVHSAVJBVV95cUxNUWZjc0QyNFQ1Qk5FdTFFNHp2MF9fb1lMQmQxVmI0WVFBem1XeGRhbTF1Ym94dDhQRWtiMXV4NU5hMEk0YWYxMjNsci1MUGl1ZkFR?oc=5","publishedAt":"2026-05-15T07:00:00.000Z","summary":"住宅産業新聞が「【中東情勢の影響】LIXIL瀬戸社長、受注対応や今後の値上げに言及=タカラスタンダード・小森社長、業界の取り組み状況説明」を報じています。 これは価格改定・原価上昇、商品・メーカー動向に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"","imageLabel":"官公庁・公的統計"},{"id":"2026-05-15-官公庁-公的統計-1","category":"官公庁・公的統計","title":"中東情勢で資材調達難が深刻に、全建「工事の中止や遅延は避けられない」","source":"日経クロステック","url":"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5mWC1YamZvZWpSeEg1OEVFVDJnbVU1QkVzeXR6VU9XN1RCVFhubVMtdk9Wa1h3UncxTTFlbW5TbmhJdkJTSm94TGNoMHR3eDA4WXdMVzNMVmhJNGVYc3BnYjRqbklZTGM?oc=5","googleNewsUrl":"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5mWC1YamZvZWpSeEg1OEVFVDJnbVU1QkVzeXR6VU9XN1RCVFhubVMtdk9Wa1h3UncxTTFlbW5TbmhJdkJTSm94TGNoMHR3eDA4WXdMVzNMVmhJNGVYc3BnYjRqbklZTGM?oc=5","publishedAt":"2026-05-15T07:00:00.000Z","summary":"日経クロステックが「中東情勢で資材調達難が深刻に、全建「工事の中止や遅延は避けられない」」を報じています。 これは納期・供給リスクに関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"","imageLabel":"官公庁・公的統計"},{"id":"2026-05-15-crawl-2-国土交通省-建築","category":"官公庁・公的統計","title":"住宅・建築トップ","source":"国土交通省 建築","url":"https://www.mlit.go.jp/jutakukentiku/index.html","publishedAt":"2026-05-25T21:55:29.810Z","summary":"国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-crawl-3-国土交通省-建築","category":"官公庁・公的統計","title":"建築基準法施行令の一部を改正する政令（令和5年政令第34号）について","source":"国土交通省 建築","url":"https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000175.html","publishedAt":"2026-05-25T21:55:29.810Z","summary":"国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-crawl-4-国土交通省-建築","category":"官公庁・公的統計","title":"脱炭素社会の実現に資するための建築物のエネルギー消費性能の向上に関する法律等の一部を改正する法律（令和４年法律第６９号）について","source":"国土交通省 建築","url":"https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000163.html","publishedAt":"2026-05-25T21:55:29.810Z","summary":"国土交通省 建築 の巡回で見つかった関連リンクです。リンク見出しに 建築、省エネ、建材、住宅、制度、基準 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-crawl-1-国土交通省-建築","category":"官公庁・公的統計","title":"建築 - 国土交通省","source":"国土交通省 建築","url":"https://www.mlit.go.jp/jutakukentiku/build/","publishedAt":"2026-05-25T21:55:29.810Z","summary":"国土交通省のウェブサイトです。政策、報道発表資料、統計情報、各種申請手続きに関する情報などを掲載しています。","analysis":"公開ページのタイトル、説明文、リンク見出しから、建材市場ニュースとして確認すべきトピックを抽出しています。RSSに出ない固定ページ更新やキャンペーン導線も拾える可能性があります。","action":"ページ本文の更新有無、関連商品カテゴリ、価格・納期・制度対応への影響を確認し、必要に応じて商品ページ、FAQ、メルマガ、営業資料に反映します。","imageUrl":"","imageLabel":"巡回"},{"id":"2026-05-15-crawl-1-JACCA","category":"業界団体・技術団体","title":"日本耐震天井施工協同組合","source":"JACCA","url":"https://www.jacca.or.jp/","publishedAt":"2026-05-25T21:55:29.829Z","summary":"日本耐震天井施工協同組合(JACCA)は国土交通省の許可団体です。最新の耐震天井専用部材を最新の施工技術で組み上げた当組合の耐震天井は耐震保証制度で最長30年保証！","analysis":"公開ページのタイトル、説明文、リンク見出しから、建材市場ニュースとして確認すべきトピックを抽出しています。RSSに出ない固定ページ更新やキャンペーン導線も拾える可能性があります。","action":"ページ本文の更新有無、関連商品カテゴリ、価格・納期・制度対応への影響を確認し、必要に応じて商品ページ、FAQ、メルマガ、営業資料に反映します。","imageUrl":"","imageLabel":"巡回"},{"id":"2026-05-15-crawl-2-JACCA","category":"業界団体・技術団体","title":"耐震天井セミナー","source":"JACCA","url":"https://www.jacca.or.jp/seminar/index.html","publishedAt":"2026-05-25T21:55:29.829Z","summary":"JACCA の巡回で見つかった関連リンクです。リンク見出しに 天井、耐震、下地、技術、施工、資料 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-crawl-3-JACCA","category":"業界団体・技術団体","title":"耐震天井とは","source":"JACCA","url":"https://www.jacca.or.jp/seminar/ceiling.html","publishedAt":"2026-05-25T21:55:29.829Z","summary":"JACCA の巡回で見つかった関連リンクです。リンク見出しに 天井、耐震、下地、技術、施工、資料 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-crawl-4-JACCA","category":"業界団体・技術団体","title":"天井耐震診断士認定講習会","source":"JACCA","url":"https://www.jacca.or.jp/workshops/certification.html","publishedAt":"2026-05-25T21:55:29.829Z","summary":"JACCA の巡回で見つかった関連リンクです。リンク見出しに 天井、耐震、下地、技術、施工、資料 などの確認キーワードが含まれています。","analysis":"リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。","action":"リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。","imageUrl":"","imageLabel":"巡回リンク"},{"id":"2026-05-15-social-建材-納期-2058552426580599056","category":"お客様SNS","title":"SNS投稿: 建材 の現場を見ていてもナフサを原料として使うメーカーは 納期 未定が多いと聞く。かつ断熱材は40%、合板や接着剤…","source":"Yahoo!リアルタイム検索 / nishizawa_saitm","url":"https://x.com/nishizawa_saitm/status/2058552426580599056?utm_source=yjrealtime&utm_medium=search","publishedAt":"2026-05-24T14:15:19.000Z","summary":"公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材 の現場を見ていてもナフサを原料として使うメーカーは 納期 未定が多いと聞く。かつ断熱材は40%、合板や接着剤、塩ビなどの他もかなりの値上げも行なれ、家ができないと悲鳴があがっている。 \"「ナフサ問題ない」政府の説明に「納得せず」64％、高市内閣の支持率は横ばい… https://t.co/iU0YbNL0pD 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLTLrmNzJQyZdPTBLrO1j3VziDyvchclZTFyWGc3Cu9C2f69LzyD_5AMcMUMRq4ufRkE0viTc5WYt6oWO8mj2WUvrz2uBzf6cya68pkk-IVTD_FxFMxsFKSd0T_YES0ayVt34Y_FkHuQRR6zwUy_2bj0i3qKi5yz4KgSERCthSuRr3xVi70Y0GZkDM5olMX4EY","imageLabel":"SNS投稿"},{"id":"2026-05-15-social-建材-納期-2057809780253524467","category":"お客様SNS","title":"SNS投稿: 「ナフサ」って、実はレジ袋だけじゃない。 食品包装、点滴バッグ、注射器、塗料、 建材 …。 私たちの暮らしと医療を…","source":"Yahoo!リアルタイム検索 / WatterNT","url":"https://x.com/WatterNT/status/2057809780253524467?utm_source=yjrealtime&utm_medium=search","publishedAt":"2026-05-22T13:04:18.000Z","summary":"公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 「ナフサ」って、実はレジ袋だけじゃない。 食品包装、点滴バッグ、注射器、塗料、 建材 …。 私たちの暮らしと医療を、見えないところで支えている大切な原料です。 いま中東情勢の緊張で、 ⚠️価格高騰 ⚠️減産 ⚠️ 納期 遅れ が広がっています。 でもこれは、 「遠い国の話」ではありません。 https://t.co/SCfs9wZhLr 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLj4GwE8b-dxOFTF6vbrY-k9bVa_Fq6A-ohmG7ddNSvi7ot3GH7HK_mriL-FXiLHsLfAdVOqqZ2QCUO39jUHoqRZFZepUDDPk4RVVv0JkcwFcekce-C3alkq60iRUO1DinCBoLNuih7E2nDdXblZvqB86snJYiN1XCnCZP6H2qV9D_v0FnQJJDVPK01jVvvYKM","imageLabel":"SNS投稿"},{"id":"2026-05-15-social-建材-納期-2057799989284454823","category":"お客様SNS","title":"SNS投稿: 区内 建材 屋さんの話‥シンナー90％値上がり、マスキングテープやクロス、接着剤、絶縁テープ、塩ビ材、ダクトカバー…","source":"Yahoo!リアルタイム検索 / nomura_setsu","url":"https://x.com/nomura_setsu/status/2057799989284454823?utm_source=yjrealtime&utm_medium=search","publishedAt":"2026-05-22T12:25:24.000Z","summary":"公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 区内 建材 屋さんの話‥シンナー90％値上がり、マスキングテープやクロス、接着剤、絶縁テープ、塩ビ材、ダクトカバー入手困難。粗悪品覚悟でメルカリ頼み。仕事の中断・中止、見積が立てられない。ほか資材の数量制限、出荷未定、 納期 調整、分納、顧客離れ‥現場フリーズ寸前。消費税さげろ。給付金を。 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLy42k7qkpk3wqZ-TeMFo6RDZY4G5m7VldJ6I6MDm6KPJ-_zYAxbKXfi8BHLRVYMFI0k5f-mkyS34yxJvQS01UBWG__1Z1g_VlBFh7qGD1rlgMcRkZbz6sDHSezSikaTjEY0v-hU0-DRHYUrO5kH7U5kLSrHD3MWGfm7yOVqUAdiNEqMR8NXMXYVuKYA4V-dKE","imageLabel":"SNS投稿"},{"id":"2026-05-15-social-建材-納期-2057720960896364822","category":"お客様SNS","title":"SNS投稿: 建材納期 未定でリフォームが進まず暇になるのなら、その余った時間で国内外津々浦々 建材 探しの旅に出て、ついでに美…","source":"Yahoo!リアルタイム検索 / sgashintaku","url":"https://x.com/sgashintaku/status/2057720960896364822?utm_source=yjrealtime&utm_medium=search","publishedAt":"2026-05-22T07:11:22.000Z","summary":"公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材納期 未定でリフォームが進まず暇になるのなら、その余った時間で国内外津々浦々 建材 探しの旅に出て、ついでに美味しいもの食べて温泉入って観光名所回ったりして費用は全額経費で…… https://t.co/claSjNIwih 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLx2qU0elgxXHGnv_D8gLgN0VUBkEc01KEt_Cfl9dVM-GM6pmhFp95wTQEQrFtkUZzsF4Ncs-FzXdCBQQNYyw6dTTl5uCO9vFJ1D6iUav_R_PnPUO3WZJt0_TA6z__Wu5Azr-KnFYXYTYruu0_66E4ot8rZQgoOS5dT6nldO1UTq-i_SRa4AhEPqgKZqdq5YCy","imageLabel":"SNS投稿"},{"id":"2026-05-15-social-建材-納期-2057682928239538234","category":"お客様SNS","title":"SNS投稿: 建材 屋さんにフローリング、クロス糊、CFボンド聞いたら全部 納期 未定 徐々に効いてきた","source":"Yahoo!リアルタイム検索 / qaEGIiiRhWK59gW","url":"https://x.com/qaEGIiiRhWK59gW/status/2057682928239538234?utm_source=yjrealtime&utm_medium=search","publishedAt":"2026-05-22T04:40:14.000Z","summary":"公開SNS上で「建材 納期」に関連して、次の投稿が確認されました: 建材 屋さんにフローリング、クロス糊、CFボンド聞いたら全部 納期 未定 徐々に効いてきた 現場側の不満・不安・購買阻害要因として扱い、同じ内容の問い合わせが増えていないか確認してください。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLZeSPzAneI1TiCvaaJ1TUlqlG5ed_1tb4nARXSFYgYcSMDg-aST911Ld6OOFVcNyVDiYiOwRapfRf07_HWaESloMqVSYjRJRr9vTI5OnD-RhYiHyFQelDc_T--hxGI6vmCcMVUe0FAuksPu3k-VUNxJHsBXrH6KsjUscrMEp4eSO8hgTeAAL8TxA0lB9a_Vtn","imageLabel":"SNS投稿"},{"id":"2026-05-15-チャッピーおすすめ-1","category":"チャッピーおすすめ","title":"「断熱材が40％値上がり」ナフサの供給不安定が住宅の建築現場に影響 建築資材の品薄状態、値上げ続く「普通に家を建てるのがどんどん難しく」住宅価格は1割増「3000万円だったら300万円アップ」（NBS長野放送）","source":"Yahoo!ニュース","url":"https://news.google.com/rss/articles/CBMif0FVX3lxTE4xV1B1NGE1WFJOdTk2Mm5iZFNpY3E0R0xEZTRoQldfLUh2VTdRaXo0eW0yQm82RlVxakRlUllYLVhDU0xXMlNVVlN6TmVxSUxtaHVpQ2xQSklzU1RrZEh2ODZFdkgxZmJ1VGN2X05qTEMzTU9XSlBERG5wM1Q5eE0?oc=5","googleNewsUrl":"https://news.google.com/rss/articles/CBMif0FVX3lxTE4xV1B1NGE1WFJOdTk2Mm5iZFNpY3E0R0xEZTRoQldfLUh2VTdRaXo0eW0yQm82RlVxakRlUllYLVhDU0xXMlNVVlN6TmVxSUxtaHVpQ2xQSklzU1RrZEh2ODZFdkgxZmJ1VGN2X05qTEMzTU9XSlBERG5wM1Q5eE0?oc=5","publishedAt":"2026-05-15T07:00:00.000Z","summary":"Yahoo!ニュースが「「断熱材が40％値上がり」ナフサの供給不安定が住宅の建築現場に影響 建築資材の品薄状態、値上げ続く「普通に家を建てるのがどんどん難しく」住宅価格は1割増「3000万円だったら300万円アップ」（NBS長野放送）」を報じています。 これは価格改定・原価上昇、納期・供給リスク、省エネ・補助金・制度対応に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"","imageLabel":"チャッピーおすすめ"},{"id":"2026-05-15-チャッピーおすすめ-2","category":"チャッピーおすすめ","title":"断熱材40％、塗料80％高騰…家づくり総額が数百万円上がる「ナフサ危機」新築・リフォーム前に確認すべき3つのポイント","source":"Yahoo!ニュース","url":"https://news.google.com/rss/articles/CBMif0FVX3lxTE1aZ1VvamxzOEtDcWd3Y2Q1cnhuUkRDaUdtemRrcXp5eGlpaTBzdVB3NldpYUZMS1hQNDhuR0FueU1CTUtwaWxReHJWQkY2ZXE0QXVoMUFFLVBFanhweThQcFhGUTdjNXNoQVFadDFPcExfOTJUSUw4cWktbnpJdGM?oc=5","googleNewsUrl":"https://news.google.com/rss/articles/CBMif0FVX3lxTE1aZ1VvamxzOEtDcWd3Y2Q1cnhuUkRDaUdtemRrcXp5eGlpaTBzdVB3NldpYUZMS1hQNDhuR0FueU1CTUtwaWxReHJWQkY2ZXE0QXVoMUFFLVBFanhweThQcFhGUTdjNXNoQVFadDFPcExfOTJUSUw4cWktbnpJdGM?oc=5","publishedAt":"2026-05-16T07:00:00.000Z","summary":"Yahoo!ニュースが「断熱材40％、塗料80％高騰…家づくり総額が数百万円上がる「ナフサ危機」新築・リフォーム前に確認すべき3つのポイント」を報じています。 これは価格改定・原価上昇、省エネ・補助金・制度対応に関わる新規発信です。きりいーねでは、対象カテゴリ、該当メーカー、価格改定時期、納期影響、代替品の有無を確認し、商品ページ・FAQ・営業案内へ反映する必要があります。","analysis":"納期や供給不安は、購入直前の離脱や問い合わせ増加に直結します。カテゴリページと商品ページで在庫・納期・代替候補を明確に出す優先度が高いです。","action":"対象カテゴリを洗い出し、在庫・納期注意の表示、代替品リンク、問い合わせテンプレート、早期発注案内を追加してください。","imageUrl":"","imageLabel":"チャッピーおすすめ"}]}</script>
+  <script>
+    (function () {
+      "use strict";
+      const issue = JSON.parse(document.getElementById("dailyData").textContent);
+      const categories = ["すべて","官公庁・公的統計","業界団体・技術団体","競合メーカー","競合EC","お客様SNS","チャッピーおすすめ"];
+      const likeKey = "kirii-daily-liked";
+      let selectedCategory = "すべて";
+      function byId(id) { return document.getElementById(id); }
+      function createEl(tag, className, text) {
+        const el = document.createElement(tag);
+        if (className) el.className = className;
+        if (text !== undefined) el.textContent = text;
+        return el;
+      }
+      function getLikes() { return JSON.parse(localStorage.getItem(likeKey) || "[]"); }
+      function saveLikes(likes) { localStorage.setItem(likeKey, JSON.stringify(likes)); }
+      function escapeHtml(text) {
+        return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      }
+      function renderCategoryTabs() {
+        const wrap = byId("categoryTabs");
+        wrap.replaceChildren();
+        categories.forEach(function (category) {
+          const button = createEl("button", selectedCategory === category ? "active" : "", category);
+          button.addEventListener("click", function () { selectedCategory = category; renderArticles(); });
+          wrap.appendChild(button);
+        });
+        const list = byId("categoryList");
+        list.replaceChildren();
+        categories.filter(function (category) { return category !== "すべて"; }).forEach(function (category) {
+          const count = issue.articles.filter(function (article) { return article.category === category; }).length;
+          const item = createEl("li");
+          item.append(createEl("strong", "", category), createEl("span", "", count + "件"));
+          list.appendChild(item);
+        });
+      }
+      function renderArticles() {
+        const likes = getLikes();
+        const articles = issue.articles.filter(function (article) {
+          return selectedCategory === "すべて" || article.category === selectedCategory;
+        });
+        byId("articleCount").textContent = String(issue.articles.length);
+        const list = byId("articleList");
+        list.replaceChildren();
+        articles.forEach(function (article) { list.appendChild(renderArticle(article, likes.includes(article.id))); });
+        renderLikedList();
+      }
+      function renderArticle(article, liked) {
+        const card = createEl("article", (liked ? "article-card liked" : "article-card") + (article.imageUrl ? "" : " no-thumb"));
+        if (article.imageUrl) {
+          const photo = createEl("div", "photo has-image");
+          const img = document.createElement("img");
+          img.src = article.imageUrl;
+          img.alt = article.title;
+          img.loading = "lazy";
+          img.referrerPolicy = "no-referrer";
+          img.addEventListener("error", function () {
+            card.classList.add("no-thumb");
+            photo.remove();
+          });
+          photo.appendChild(img);
+          card.appendChild(photo);
+        }
+        const body = document.createElement("div");
+        const meta = createEl("div", "meta-row");
+        meta.append(createEl("span", "tag cat", article.category), createEl("span", "tag hot", article.source));
+        body.appendChild(meta);
+        body.appendChild(createEl("h3", "", article.title));
+        body.appendChild(createEl("div", "source-name", "情報元：" + article.source));
+        const sourceSummary = createEl("div", "source-summary-box");
+        sourceSummary.append(createEl("strong", "", "記事サマリー"), document.createTextNode(article.summary || ""));
+        body.appendChild(sourceSummary);
+        const analysis = createEl("div", "analysis-box");
+        analysis.append(createEl("strong", "", "分析コメント"), document.createTextNode(article.analysis || ""));
+        body.appendChild(analysis);
+        const action = createEl("div", "action-box");
+        action.append(createEl("strong", "", "アクションプラン"), document.createTextNode(article.action || ""));
+        body.appendChild(action);
+        const row = createEl("div", "button-row");
+        const link = createEl("a", "link-button", "情報元リンク");
+        link.href = article.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        const like = createEl("button", liked ? "btn-like active" : "btn-like", liked ? "いいね解除" : "いいね！");
+        like.addEventListener("click", function () { toggleLike(article.id); });
+        row.append(link, like);
+        body.appendChild(row);
+        card.appendChild(body);
+        return card;
+      }
+      function toggleLike(id) {
+        let likes = getLikes();
+        likes = likes.includes(id) ? likes.filter(function (value) { return value !== id; }) : likes.concat(id);
+        saveLikes(likes);
+        renderArticles();
+      }
+      function renderLikedList() {
+        const likes = getLikes();
+        const liked = issue.articles.filter(function (article) { return likes.includes(article.id); });
+        byId("likedCount").textContent = String(liked.length);
+        const list = byId("likedList");
+        list.replaceChildren();
+        if (liked.length === 0) {
+          list.appendChild(createEl("div", "liked-item", "まだいいね記事はありません。"));
+          return;
+        }
+        liked.forEach(function (article) {
+          const item = createEl("div", "liked-item");
+          item.append(createEl("strong", "", article.title), createEl("div", "", article.category + " / " + article.source), createEl("div", "", article.summary));
+          list.appendChild(item);
+        });
+      }
+      function formatVolume(value) {
+        if (value === null || value === undefined) return "未取得";
+        if (value >= 1000000) return (value / 1000000).toFixed(2) + "M";
+        if (value >= 1000) return (value / 1000).toFixed(1) + "K";
+        return String(value);
+      }
+      function renderTraffic() {
+        const rows = issue.trafficRows || [];
+        const chart = byId("trafficChart");
+        const width = 960;
+        const height = 380;
+        const colors = ["#17466e", "#0f766e", "#b45309", "#6d28d9", "#be185d"];
+        const values = rows.flatMap(function (row) { return row.visits || []; }).filter(function (value) { return typeof value === "number"; });
+        const maxValue = Math.max(1, ...values);
+        const minValue = Math.max(1, Math.min(...values));
+        const yTicks = [10000, 50000, 100000, 500000, 1000000, 5000000, 20000000].filter(function (value) {
+          return value >= minValue * 0.7 && value <= maxValue * 1.2;
+        });
+        const left = 104;
+        const right = 815;
+        const top = 42;
+        const bottom = 300;
+        const logMin = Math.log10(Math.max(1000, minValue * 0.6));
+        const logMax = Math.log10(maxValue * 1.35);
+        function xFor(index, length) {
+          return left + index * ((right - left) / Math.max(1, length - 1));
+        }
+        function yFor(value) {
+          return bottom - ((Math.log10(value) - logMin) / (logMax - logMin)) * (bottom - top);
+        }
+        let svg = "<svg viewBox='0 0 " + width + " " + height + "' role='img' aria-label='競合EC来訪ボリューム'>";
+        svg += "<rect x='0' y='0' width='" + width + "' height='" + height + "' rx='18' fill='#f8fafc'></rect>";
+        yTicks.forEach(function (tick) {
+          const y = yFor(tick);
+          svg += "<line x1='" + left + "' y1='" + y + "' x2='" + right + "' y2='" + y + "' stroke='#e5e7eb'></line>";
+          svg += "<text x='" + (left - 12) + "' y='" + (y + 4) + "' text-anchor='end' fill='#6b7280' font-size='14' font-weight='700'>" + formatVolume(tick) + "</text>";
+        });
+        const xLabels = ["60日前", "45日前", "30日前", "15日前", "直近"];
+        const xIndexes = [0, 2, 4, 6, 8];
+        xLabels.forEach(function (label, index) {
+          const x = xFor(xIndexes[index], 9);
+          svg += "<line x1='" + x + "' y1='" + top + "' x2='" + x + "' y2='" + bottom + "' stroke='#eef2f7'></line>";
+          svg += "<text x='" + x + "' y='340' text-anchor='middle' fill='#374151' font-size='17' font-weight='900'>" + label + "</text>";
+        });
+        svg += "<line x1='" + left + "' y1='" + top + "' x2='" + left + "' y2='" + bottom + "' stroke='#94a3b8' stroke-width='2'></line>";
+        svg += "<line x1='" + left + "' y1='" + bottom + "' x2='" + right + "' y2='" + bottom + "' stroke='#94a3b8' stroke-width='2'></line>";
+        svg += "<text x='18' y='32' fill='#374151' font-size='14' font-weight='900'>訪問数 / 週</text>";
+        svg += "<text x='390' y='368' fill='#374151' font-size='15' font-weight='900'>過去60日間の推定推移</text>";
+        if (yTicks.length === 0) {
+          svg += "<text x='120' y='190' fill='#6b7280' font-size='16'>表示できる訪問数データがありません</text>";
+        }
+        rows.forEach(function (row, rowIndex) {
+          const usable = (row.visits || []).map(function (value, index) { return { value: value, index: index }; }).filter(function (point) { return typeof point.value === "number"; });
+          const points = usable.map(function (point) {
+            const x = xFor(point.index, usable.length);
+            const y = yFor(point.value);
+            return x + "," + y;
+          }).join(" ");
+          svg += "<polyline points='" + points + "' fill='none' stroke='" + colors[rowIndex % colors.length] + "' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'></polyline>";
+          usable.forEach(function (point) {
+            svg += "<circle cx='" + xFor(point.index, usable.length) + "' cy='" + yFor(point.value) + "' r='4' fill='" + colors[rowIndex % colors.length] + "'></circle>";
+          });
+          const latest = usable[usable.length - 1];
+          if (latest) {
+            svg += "<text x='" + (right + 12) + "' y='" + (yFor(latest.value) + 4) + "' fill='" + colors[rowIndex % colors.length] + "' font-size='13' font-weight='900'>" + escapeHtml(row.site) + " " + formatVolume(latest.value) + "</text>";
+          }
+          svg += "<text x='126' y='" + (24 + rowIndex * 17) + "' fill='" + colors[rowIndex % colors.length] + "' font-size='13' font-weight='800'>" + escapeHtml(row.site + " / " + row.confidence) + "</text>";
+        });
+        svg += "</svg>";
+        chart.innerHTML = svg;
+
+        const table = document.createElement("table");
+        table.innerHTML = "<thead><tr><th>サイト</th><th>ドメイン</th><th>月間訪問</th><th>直近週</th><th>Pages/Visit</th><th>区分</th><th>出典</th></tr></thead>";
+        const tbody = document.createElement("tbody");
+        rows.forEach(function (row) {
+          const tr = document.createElement("tr");
+          const latest = (row.visits || []).filter(function (value) { return typeof value === "number"; }).slice(-1)[0];
+          tr.innerHTML = "<td>" + escapeHtml(row.site) + "</td><td>" + escapeHtml(row.domain) + "</td><td>" + formatVolume(row.monthlyVisits) + "</td><td>" + formatVolume(latest) + "</td><td>" + (row.pagesPerVisit || "未取得") + "</td><td>" + escapeHtml(row.confidence || "推定") + "</td><td>" + escapeHtml(row.source) + "</td>";
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        byId("trafficTable").replaceChildren(table);
+      }
+      function exportLikedPdf() {
+        const likes = getLikes();
+        const liked = issue.articles.filter(function (article) { return likes.includes(article.id); });
+        if (liked.length === 0) { alert("PDF出力するいいね記事がありません。"); return; }
+        const win = window.open("", "_blank");
+        if (!win) { alert("ポップアップがブロックされました。ブラウザ設定を確認してください。"); return; }
+        const doc = win.document;
+        doc.open();
+        doc.write("<!DOCTYPE html><html lang='ja'><head><meta charset='UTF-8'><title>いいね記事PDF</title><style>body{font-family:sans-serif;line-height:1.7;padding:28px;color:#1f2937}h1{font-size:24px}.item{border-bottom:1px solid #ddd;padding:14px 0}.meta{color:#666;font-size:12px}a{color:#0f766e}</style></head><body>");
+        doc.write("<h1>桐井製作所・きりいーね いいね記事まとめ</h1>");
+        liked.forEach(function (article) {
+          doc.write("<div class='item'>");
+          doc.write("<h2>" + escapeHtml(article.title) + "</h2>");
+          doc.write("<div class='meta'>" + escapeHtml(issue.label + " / " + article.category + " / " + article.source) + "</div>");
+          doc.write("<p><strong>サマリー：</strong>" + escapeHtml(article.summary || "") + "</p>");
+          doc.write("<p><strong>分析：</strong>" + escapeHtml(article.analysis || "") + "</p>");
+          doc.write("<p><strong>アクション：</strong>" + escapeHtml(article.action || "") + "</p>");
+          doc.write("<p><a href='" + encodeURI(article.url) + "'>情報元リンク</a></p>");
+          doc.write("</div>");
+        });
+        doc.write("</body></html>");
+        doc.close();
+        win.focus();
+        win.print();
+      }
+      function clearLikes() { saveLikes([]); renderArticles(); }
+      byId("exportPdfButton").addEventListener("click", exportLikedPdf);
+      byId("clearLikesButton").addEventListener("click", clearLikes);
+      byId("issueSelect").addEventListener("change", function (event) {
+        if (event.target.value) window.location.href = event.target.value;
+      });
+      renderCategoryTabs();
+      renderArticles();
+      renderTraffic();
+    }());
+  </script>
+</body>
+</html>
