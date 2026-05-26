@@ -3,6 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const TIME_ZONE = "Asia/Tokyo";
+const BROWSER_USER_AGENT = "Mozilla/5.0";
 
 const CATEGORIES = [
   "すべて",
@@ -26,6 +27,14 @@ const FEEDS = [
   { category: "チャッピーおすすめ", query: "建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰" },
   { category: "チャッピーおすすめ", query: "ナフサ 建材 価格 OR 住宅資材 納期" }
 ];
+
+const ARTICLE_URL_OVERRIDES = new Map([
+  ["東京都が国交省に「都営住宅用資材の安定供給・高騰対策」で緊急要望", "https://www.jutaku-s.com/news/id/0000038329"],
+  ["ノダ、建具・収納など建材製品を値上げ 7月1日出荷分から", "https://www.s-housing.jp/archives/420630"],
+  ["チヨダウーテ、ジプスターを不燃仕様に統合 6月1日から受注開始", "https://www.s-housing.jp/archives/420727"],
+  ["【不動産投資の落とし穴】 設備が入らなくても引渡し？ 「ナフサショック」で変わる新築・リフォーム投資の注意点", "https://www.kenbiya.com/ar/ns/jiji/legal_knowledge/10153.html"],
+  ["ナフサショックとは？製造業に影響する“原材料危機”の正体", "https://mitsudenshi.co.jp/12602/"]
+]);
 
 const CRAWL_SOURCES = [
   {
@@ -257,7 +266,11 @@ function normalizeArticleText(value = "") {
   return stripHtml(value)
     .replace(/※このニュースの記事本文は[^。]*。?/g, " ")
     .replace(/この記事はいかがでしたか[\s\S]*$/u, "")
-    .replace(/続きを読む|関連ニュース|関連記事|コメント|シェア|ポスト|ログイン|会員登録|広告|PR|TREK|試読会員|無料体験|著作権の利用手続き/g, " ")
+    .replace(/続きを読む|関連ニュース|関連記事|関連記事はこちら|コメント|シェア|ポスト|ログイン|会員登録|広告|PR|TREK|試読会員|無料体験|著作権の利用手続き/g, " ")
+    .replace(/PDF形式のファイルをご覧いただくためには[\s\S]*?ください。?/g, " ")
+    .replace(/Adobe Acrobat Reader[^。]*。?/g, " ")
+    .replace(/住宅ビジネスに関する情報は[^。]*。?/g, " ")
+    .replace(/中東情勢[―-]受注・供給動向、各社対応まとめ/g, " ")
     .replace(/Copyright[^。]*。?/gi, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -293,115 +306,66 @@ function splitSentences(text = "") {
     .split(/(?<=[。！？])\s*/u)
     .map((sentence) => sentence.trim())
     .filter((sentence) => sentence.length >= 18)
-    .filter((sentence) => !/Cookie|JavaScript|ブラウザ|有料会員|購読|個人情報|利用規約|広告|ランキング/.test(sentence));
-}
-
-function titleBasedSummary(title = "", source = "") {
-  const cleanTitle = cleanNewsTitle(title);
-  const text = cleanTitle;
-  const actor = text.match(/(国交省|国土交通省|東京都|政府|全建総連|LIXIL|リクシル|永大産業|ノダ|大建工業|建デポ|モノタロウ|AUN WORKS|ミラタップ)/)?.[1] || source;
-  const date = text.match(/\d{1,2}月\d{1,2}日(?:受注分|出荷分)?から/)?.[0] || "";
-  const productMatch = text.match(/(.{2,40})(?:を|など)?(?:値上げ|価格改定)/);
-  const product = productMatch?.[1]?.replace(actor, "").replace(/、?$/, "").trim();
-  const points = [];
-  if (/値上げ|価格改定|高騰|コスト|原材料|ナフサ/.test(text)) {
-    points.push(`${actor}による価格改定・コスト上昇の動き`);
-    if (product) points.push(`対象は${product}周辺の製品・資材`);
-    if (date) points.push(`適用時期は${date}`);
-  }
-  if (/納期|供給|不足|目詰まり|調達|流通|安定供給/.test(text)) {
-    points.push("建設・住宅資材の供給不安や流通停滞");
-    points.push("工務店、一人親方、住宅工事の工程への影響");
-  }
-  if (/経済対策|政府|国交省|東京都|要望|申し入れ|制度|補助金/.test(text)) {
-    points.push("行政・団体による要望、情報提供、対策の動き");
-  }
-  if (/工事現場|中小建設|声|追いつめ/.test(text)) {
-    points.push("現場側の資材調達、採算、工期への負担");
-  }
-  const pointText = points.length ? [...new Set(points)].join("、") : "建材市場に関わる新しい動き";
-  return `${source}の記事は「${cleanTitle}」を扱っています。内容の中心は、${pointText}です。価格、納期、供給、対象品目、実施時期、現場への影響を読み取るべきニュースで、住宅・建築関連事業者の調達判断や見積条件にも関わる可能性があります。`;
+    .filter((sentence) => !/Cookie|JavaScript|ブラウザ|有料会員|購読|個人情報|利用規約|広告|ランキング|ポータルサイト|ECサイト|オンラインで完結|過去記事|リーダーアプリ|化学の力で/.test(sentence))
+    .filter((sentence) => !/\.\.\.|…\s*(化学|工業団地|過去記事|その日のニュース|オンライン|日刊工業新聞社のEC)/.test(sentence));
 }
 
 function buildArticleSummary({ title, source, description = "", body = "" }) {
   const cleanTitle = cleanNewsTitle(title);
   const terms = titleTerms(cleanTitle);
-  const candidates = [
-    ...splitSentences(body),
-    ...splitSentences(description)
-  ];
+  const candidates = [...splitSentences(body), ...splitSentences(description)];
   const unique = [];
   const seen = new Set();
   for (const sentence of candidates) {
     const compact = sentence.replace(/\s/g, "");
     if (seen.has(compact)) continue;
     if (cleanTitle && compact.includes(cleanTitle.replace(/\s/g, ""))) continue;
+    if (/記事は|取り上げています|扱っています|読みどころ|報道の中心|確認が必要|必要があります|反映します|追加してください/.test(sentence)) continue;
+    if (/Yahoo! JAPAN|ご覧になろうとしているページ|検索した結果|現在表示できません|ヒットしました/.test(sentence)) continue;
     seen.add(compact);
     unique.push(sentence);
   }
-  const scored = unique
-    .map((sentence, index) => {
-      const relevance = terms.filter((term) => sentence.includes(term)).length * 12
-        + (/価格|高騰|値上げ|納期|供給|不足|建材|資材|住宅|建築|施工|国交省|LIXIL|EC|工務店|メーカー|原材料|ナフサ/.test(sentence) ? 8 : 0);
-      return {
-        sentence,
-        index,
-        relevance,
-        score: relevance - (index * 0.2)
-      };
-    })
+
+  const scored = unique.map((sentence, index) => {
+    const relevance = terms.filter((term) => sentence.includes(term)).length * 10
+      + (/価格|高騰|値上げ|納期|供給|不足|建材|資材|住宅|建築|施工|国交省|LIXIL|EC|工務店|メーカー|原材料|ナフサ|補助金|制度/.test(sentence) ? 7 : 0)
+      + (index < 4 ? 4 : 0);
+    return { sentence, index, relevance, score: relevance - (index * 0.15) };
+  });
+  const hasRelevant = scored.some((item) => item.relevance >= 7);
+  const pool = (hasRelevant ? scored.filter((item) => item.relevance >= 7) : scored)
     .sort((a, b) => b.score - a.score || a.index - b.index);
-  const pool = scored.some((item) => item.relevance > 0)
-    ? scored.filter((item) => item.relevance > 0)
-    : scored;
+
   const selected = [];
   let length = 0;
   for (const item of pool) {
-    if (selected.length >= 4) break;
+    if (selected.length >= 5) break;
     selected.push(item);
     length += item.sentence.length;
-    if (length >= 230) break;
+    if (length >= 240) break;
   }
   const ordered = selected.sort((a, b) => a.index - b.index).map((item) => item.sentence);
   let summary = ordered.join("");
-  if (!summary) {
-    const fallback = normalizeArticleText(description);
-    summary = fallback && fallback !== cleanTitle ? fallback : `${source}の記事は「${cleanTitle}」について伝えています。`;
-  }
-  if (cleanTitle && summary.includes(cleanTitle) && summary.includes(source) && summary.length < 120) {
-    summary = titleBasedSummary(cleanTitle, source);
-  }
-  if (summary.length < 160 && cleanTitle) {
-    const topicSignals = [];
-    const topicText = `${cleanTitle} ${summary}`;
-    if (/価格|高騰|値上げ|コスト|原材料|ナフサ/.test(topicText)) topicSignals.push("価格上昇や原材料コスト");
-    if (/納期|供給|不足|目詰まり|調達|出荷/.test(topicText)) topicSignals.push("供給不安や納期への影響");
-    if (/国交省|東京都|政府|制度|補助金|統計/.test(topicText)) topicSignals.push("行政・制度面の対応");
-    if (/メーカー|LIXIL|永大|ノダ|建材製品/.test(topicText)) topicSignals.push("メーカーの製品・価格対応");
-    const topic = topicSignals.length ? topicSignals.join("、") : "建材市場への影響";
-    const prefix = summary.includes(cleanTitle) ? "" : `${source}の記事は「${cleanTitle}」を取り上げています。`;
-    summary = `${prefix}${summary}報道の中心は、${topic}です。建材の調達、価格、現場工程、住宅・建築関連事業への影響を示す内容です。`;
-  }
-  if (cleanTitle && summary.includes(cleanTitle) && /報道の中心|主な論点/.test(summary) && summary.length < 210) {
-    summary = titleBasedSummary(cleanTitle, source);
-  }
-  if (summary.length < 200) {
-    const topicText = `${cleanTitle} ${summary}`;
-    const market = /建材|資材|住宅|建築|施工|工務店|メーカー/.test(topicText)
-      ? "建材市場や住宅・建築現場への波及"
-      : "関連業界への波及";
-    const cost = /価格|高騰|値上げ|原材料|ナフサ|コスト/.test(topicText)
-      ? "価格や原材料コスト"
-      : "需給や事業環境";
-    const supply = /納期|供給|不足|調達|目詰まり|出荷/.test(topicText)
-      ? "供給・納期面の変化"
-      : "今後の対応";
-    summary = `${summary}${market}に関わる内容で、${cost}、${supply}、発表主体や企業・行政の対応が主な読みどころです。`;
-  }
+
+  if (!summary) return "";
+
   if (summary.length > 300) {
-    summary = `${summary.slice(0, 299)}…`;
+    const clipped = summary.slice(0, 300);
+    const boundary = Math.max(clipped.lastIndexOf("。"), clipped.lastIndexOf("！"), clipped.lastIndexOf("？"));
+    summary = boundary >= 180 ? clipped.slice(0, boundary + 1) : `${summary.slice(0, 299)}…`;
   }
-  return summary;
+  return summary.trim();
+}
+
+function hasSubstantialSummary(summary = "", { minLength = 180 } = {}) {
+  const text = normalizeArticleText(summary);
+  if (text.length < minLength) return false;
+  if (/記事は|取り上げています|扱っています|読みどころ|報道の中心|確認が必要|必要があります|反映します|追加してください/.test(text)) return false;
+  if (/Yahoo! JAPAN|ご覧になろうとしているページ|検索した結果|現在表示できません|ヒットしました/.test(text)) return false;
+  if (/PDF形式のファイル|Adobe Acrobat Reader|トップページ|政策、報道発表資料、統計情報/.test(text)) return false;
+  if (/」←|【福岡発】|関連記事.*関連記事/.test(text)) return false;
+  if ((text.match(/。/g) || []).length < 2 && text.length < 240) return false;
+  return true;
 }
 
 function makeAnalysis(article) {
@@ -466,6 +430,15 @@ function isGoogleNewsUrl(url = "") {
   }
 }
 
+function isHomepageUrl(url = "") {
+  try {
+    const parsed = new URL(url);
+    return parsed.pathname === "/" || parsed.pathname === "";
+  } catch {
+    return false;
+  }
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -475,7 +448,7 @@ async function fetchOgImage(url) {
   try {
     const response = await fetch(url, {
       signal: AbortSignal.timeout(8000),
-      headers: { "User-Agent": "Mozilla/5.0 kirii-daily-news/1.0" }
+      headers: { "User-Agent": BROWSER_USER_AGENT }
     });
     if (!response.ok) return "";
     const contentType = response.headers.get("content-type") || "";
@@ -524,7 +497,7 @@ async function fetchArticleText(url) {
   try {
     const response = await fetch(url, {
       signal: AbortSignal.timeout(10000),
-      headers: { "User-Agent": "Mozilla/5.0 kirii-daily-news/1.0" }
+      headers: { "User-Agent": BROWSER_USER_AGENT }
     });
     if (!response.ok) return { description: "", body: "" };
     const contentType = response.headers.get("content-type") || "";
@@ -603,13 +576,13 @@ async function findWithYahooSearch(queries, source, sourceUrl) {
     url.searchParams.set("p", query);
     const response = await fetch(url, {
       signal: AbortSignal.timeout(10000),
-      headers: { "User-Agent": "Mozilla/5.0 kirii-daily-news/1.0" }
+      headers: { "User-Agent": BROWSER_USER_AGENT }
     });
     if (!response.ok) continue;
     const html = await response.text();
     const candidates = [...html.matchAll(/https?:\/\/[^"'<> ]+/g)]
       .map((match) => cleanSearchCandidate(match[0]))
-      .filter(usableArticleCandidate);
+      .filter((candidate) => usableArticleCandidate(candidate) && !isHomepageUrl(candidate));
     const sourceMatch = candidates.find((candidate) => candidateMatchesSource(candidate, source, sourceUrl));
     if (sourceMatch) return sourceMatch;
     if (candidates[0]) return candidates[0];
@@ -627,7 +600,7 @@ async function fetchSearchSnippetText(title, source) {
       url.searchParams.set("p", query);
       const response = await fetch(url, {
         signal: AbortSignal.timeout(10000),
-        headers: { "User-Agent": "Mozilla/5.0 kirii-daily-news/1.0" }
+        headers: { "User-Agent": BROWSER_USER_AGENT }
       });
       if (!response.ok) continue;
       const text = normalizeArticleText(await response.text());
@@ -652,14 +625,14 @@ async function findWithDuckDuckGo(queries) {
     url.searchParams.set("q", query);
     const response = await fetch(url, {
       signal: AbortSignal.timeout(10000),
-      headers: { "User-Agent": "Mozilla/5.0 kirii-daily-news/1.0" }
+      headers: { "User-Agent": BROWSER_USER_AGENT }
     });
     if (!response.ok) continue;
     const html = await response.text();
     const matches = [...html.matchAll(/class=["']result__a["'][^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
     for (const match of matches) {
       const candidate = decodeDuckDuckGoUrl(decodeXml(match[1]));
-      if (usableArticleCandidate(candidate)) return candidate;
+      if (usableArticleCandidate(candidate) && !isHomepageUrl(candidate)) return candidate;
     }
     await sleep(350);
   }
@@ -668,6 +641,7 @@ async function findWithDuckDuckGo(queries) {
 
 async function findOriginalArticleUrl(title, source, sourceUrl = "") {
   const cleanTitle = cleanNewsTitle(title);
+  if (ARTICLE_URL_OVERRIDES.has(cleanTitle)) return ARTICLE_URL_OVERRIDES.get(cleanTitle);
   const queries = [
     `${cleanTitle} ${source}`.trim(),
     sourceUrl ? `site:${hostOf(sourceUrl)} ${cleanTitle}` : "",
@@ -728,15 +702,28 @@ async function fetchGoogleNews(feed, date) {
     const googleNewsUrl = tag(item, "link");
     const originalUrl = await findOriginalArticleUrl(title, source, sourceUrl);
     const articleUrl = originalUrl || googleNewsUrl;
+    if (isGoogleNewsUrl(articleUrl) || isHomepageUrl(articleUrl)) {
+      console.warn(`Skipped unresolved article URL: ${cleanNewsTitle(title)}`);
+      await sleep(500);
+      continue;
+    }
     const rssImage = imageFromRssItem(item);
     const imageUrl = rssImage && !isGoogleNewsImage(rssImage)
       ? rssImage
       : await fetchOgImage(originalUrl);
     const articleText = await fetchArticleText(articleUrl);
     const cleanArticleTitle = cleanNewsTitle(title);
-    const thinArticleText = normalizeArticleText(articleText.body).length < 100
-      && (!articleText.description || normalizeArticleText(articleText.description).includes(cleanArticleTitle));
-    const searchText = thinArticleText ? await fetchSearchSnippetText(title, source) : "";
+    const articleSummary = buildArticleSummary({
+      title,
+      source,
+      description: `${articleText.description || ""} ${summary || ""}`,
+      body: articleText.body || ""
+    });
+    if (!hasSubstantialSummary(articleSummary)) {
+      console.warn(`Skipped thin article: ${cleanArticleTitle || title}`);
+      await sleep(500);
+      continue;
+    }
     const article = {
       id: `${date}-${feed.category.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}-${index + 1}`,
       category: feed.category,
@@ -745,12 +732,7 @@ async function fetchGoogleNews(feed, date) {
       url: articleUrl,
       googleNewsUrl,
       publishedAt: safeIsoDate(tag(item, "pubDate")),
-      summary: buildArticleSummary({
-        title,
-        source,
-        description: `${articleText.description || ""} ${summary || ""}`,
-        body: `${articleText.body || ""} ${searchText}`
-      }),
+      summary: articleSummary,
       analysis: "",
       action: "",
       imageUrl,
@@ -817,7 +799,7 @@ async function fetchRealtimePosts(query, date) {
       source: `Yahoo!リアルタイム検索 / ${entry.screenName || entry.name || query}`,
       url: entry.url || url.toString(),
       publishedAt: entry.createdAt ? new Date(entry.createdAt * 1000).toISOString() : new Date().toISOString(),
-      summary: limitText(`「${query}」に関連する公開SNS投稿です。投稿では、${body}`, 300),
+      summary: limitText(body, 300),
       analysis: "",
       action: "",
       imageUrl: entry.profileImage || "",
@@ -870,19 +852,21 @@ async function crawlSourcePage(source, date) {
     body: extractArticleBody(html)
   });
 
-  articles.push({
-    id: `${date}-crawl-${articles.length + 1}-${source.name.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}`,
-    category: source.category,
-    title: ogTitle || pageTitle,
-    source: source.name,
-    url: source.url,
-    publishedAt: new Date().toISOString(),
-    summary: baseSummary,
-    analysis: "公開ページのタイトル、説明文、リンク見出しから、建材市場ニュースとして確認すべきトピックを抽出しています。RSSに出ない固定ページ更新やキャンペーン導線も拾える可能性があります。",
-    action: "ページ本文の更新有無、関連商品カテゴリ、価格・納期・制度対応への影響を確認し、必要に応じて商品ページ、FAQ、メルマガ、営業資料に反映します。",
-    imageUrl: ogImage ? absoluteUrl(source.url, ogImage) : "",
-    imageLabel: "巡回"
-  });
+  if (hasSubstantialSummary(baseSummary) && !/トップ|ホーム|サイトマップ|一覧/.test(ogTitle || pageTitle)) {
+    articles.push({
+      id: `${date}-crawl-${articles.length + 1}-${source.name.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}`,
+      category: source.category,
+      title: ogTitle || pageTitle,
+      source: source.name,
+      url: source.url,
+      publishedAt: new Date().toISOString(),
+      summary: baseSummary,
+      analysis: "公開ページ本文から抽出した更新候補です。RSSに出ない固定ページ更新やキャンペーン導線も拾える可能性があります。",
+      action: "ページ本文の更新有無、関連商品カテゴリ、価格・納期・制度対応への影響を確認し、必要に応じて商品ページ、FAQ、メルマガ、営業資料に反映します。",
+      imageUrl: ogImage ? absoluteUrl(source.url, ogImage) : "",
+      imageLabel: "巡回"
+    });
+  }
 
   const linkMatches = [...html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
   const seenLinks = new Set([source.url]);
@@ -890,8 +874,17 @@ async function crawlSourcePage(source, date) {
     const href = absoluteUrl(source.url, match[1]);
     const text = stripHtml(match[2]);
     if (!href || seenLinks.has(href) || text.length < 6 || text.length > 90) continue;
+    if (isHomepageUrl(href) || /トップ|ホーム|サイトマップ|一覧|Adobe|Acrobat|PDF/.test(text)) continue;
     if (!isRelevant(text, source.keywords)) continue;
     seenLinks.add(href);
+    const linkedText = await fetchArticleText(href);
+    const linkedSummary = buildArticleSummary({
+      title: text,
+      source: source.name,
+      description: linkedText.description,
+      body: linkedText.body
+    });
+    if (!hasSubstantialSummary(linkedSummary)) continue;
     articles.push({
       id: `${date}-crawl-${articles.length + 1}-${source.name.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}`,
       category: source.category,
@@ -899,13 +892,8 @@ async function crawlSourcePage(source, date) {
       source: source.name,
       url: href,
       publishedAt: new Date().toISOString(),
-      summary: buildArticleSummary({
-        title: text,
-        source: source.name,
-        description: `${source.name}の公開ページ内で確認した関連リンクです。見出しは「${text}」。${source.keywords.join("、")}など建材市場に関わる語が含まれており、リンク先で詳細確認が必要な更新候補です。`,
-        body: ""
-      }),
-      analysis: "リンク見出しベースのトピック候補です。RSSより広く拾える一方、重要度判定は粗いため、実運用では差分検知や本文要約と組み合わせると精度が上がります。",
+      summary: linkedSummary,
+      analysis: "リンク先本文から抽出したトピックです。RSSに出ない更新を拾うため、ページ巡回で本文取得できたものだけを掲載しています。",
       action: "リンク先を確認し、きりいーねの商品カテゴリ、仕入れ、価格・納期表示、施工説明、キャンペーン導線に関係するものだけを採用してください。",
       imageUrl: ogImage ? absoluteUrl(source.url, ogImage) : "",
       imageLabel: "巡回リンク"
@@ -918,9 +906,10 @@ async function crawlSourcePage(source, date) {
 }
 
 async function collectArticles(date) {
+  const isToday = date === jstDate();
   const results = await Promise.allSettled([
     ...FEEDS.map((feed) => fetchGoogleNews(feed, date)),
-    collectSocialSearches(date),
+    ...(isToday ? [collectSocialSearches(date)] : []),
     ...CRAWL_SOURCES.map((source) => crawlSourcePage(source, date))
   ]);
   const seen = new Set();
@@ -959,17 +948,11 @@ async function collectArticles(date) {
         .slice(0, 18 - selected.length));
     }
     selected.splice(18);
-    if (selected.length < 18) {
-      selected.push(...articles
-        .filter((article) => article.id.includes("-crawl-"))
-        .sort(compareArticles)
-        .slice(0, 18 - selected.length));
-    }
     return selected.slice(0, 18).sort(compareArticles);
   }
 
-  console.warn("No live RSS articles were collected. Using bundled fallback articles.");
-  return FALLBACK_ARTICLES.map((article) => ({ ...article, id: article.id.replace("2026-05-24", date) }));
+  console.warn("No articles with readable source text were collected.");
+  return [];
 }
 
 function renderPage(data, { latest = false, archives = [] } = {}) {
