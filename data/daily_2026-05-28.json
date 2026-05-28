@@ -1,7 +1,7 @@
 {
   "date": "2026-05-28",
   "label": "2026年05月28日号",
-  "generatedAt": "2026-05-28T03:35:26.558Z",
+  "generatedAt": "2026-05-28T11:52:44.830Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -155,16 +155,42 @@
       "imageLabel": "SNS投稿"
     },
     {
-      "id": "2026-05-28-social-建設資材-納期-2059768737969131539",
+      "id": "2026-05-28-social-建材-納期-2059859325263474915",
       "category": "お客様SNS",
-      "title": "SNS投稿: 建設資材 65品目で価格改定、 納期 遅延は53品目 中東情勢で調達困難に https://t.co/I1UrEs…",
-      "source": "Yahoo!リアルタイム検索 / CriticCovid19",
-      "url": "https://x.com/CriticCovid19/status/2059768737969131539?utm_source=yjrealtime&utm_medium=search",
-      "publishedAt": "2026-05-27T22:48:30.000Z",
-      "summary": "建設資材 65品目で価格改定、 納期 遅延は53品目 中東情勢で調達困難に https://t.co/I1UrEsWsuJ",
+      "title": "SNS投稿: 本日もある 建材 商社と打ち合わせをしたが、この材料は巷ではモノが入ってこないという声が挙がっているが、実は材料は…",
+      "source": "Yahoo!リアルタイム検索 / fujiwaramasaaki",
+      "url": "https://x.com/fujiwaramasaaki/status/2059859325263474915?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-28T04:48:28.000Z",
+      "summary": "本日もある 建材 商社と打ち合わせをしたが、この材料は巷ではモノが入ってこないという声が挙がっているが、実は材料は普通に入ってきており前年以上の入荷状況である。当社も 納期 遅延はあれど調達できている。止まっている現場は一つもない。（まあ当社規模だからってのもあるけど）",
       "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
       "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
-      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLbEpGpJ6bwp2MhZ2M1OYhgJpWaPRpAYkUmLSc7SRuRXVfGIg16Nr19sQ7G_e6mdcF3KbJVotiJPbEEpqGNKzROPfnZSLiVkmfLsLzLiW5zK0tui6RAJ24ic7pyrNQRTcURdWXwKc_jnqu1uyAAq11P8M4Z-dchZ7L94_H8KXEJWY3pAIllwIHoOtb7nwe2Yk4",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLeoQYYOt0g85csdIDvk5s4sx2y748ZaVOerDvFgeY3ahjsC6j9w3QlcM4Woh4iq9WaRS-aK06KWA7eHI1Vh6Nz775h1WgotYLSVL9kyOzY9F8HduVVbQKvRH3ZwgxKXbUeKUEu_P9cKaOCL_x6j0bwdGK4zcVBgGS5gU5SXBVL4e7eFdMtMxop1Nti159am_q",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-05-28-social-建材-価格-2059952182540300301",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 石油問題は、 ガソリン 価格 だけの話ではなく、 配送費 食品包装 洗剤 樹脂 建材 電気代 など、 生活の見えな…",
+      "source": "Yahoo!リアルタイム検索 / th__shufu",
+      "url": "https://x.com/th__shufu/status/2059952182540300301?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-28T10:57:27.000Z",
+      "summary": "石油問題は、 ガソリン 価格 だけの話ではなく、 配送費 食品包装 洗剤 樹脂 建材 電気代 など、 生活の見えない部分へ広がりやすいです 最近の「疲れやすさ」は、 単なる気分ではなく、 小さなコスト増加が積み重なった結果でもあるのかもしれません",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL6tcoSIrMXllx2NFq1bz-nFrkelQt_WI-be-ASl4rNAzPLn9lqH2r1eOuIB1qyvMOH3JFdqJqfJREwnYhHV1haY34EiWPEqWvdv8_Cs0tLydDlz8yp5KtWcK6SWz55bt4ImK725fCmQUVNKPEgsjPoJZGnZ1jUzX1olCV98ug2grOFfjTRzJu_Jf33gmtcRHD",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-05-28-social-建材-価格-2059840821726498888",
+      "category": "お客様SNS",
+      "title": "SNS投稿: メンテだったので昼にデイリー ハトピアのアプデ情報多くて難しい！なに！パーティなに！ 浮いてる本！なに！ 研究所増…",
+      "source": "Yahoo!リアルタイム検索 / tamtamutopi",
+      "url": "https://x.com/tamtamutopi/status/2059840821726498888?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-05-28T03:34:56.000Z",
+      "summary": "メンテだったので昼にデイリー ハトピアのアプデ情報多くて難しい！なに！パーティなに！ 浮いてる本！なに！ 研究所増えてる！なに！ ボブじいなんか売り始めた！なに！ パーティ 建材 使い方以前に全部星 価格 なに！全部買うとめちゃいるんだけど！なに！ また建築しなきゃだめなの！なに！！！ https://t.co/VIxl87I9y3",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLYB4Ad9AkhC6G0Hpcoy-_7s-VSizu2J_qQIS9gfby4qDDbC21iItmuAEVoFXefY39vocCAKrQlTLIMTjFJ_kjE3diQIUx_h5q2IvaDYaDaPVMbFOYgyIB9IyfYDy6bG2HUhQq8rZMT0hH0y7bT7DOrO6TW945W6do38BTOiNJg58DKm-Tr7JgS3yVp7PpDefi",
       "imageLabel": "SNS投稿"
     },
     {
@@ -178,32 +204,6 @@
       "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では ナフサ に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
       "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. ナフサ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
       "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLsKKRw-7KTsix5FXt_q54lWTjYUcozPsF5V14wxmuFaV0YjBr1W4eiCuzNQfKiXWp4Q0G5TwRvpTXrvADcGhGccGvGiEsaoTjF6TjEGpzxp__HGP4RTpRWJX2z_HMvqXhaAZ7tdu5jbtEnpEJq8WThOwP2Ek7Q1tJ5aHu2nAJJABnF6yvQV-PtTa3Rc0o6HsG",
-      "imageLabel": "SNS投稿"
-    },
-    {
-      "id": "2026-05-28-social-建材-価格-2059787006516003124",
-      "category": "お客様SNS",
-      "title": "SNS投稿: DIYに優しい 建材 も良心 価格 のホームセンターまとめ ⚫︎カインズ 初心者にも優しい ⚫︎コメリ 大型店だと…",
-      "source": "Yahoo!リアルタイム検索 / toyohahome",
-      "url": "https://x.com/toyohahome/status/2059787006516003124?utm_source=yjrealtime&utm_medium=search",
-      "publishedAt": "2026-05-28T00:01:06.000Z",
-      "summary": "DIYに優しい 建材 も良心 価格 のホームセンターまとめ ⚫︎カインズ 初心者にも優しい ⚫︎コメリ 大型店だといろいろ揃う。安い ⚫︎コーナン マニアックな資材がある店舗も 砂利とか大量買いなら 建材 屋さん最強だけど、トラックないとムズイ😆",
-      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
-      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
-      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLkNVupaVM8AXkxEwyXGeM7QZRJQH7CeW6YC5FQvKY_eJ6_etzwatx7vV5Ngdvfga82KEmrO3ayvQqGE6dpMOKMqVc8Jp19K5cPE6TBa0abZ-Qwed_pQLtFi3IHDcuXghalZWIlhKlmFpC10bns-DgNM6IHtjOaNnfW72EuCfVKnX8z9I4-iVbrDhdC_Rpy3Tc",
-      "imageLabel": "SNS投稿"
-    },
-    {
-      "id": "2026-05-28-social-建材-価格-2059768271180898659",
-      "category": "お客様SNS",
-      "title": "SNS投稿: 「無垢=高い」は半分マーケティング。 杉やカバの無垢なら、HM標準の突板と 価格 帯は被る。 なのに採用されない。…",
-      "source": "Yahoo!リアルタイム検索 / hari_sumai",
-      "url": "https://x.com/hari_sumai/status/2059768271180898659?utm_source=yjrealtime&utm_medium=search",
-      "publishedAt": "2026-05-27T22:46:39.000Z",
-      "summary": "「無垢=高い」は半分マーケティング。 杉やカバの無垢なら、HM標準の突板と 価格 帯は被る。 なのに採用されない。 理由は 建材 メーカーとの年間仕入れ契約、 施工標準化、床暖パッケージとの整合性。 突板は業界オペレーションに最適化された素材。 無垢は性能で負けてるんじゃなく、 ⇓",
-      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
-      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
-      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL-SbLpxQzOGRK5TE-D_A4DsgLkgbl5FHF5fOEnSrcFIj77gxfTnm5CB2Tncj09T15BUVWcPGV_dbIEEOoF24d_TaPAsBfK-QWL_J1ZOprmjsIQP83P9CRsRLrNxkyqCFG8-clhOjtqcqxyqX1g42styuJlsb6_SH2b_55_LXdoKHvyvtdUgFzzM8miJ-_11aU",
       "imageLabel": "SNS投稿"
     }
   ]
