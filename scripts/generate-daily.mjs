@@ -210,6 +210,11 @@ function jstDate(now = new Date()) {
   return `${values.year}-${values.month}-${values.day}`;
 }
 
+function jstDateFromValue(value) {
+  const date = value instanceof Date ? value : new Date(value || Date.now());
+  return Number.isNaN(date.getTime()) ? jstDate() : jstDate(date);
+}
+
 function addDays(dateString, days) {
   const date = new Date(`${dateString}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() + days);
@@ -412,6 +417,27 @@ function makeAnalysis(article) {
         "きりいーねでは、工務店向けだけでなく、リフォーム会社がすぐ使う補修材、内装材、設備まわりの副資材を欠品させないことが売上機会になります。"
       ]);
     }
+    if (/工事、様子見|様子見した方がいい|納期 は混乱/.test(text)) {
+      return sentenceJoin([
+        "この投稿は、建材不足が顧客側の発注意欲そのものを止めているサインです。",
+        "単に納期が遅いという話ではなく、「今注文してよいのか」「待った方がよいのか」という判断保留が起きています。",
+        "きりいーねでは、納期未定の商品を隠すよりも、今発注できる商品、納期確認が必要な商品、代替相談すべき商品を分けて見せることで、顧客の様子見を具体的な問い合わせや早期発注に変える余地があります。"
+      ]);
+    }
+    if (/マイホーム|10年前よりさらに高く|新築/.test(text)) {
+      return sentenceJoin([
+        "この投稿は、建材高騰が専門業者だけでなく、一般消費者の住宅取得心理にも浸透していることを示しています。",
+        "新築価格への不安が強くなると、リフォーム、部分改修、DIY寄りの補修需要へ流れる可能性があります。",
+        "きりいーねでは、プロ向け建材ECであっても、工務店が施主に説明しやすい価格上昇背景や、予算内で提案できる代替材・部分改修材の見せ方が重要になります。"
+      ]);
+    }
+    if (/面発光|短 納期|244lm|ドットレス|160サイズ/.test(text)) {
+      return sentenceJoin([
+        "この投稿は、供給不安の話題が多い中で、短納期を明確に打ち出す建材・部材訴求が目立つ例です。",
+        "顧客は価格だけでなく、現場工程に間に合うかを重視しているため、短納期表示そのものが差別化要素になっています。",
+        "きりいーねでも、単なる商品スペックより「何日で届くか」「サイズ展開が現場調整に使えるか」「代替として提案しやすいか」を前面に出す商品群を増やすべきです。"
+      ]);
+    }
     return sentenceJoin([
       "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。",
       `投稿内では ${productText} に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。`,
@@ -499,6 +525,27 @@ function makeAction(article) {
         "1. リフォーム会社・中古再販事業者が短納期で使いやすい内装材、補修材、設備副資材を「即納・短納期」カテゴリとして切り出す。",
         "2. 新築遅延の代替需要を拾うため、リノベ・原状回復向けに買い忘れやすい副資材セットを作る。",
         "3. 顧客向け記事では、建材遅延時に先行して進められる工事と、そのために必要な資材を整理して提案する。"
+      ]);
+    }
+    if (/工事、様子見|様子見した方がいい|納期 は混乱/.test(text)) {
+      return sentenceJoin([
+        "1. 商品一覧に「即納」「納期確認」「代替相談」の3分類を表示し、顧客が様子見せず次の行動を選べるようにする。",
+        "2. 納期不安が大きいカテゴリでは、問い合わせボタンの文言を「納期を確認する」に変え、営業対応へつなげる。",
+        "3. メルマガでは不安を煽るのではなく、今週発注可能な品目と早めに確認すべき品目を分けて案内する。"
+      ]);
+    }
+    if (/マイホーム|10年前よりさらに高く|新築/.test(text)) {
+      return sentenceJoin([
+        "1. 工務店が施主説明に使えるよう、値上げ背景、代替材、部分改修で費用を抑える考え方をカテゴリ記事にまとめる。",
+        "2. 新築向けだけでなく、補修、リフォーム、部分交換で使える建材・副資材の導線を強化する。",
+        "3. 高騰局面でも提案しやすい価格帯の商品を抽出し、比較表やセット提案として見せる。"
+      ]);
+    }
+    if (/面発光|短 納期|244lm|ドットレス|160サイズ/.test(text)) {
+      return sentenceJoin([
+        "1. 短納期を訴求できる照明・内装部材を抽出し、商品一覧で納期の短さがすぐ分かる表示にする。",
+        "2. サイズ展開が多い商品は、現場寸法に合わせて選びやすい絞り込み条件を追加する。",
+        "3. 欠品・長納期品の代替候補として、短納期品を商品ページ内で提案できるよう関連付ける。"
       ]);
     }
     return sentenceJoin([
@@ -846,8 +893,7 @@ function tag(item, name) {
 
 async function fetchGoogleNews(feed, date) {
   const url = new URL("https://news.google.com/rss/search");
-  const today = jstDate();
-  const queryDatePart = date === today ? "when:7d" : `after:${date} before:${addDays(date, 1)}`;
+  const queryDatePart = `after:${date} before:${addDays(date, 1)}`;
   url.searchParams.set("q", `${feed.query} ${queryDatePart}`);
   url.searchParams.set("hl", "ja");
   url.searchParams.set("gl", "JP");
@@ -869,6 +915,11 @@ async function fetchGoogleNews(feed, date) {
     const sourceUrl = attr(sourceTag, "url");
     const summary = tag(item, "description") || title;
     const googleNewsUrl = tag(item, "link");
+    const publishedAt = safeIsoDate(tag(item, "pubDate"));
+    if (jstDateFromValue(publishedAt) !== date) {
+      console.warn(`Skipped off-date article: ${cleanNewsTitle(title)} (${jstDateFromValue(publishedAt)})`);
+      continue;
+    }
     const originalUrl = await findOriginalArticleUrl(title, source, sourceUrl);
     const articleUrl = originalUrl || googleNewsUrl;
     if (isGoogleNewsUrl(articleUrl) || isHomepageUrl(articleUrl)) {
@@ -900,7 +951,7 @@ async function fetchGoogleNews(feed, date) {
       source,
       url: articleUrl,
       googleNewsUrl,
-      publishedAt: safeIsoDate(tag(item, "pubDate")),
+      publishedAt,
       summary: articleSummary,
       analysis: "",
       action: "",
@@ -961,13 +1012,15 @@ async function fetchRealtimePosts(query, date) {
   return entries.slice(0, 5).map((entry, index) => {
     const body = cleanMarkerText(entry.displayTextBody || entry.displayText || "");
     if (!body || body.length < 18) return null;
+    const publishedAt = entry.createdAt ? new Date(entry.createdAt * 1000).toISOString() : new Date().toISOString();
+    if (jstDateFromValue(publishedAt) !== date) return null;
     const article = {
       id: `${date}-social-${query.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}-${entry.id || index}`,
       category: "お客様SNS",
       title: `SNS投稿: ${limitText(body, 58)}`,
       source: `Yahoo!リアルタイム検索 / ${entry.screenName || entry.name || query}`,
       url: entry.url || url.toString(),
-      publishedAt: entry.createdAt ? new Date(entry.createdAt * 1000).toISOString() : new Date().toISOString(),
+      publishedAt,
       summary: limitText(body, 300),
       analysis: "",
       action: "",
