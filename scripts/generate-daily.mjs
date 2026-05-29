@@ -69,6 +69,57 @@ const CRAWL_SOURCES = [
   }
 ];
 
+const OFFICIAL_UPDATE_SOURCES = [
+  {
+    category: "官公庁・公的統計",
+    name: "国土交通省 報道発表",
+    url: "https://www.mlit.go.jp/report/press/",
+    keywords: ["建設", "建築", "住宅", "資材", "建材", "工事", "公共工事", "建設業", "不動産", "省エネ", "木材"]
+  },
+  {
+    category: "官公庁・公的統計",
+    name: "経済産業省 ニュースリリース",
+    url: "https://www.meti.go.jp/press/",
+    keywords: ["資材", "建材", "ナフサ", "化学", "原材料", "価格", "供給", "物流", "中小企業", "石油", "プラスチック", "住宅", "建設"]
+  },
+  {
+    category: "官公庁・公的統計",
+    name: "農林水産省 報道発表",
+    url: "https://www.maff.go.jp/j/press/",
+    keywords: ["木材", "林業", "建築物木材", "資材", "価格", "供給", "原材料", "住宅", "建設"]
+  },
+  {
+    category: "業界団体・技術団体",
+    name: "日本建設業連合会",
+    url: "https://www.nikkenren.com/news/",
+    keywords: ["建設", "建築", "資材", "価格", "供給", "労務", "公共工事", "要望", "提言"]
+  },
+  {
+    category: "業界団体・技術団体",
+    name: "日本耐震天井施工協同組合",
+    url: "https://www.jacca.or.jp/",
+    keywords: ["天井", "耐震", "下地", "施工", "技術", "建築", "資材", "部材"]
+  },
+  {
+    category: "競合メーカー",
+    name: "DAIKEN ニュース",
+    url: "https://www.daiken.jp/news/",
+    keywords: ["建材", "製品", "価格改定", "値上げ", "供給", "納期", "中東", "原材料", "床", "壁", "天井", "ドア"]
+  },
+  {
+    category: "競合メーカー",
+    name: "ノダ ニュース",
+    url: "https://www.noda-co.jp/news/",
+    keywords: ["建材", "製品", "価格改定", "値上げ", "供給", "納期", "建具", "収納", "造作材", "階段", "框"]
+  },
+  {
+    category: "競合メーカー",
+    name: "サンゲツ ニュース",
+    url: "https://www.sangetsu.co.jp/information/",
+    keywords: ["壁装材", "床材", "副資材", "価格改定", "値上げ", "供給", "納期", "建材", "製品"]
+  }
+];
+
 const SOCIAL_QUERIES = [
   "建材 納期",
   "建材 価格",
@@ -219,6 +270,33 @@ function addDays(dateString, days) {
   const date = new Date(`${dateString}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() + days);
   return date.toISOString().slice(0, 10);
+}
+
+function normalizeDateParts(year, month, day) {
+  const y = String(year).padStart(4, "0");
+  const m = String(month).padStart(2, "0");
+  const d = String(day).padStart(2, "0");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(`${y}-${m}-${d}`)) return "";
+  return `${y}-${m}-${d}`;
+}
+
+function extractDateFromText(text = "") {
+  const normalized = stripHtml(text);
+  const jp = normalized.match(/(20\d{2}|令和\s*[0-9０-９]+)\s*年\s*([0-9０-９]{1,2})\s*月\s*([0-9０-９]{1,2})\s*日/u);
+  if (jp) {
+    const yearText = jp[1].replace(/\s/g, "");
+    const year = yearText.startsWith("令和")
+      ? 2018 + Number(yearText.replace("令和", "").replace(/[０-９]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)))
+      : Number(yearText);
+    const month = Number(jp[2].replace(/[０-９]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)));
+    const day = Number(jp[3].replace(/[０-９]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0)));
+    return normalizeDateParts(year, month, day);
+  }
+  const dot = normalized.match(/\b(20\d{2})[./-]([01]?\d)[./-]([0-3]?\d)\b/);
+  if (dot) return normalizeDateParts(dot[1], dot[2], dot[3]);
+  const compact = normalized.match(/\b(20\d{2})([01]\d)([0-3]\d)\b/);
+  if (compact) return normalizeDateParts(compact[1], compact[2], compact[3]);
+  return "";
 }
 
 function labelForDate(date) {
@@ -886,6 +964,15 @@ function isRelevant(text, keywords) {
   return keywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
 }
 
+function cleanLinkTitle(value = "") {
+  return cleanMarkerText(value)
+    .replace(/^\d{4}[./-]\d{1,2}[./-]\d{1,2}\s*/u, "")
+    .replace(/^20\d{2}年\d{1,2}月\d{1,2}日\s*/u, "")
+    .replace(/^(お知らせ|ニュース|製品情報|プレスリリース|報道発表)\s*/u, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function tag(item, name) {
   const match = item.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`, "i"));
   return decodeXml(match?.[1] ?? "");
@@ -1127,11 +1214,72 @@ async function crawlSourcePage(source, date) {
   return articles;
 }
 
+async function crawlOfficialUpdates(source, date) {
+  const response = await fetch(source.url, {
+    signal: AbortSignal.timeout(15000),
+    headers: { "User-Agent": BROWSER_USER_AGENT }
+  });
+  if (!response.ok) throw new Error(`Official crawl failed ${source.name}: ${response.status}`);
+
+  const html = await response.text();
+  const linkMatches = [...html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+  const candidates = [];
+  const seenLinks = new Set();
+
+  for (const match of linkMatches) {
+    const href = absoluteUrl(source.url, match[1]);
+    if (!href || seenLinks.has(href) || isHomepageUrl(href)) continue;
+    const title = cleanLinkTitle(match[2]);
+    if (title.length < 5 || title.length > 120) continue;
+    const context = stripHtml(html.slice(Math.max(0, match.index - 220), Math.min(html.length, match.index + 520)));
+    const updateDate = extractDateFromText(`${context} ${href}`);
+    if (updateDate !== date) continue;
+    if (!isRelevant(`${title} ${context}`, source.keywords)) continue;
+    seenLinks.add(href);
+    candidates.push({ href, title, context });
+    if (candidates.length >= 12) break;
+  }
+
+  const articles = [];
+  for (const [index, candidate] of candidates.entries()) {
+    const articleText = await fetchArticleText(candidate.href);
+    const summary = buildArticleSummary({
+      title: candidate.title,
+      source: source.name,
+      description: articleText.description || candidate.context,
+      body: articleText.body
+    });
+    if (!hasSubstantialSummary(summary, { minLength: 120 })) continue;
+    const imageUrl = await fetchOgImage(candidate.href);
+    const article = {
+      id: `${date}-official-${source.name.replace(/[^\p{Letter}\p{Number}]+/gu, "-")}-${index + 1}`,
+      category: source.category,
+      title: candidate.title,
+      source: source.name,
+      url: candidate.href,
+      publishedAt: `${date}T00:00:00.000+09:00`,
+      summary,
+      analysis: "",
+      action: "",
+      imageUrl,
+      imageLabel: source.category
+    };
+    article.analysis = makeAnalysis(article);
+    article.action = makeAction(article);
+    articles.push(article);
+    await sleep(250);
+  }
+
+  console.warn(`${source.name}: official updates ${articles.length}`);
+  return articles;
+}
+
 async function collectArticles(date) {
   const isToday = date === jstDate();
   const results = await Promise.allSettled([
     ...FEEDS.map((feed) => fetchGoogleNews(feed, date)),
     ...(isToday ? [collectSocialSearches(date)] : []),
+    ...OFFICIAL_UPDATE_SOURCES.map((source) => crawlOfficialUpdates(source, date)),
     ...CRAWL_SOURCES.map((source) => crawlSourcePage(source, date))
   ]);
   const seen = new Set();
@@ -1154,7 +1302,7 @@ async function collectArticles(date) {
   }
 
   if (articles.length > 0) {
-    const liveArticles = articles.filter((article) => !article.id.includes("-crawl-"));
+    const liveArticles = articles.filter((article) => !article.id.includes("-crawl-") || article.id.includes("-official-"));
     const selected = [];
     for (const category of CATEGORIES.filter((item) => item !== "すべて")) {
       selected.push(...liveArticles
@@ -1805,7 +1953,7 @@ async function buildDaily(date) {
     label: labelForDate(date),
     generatedAt,
     timezone: TIME_ZONE,
-    sources: FEEDS,
+    sources: [...FEEDS, ...OFFICIAL_UPDATE_SOURCES, ...CRAWL_SOURCES],
     categories: CATEGORIES,
     trafficRows: TRAFFIC_ROWS,
     articles
