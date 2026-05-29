@@ -1,7 +1,7 @@
 {
   "date": "2026-05-29",
   "label": "2026年05月29日号",
-  "generatedAt": "2026-05-29T01:02:13.878Z",
+  "generatedAt": "2026-05-29T01:18:57.204Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -27,6 +27,208 @@
     {
       "category": "チャッピーおすすめ",
       "query": "ナフサ 建材 価格 OR 住宅資材 納期"
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 報道発表",
+      "url": "https://www.mlit.go.jp/report/press/",
+      "keywords": [
+        "建設",
+        "建築",
+        "住宅",
+        "資材",
+        "建材",
+        "工事",
+        "公共工事",
+        "建設業",
+        "不動産",
+        "省エネ",
+        "木材"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "経済産業省 ニュースリリース",
+      "url": "https://www.meti.go.jp/press/",
+      "keywords": [
+        "資材",
+        "建材",
+        "ナフサ",
+        "化学",
+        "原材料",
+        "価格",
+        "供給",
+        "物流",
+        "中小企業",
+        "石油",
+        "プラスチック",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "農林水産省 報道発表",
+      "url": "https://www.maff.go.jp/j/press/",
+      "keywords": [
+        "木材",
+        "林業",
+        "建築物木材",
+        "資材",
+        "価格",
+        "供給",
+        "原材料",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本建設業連合会",
+      "url": "https://www.nikkenren.com/news/",
+      "keywords": [
+        "建設",
+        "建築",
+        "資材",
+        "価格",
+        "供給",
+        "労務",
+        "公共工事",
+        "要望",
+        "提言"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本耐震天井施工協同組合",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "施工",
+        "技術",
+        "建築",
+        "資材",
+        "部材"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "DAIKEN ニュース",
+      "url": "https://www.daiken.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "中東",
+        "原材料",
+        "床",
+        "壁",
+        "天井",
+        "ドア"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "ノダ ニュース",
+      "url": "https://www.noda-co.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建具",
+        "収納",
+        "造作材",
+        "階段",
+        "框"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "サンゲツ ニュース",
+      "url": "https://www.sangetsu.co.jp/information/",
+      "keywords": [
+        "壁装材",
+        "床材",
+        "副資材",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建材",
+        "製品"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/build/",
+      "keywords": [
+        "建築",
+        "省エネ",
+        "建材",
+        "住宅",
+        "制度",
+        "基準"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "JACCA",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "技術",
+        "施工",
+        "資料"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "AUN WORKS",
+      "url": "https://www.aunworks.jp/",
+      "keywords": [
+        "建材",
+        "内装",
+        "工具",
+        "特集",
+        "新商品",
+        "キャンペーン"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "モノタロウ",
+      "url": "https://www.monotaro.com/",
+      "keywords": [
+        "建材",
+        "資材",
+        "現場",
+        "工具",
+        "価格",
+        "納期"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "建デポ",
+      "url": "https://kendepot.co.jp/",
+      "keywords": [
+        "建材",
+        "店舗",
+        "資材",
+        "キャンペーン",
+        "新着"
+      ]
     }
   ],
   "categories": [
