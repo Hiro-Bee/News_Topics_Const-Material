@@ -1,7 +1,7 @@
 {
   "date": "2026-06-04",
   "label": "2026年06月04日号",
-  "generatedAt": "2026-06-03T15:26:24.705Z",
+  "generatedAt": "2026-06-04T10:47:34.197Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -342,5 +342,71 @@
       "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
     }
   ],
-  "articles": []
+  "articles": [
+    {
+      "id": "2026-06-04-social-建材-価格-2062438530585145510",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 銀色パッケージのエビせんを買ってしまった。中東問題による 建材 不足と 価格 高騰で困っていますので、同じ悩みを抱…",
+      "source": "Yahoo!リアルタイム検索 / TOY_order",
+      "url": "https://x.com/TOY_order/status/2062438530585145510?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-04T07:37:18.000Z",
+      "summary": "銀色パッケージのエビせんを買ってしまった。中東問題による 建材 不足と 価格 高騰で困っていますので、同じ悩みを抱えた企業は応援したくなるのですよ。 スーパーのお菓子コーナーで猛烈に目立っていました。賢い戦略ですぞ！",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLL8SjTTs4f4bVJlgEyvPN75O3VWwy5_xWw4NyteIO0dbmXuOAZ6fFChNha1w78x7w1DAT04KvWXPP2uqjykQWt0yTRLKgXN4OU0SimccO63QDf2LO1qgCRyNP8HGrUheFSQXn7v6ihHE7cv9c-tdzYHiVc1ecFFlk4QUnKXrnWhwhSFTAo3rWcrhH1NmBP6Wr",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-04-social-建設資材-納期-2062323374278459758",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 日本建設業連合会は、中東情勢の混迷に伴う取引条件の変更を告げられた資材の品目を調査した。価格改定は64品目、 納期…",
+      "source": "Yahoo!リアルタイム検索 / SIGMA_Const",
+      "url": "https://x.com/SIGMA_Const/status/2062323374278459758?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-03T23:59:43.000Z",
+      "summary": "日本建設業連合会は、中東情勢の混迷に伴う取引条件の変更を告げられた資材の品目を調査した。価格改定は64品目、 納期 遅延が52品目、受注制約が48品目。 【中東情勢で調達困難に、 建設資材 の価格改定64品目 日建連調べ - 日本経済新聞】 https://t.co/mWMpEsRItI",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLqcVxzgUNeu0BfdaSR__W9XV3Ns_jtjito6ui5x0N7n808FiGjv4JBvAObHdQ8gSF5JiBcV9lW-jOlbC1HA92fVLCwdfEqfAKQYjX2olVc6sEz1jBFNaqpEsL3UJZH4uMHeuVk-ir5ogdXLNts7n5bNYxZj9-Wzn2WvajKbSoTxCVJCmIZ00SWT7VLJ1ihOMX",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-04-social-建材-価格-2062391691500200343",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 【DX】💻住設・ 建材 が再値上げ ・中東情勢緊迫でLIXIL等6月 価格 改定 ・原材料や物流費高騰が直撃 ・…",
+      "source": "Yahoo!リアルタイム検索 / Bitman0404",
+      "url": "https://x.com/Bitman0404/status/2062391691500200343?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-04T04:31:11.000Z",
+      "summary": "【DX】💻住設・ 建材 が再値上げ ・中東情勢緊迫でLIXIL等6月 価格 改定 ・原材料や物流費高騰が直撃 ・見積有効期限の管理が重要に 💡現場は施主への早期説明と 価格 転嫁の交渉が急務。 https://t.co/mcAgnIOkV2",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLyv8rWSOOa3HQ13PvrRVIqe1JaVHztAAPWyc5HHBwZe7Yj-pD6WtyZCb3eqPCyNQf_zphl6LKAhBg-tNJpcSp4Ty5zIz8WLBJ0Xr7JSlQsUXQPspvoekRFpObsS077S6Kp9ncZ61Wsmy7ewTq0sAfjMTmogWnQKKSif4KMafe5dtuww0x4o2U_rUb6oL_CJn5",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-04-social-建材-価格-2062293421189144938",
+      "category": "お客様SNS",
+      "title": "SNS投稿: DAISUKI FULL POWER でAI熱が加速するほど、電力コスト→ 建材 費→建築費の上昇圧力が連鎖する。…",
+      "source": "Yahoo!リアルタイム検索 / migerumansion",
+      "url": "https://x.com/migerumansion/status/2062293421189144938?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-03T22:00:41.000Z",
+      "summary": "DAISUKI FULL POWER でAI熱が加速するほど、電力コスト→ 建材 費→建築費の上昇圧力が連鎖する。大手デベは 価格 転嫁できるが中小工務店は体力的に詰む。供給が絞られた郊外の中古、誰も気づかないうちに値上がりしてくからな。",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLzIcPSQwvz8wV-aNfT99KQDIir9-SwxC0ZY_Mpwmae2GpOv_dsk8h1O2b06svuiICyhPbWlNLsOHm1qL3z3ESItVmKAs5zR8irLEpGKRmF0N2AyxMw-oQe-75l1X5PpYGugBEmsqp7G7d31w1-q5usY85lQ9xQ95GVTB3tS9rE2JuC-p6neTG8Do3JwGudob4",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-04-social-建材-在庫-2062308672601256119",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 6月4日(木)豊橋市植田 建材 、本日営業しております。 ・残土受け入れ 可能 ・砕石 C30-0・RC40-0・…",
+      "source": "Yahoo!リアルタイム検索 / vP9gC2a8GDZWF6k",
+      "url": "https://x.com/vP9gC2a8GDZWF6k/status/2062308672601256119?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-03T23:01:18.000Z",
+      "summary": "6月4日(木)豊橋市植田 建材 、本日営業しております。 ・残土受け入れ 可能 ・砕石 C30-0・RC40-0・20-5(ブラウン) 全て 在庫 あり ・洗砂 在庫 あり ・セメント 在庫 なし 御用のある方は…☎080-1600-7146(吉田) までご連絡下さい #豊橋残土 #豊橋残土処分",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLF0lPjUP28akv3yQ4NdwK9IyjzdQ54vzIVcnXBdSGt8Ksu51_euy7GZiku6et0C-nvF3KIgUTfAW0TcqKWPg5uUWjdjp34-_gvwhAhEMraQYiUDgHLWFjvAq3-ayquR9fttNkOetegPtLWjxnU_0AfcKoRtnbll26pSvq9OX1p6UyW97XxbrMcYinNSXeX1K4",
+      "imageLabel": "SNS投稿"
+    }
+  ]
 }
