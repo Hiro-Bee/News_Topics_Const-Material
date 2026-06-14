@@ -1,0 +1,426 @@
+{
+  "date": "2026-06-14",
+  "label": "2026年06月14日号",
+  "generatedAt": "2026-06-14T10:33:04.107Z",
+  "timezone": "Asia/Tokyo",
+  "sources": [
+    {
+      "category": "官公庁・公的統計",
+      "query": "建設資材 供給 国土交通省"
+    },
+    {
+      "category": "業界団体・技術団体",
+      "query": "建設資材 高騰 全建総連"
+    },
+    {
+      "category": "競合メーカー",
+      "query": "LIXIL 建材 値上げ OR 永大産業 建材 値上げ"
+    },
+    {
+      "category": "競合EC",
+      "query": "モノタロウ 建材 納期 OR AUN WORKS 建材 OR 建デポ 建材"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "ナフサ 建材 価格 OR 住宅資材 納期"
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 報道発表",
+      "url": "https://www.mlit.go.jp/report/press/",
+      "keywords": [
+        "建設",
+        "建築",
+        "住宅",
+        "資材",
+        "建材",
+        "工事",
+        "公共工事",
+        "建設業",
+        "不動産",
+        "省エネ",
+        "木材"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "経済産業省 ニュースリリース",
+      "url": "https://www.meti.go.jp/press/",
+      "keywords": [
+        "資材",
+        "建材",
+        "ナフサ",
+        "化学",
+        "原材料",
+        "価格",
+        "供給",
+        "物流",
+        "中小企業",
+        "石油",
+        "プラスチック",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "農林水産省 報道発表",
+      "url": "https://www.maff.go.jp/j/press/",
+      "keywords": [
+        "木材",
+        "林業",
+        "建築物木材",
+        "資材",
+        "価格",
+        "供給",
+        "原材料",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本建設業連合会",
+      "url": "https://www.nikkenren.com/news/",
+      "keywords": [
+        "建設",
+        "建築",
+        "資材",
+        "価格",
+        "供給",
+        "労務",
+        "公共工事",
+        "要望",
+        "提言"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本耐震天井施工協同組合",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "施工",
+        "技術",
+        "建築",
+        "資材",
+        "部材"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "DAIKEN ニュース",
+      "url": "https://www.daiken.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "中東",
+        "原材料",
+        "床",
+        "壁",
+        "天井",
+        "ドア"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "ノダ ニュース",
+      "url": "https://www.noda-co.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建具",
+        "収納",
+        "造作材",
+        "階段",
+        "框"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "サンゲツ ニュース",
+      "url": "https://www.sangetsu.co.jp/information/",
+      "keywords": [
+        "壁装材",
+        "床材",
+        "副資材",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建材",
+        "製品"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/build/",
+      "keywords": [
+        "建築",
+        "省エネ",
+        "建材",
+        "住宅",
+        "制度",
+        "基準"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "JACCA",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "技術",
+        "施工",
+        "資料"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "AUN WORKS",
+      "url": "https://www.aunworks.jp/",
+      "keywords": [
+        "建材",
+        "内装",
+        "工具",
+        "特集",
+        "新商品",
+        "キャンペーン"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "モノタロウ",
+      "url": "https://www.monotaro.com/",
+      "keywords": [
+        "建材",
+        "資材",
+        "現場",
+        "工具",
+        "価格",
+        "納期"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "建デポ",
+      "url": "https://kendepot.co.jp/",
+      "keywords": [
+        "建材",
+        "店舗",
+        "資材",
+        "キャンペーン",
+        "新着"
+      ]
+    }
+  ],
+  "categories": [
+    "すべて",
+    "官公庁・公的統計",
+    "業界団体・技術団体",
+    "競合メーカー",
+    "競合EC",
+    "お客様SNS",
+    "チャッピーおすすめ"
+  ],
+  "trafficRows": [
+    {
+      "site": "モノタロウ",
+      "domain": "monotaro.com",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 16920000,
+      "pagesPerVisit": 3.92,
+      "visits": [
+        3350000,
+        3480000,
+        3620000,
+        3570000,
+        3740000,
+        3890000,
+        3820000,
+        3970000,
+        3900000
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 16.92M、pages/visit 3.92 を起点に週次換算。"
+    },
+    {
+      "site": "AUN WORKS",
+      "domain": "aunworks.jp",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 185550,
+      "pagesPerVisit": 3.07,
+      "visits": [
+        28500,
+        30200,
+        31800,
+        33500,
+        36100,
+        38400,
+        40200,
+        42700,
+        43800
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 185.55K、pages/visit 3.07 を起点に週次換算。"
+    },
+    {
+      "site": "建デポ",
+      "domain": "kendepot.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 420000,
+      "pagesPerVisit": 2.4,
+      "visits": [
+        83000,
+        86500,
+        89000,
+        92200,
+        94800,
+        97100,
+        100500,
+        97300,
+        96200
+      ],
+      "note": "店舗検索、キャンペーン閲覧、ブランド指名検索を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "ミラタップ",
+      "domain": "miratap.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 1250000,
+      "pagesPerVisit": 3.1,
+      "visits": [
+        246000,
+        258000,
+        271000,
+        289000,
+        301000,
+        296000,
+        310000,
+        322000,
+        316000
+      ],
+      "note": "住宅設備・建材ECとしての指名検索、商品閲覧、カタログ閲覧を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "きりいーね",
+      "domain": "kirii-net.jp",
+      "source": "予測モデル / GA4差替推奨",
+      "confidence": "予測",
+      "monthlyVisits": 32000,
+      "pagesPerVisit": 2.2,
+      "visits": [
+        6100,
+        6450,
+        6900,
+        7200,
+        7350,
+        7600,
+        7900,
+        8200,
+        8050
+      ],
+      "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
+    }
+  ],
+  "articles": [
+    {
+      "id": "2026-06-14-官公庁-公的統計-1",
+      "category": "官公庁・公的統計",
+      "title": "国交省に石油製品の相談9500件エンジンオイルやシンナー、ナフサ由来資材が不足の声",
+      "source": "朝日放送",
+      "url": "https://www.asahi.co.jp/webnews/pages/ann_000511231.html",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1lT3M0cURDbGZaeTFpNkxFcDZQVHh1UHNhTW44OFp3OVRXR0d6XzJ4bWlaUXBtNFRLSjN0ZmxNbGFSbHFSR0VUaE12ZUtHV0lvcTYxUkZveV93SXcyOFVGUUNTbmNBNXc?oc=5",
+      "publishedAt": "2026-06-14T07:13:43.000Z",
+      "summary": "自動車整備の事業者からは、エンジンオイルやシンナーが不足しているという声が上がっています。住宅関連の事業者からは、断熱材などナフサ由来の資材が不足しているといった相談が寄せられました。国交省は、このうちおよそ850件については状況を特定し、経済産業省と連携して解消に向けて取り組んでいると説明しています。金子恭之国土交通大臣 「把握した状況にきめ細かく対応し、建設住宅資材や潤滑油等における供給の偏りと流通の目詰まりを解消し、地域の暮らしと経済を支える建設業や自動車整備、バス、タクシー、トラック事業等における供給不安の解消に万全を期す」 （2026年6月10日放送分より）",
+      "analysis": "この内容は建材市場に関わる変化を示していますが、単独で読むよりも、対象品目、発生時期、価格・納期・仕様への影響を分けて見る必要があります。 本文から読み取れる対象は 断熱材、ナフサ で、きりいーねでは商品マスタ、在庫表示、代替提案、FAQのどこに反映すべきかを確認する価値があります。 特にニュース本文に出ているメーカー名・品目名をそのまま社内確認リストに落とし、仕入れ先確認と商品ページ改善につなげるべきです。",
+      "action": "1. 断熱材、ナフサ に該当する商品・カテゴリを抽出し、価格、納期、在庫、代替可否を確認する。 2. 記事内のメーカー名・品目名を商品マスタ、FAQ、営業問い合わせテンプレートに反映する。 3. 顧客が判断に迷う点を商品ページに追加し、必要ならカテゴリページやメルマガで注意喚起する。",
+      "imageUrl": "https://www.asahi.co.jp/webnews/pages/img/000511231_640.jpg",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-06-14-social-建材-価格-2065834125475610982",
+      "category": "お客様SNS",
+      "title": "SNS投稿: マンション 価格 は供給数の大幅減少とナフサによる 建材 費上昇で実需 価格 が急激に押し上げている！ もしかした…",
+      "source": "Yahoo!リアルタイム検索 / IiCv5WwlO479537",
+      "url": "https://x.com/IiCv5WwlO479537/status/2065834125475610982?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-13T16:30:11.000Z",
+      "summary": "マンション 価格 は供給数の大幅減少とナフサによる 建材 費上昇で実需 価格 が急激に押し上げている！ もしかしたら左の図のようにバブルは終わって実需 価格 に近づいてきたのかもしれない！ https://t.co/NenfcyYVEU",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では ナフサ に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. ナフサ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLq6iUalcXvdRCQwNCOX36qN6v1gR4rVJEhKtiMxMeus-qLo7sPehXiJQ6ObkXrEYZFkShA9FhaPqhketHa_uzLXr3zO_YxhbDfC3xJ333LaF8vBtW_lKHYMuO6W4AeO42o7_IdVZGCjwek55Nklu-rMGobf5Ch77tpEjPLbWQTrOMYMeogHKH8KdQTdEzF6xv",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-14-social-建材-価格-2065973454529282541",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 輸入 建材 で失敗しない判断材料を、建築士が実務目線で届けます輸入玄関ドア・室内ドア・ガレージドアは、見た目の美し…",
+      "source": "Yahoo!リアルタイム検索 / ienekoshya",
+      "url": "https://x.com/ienekoshya/status/2065973454529282541?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-14T01:43:50.000Z",
+      "summary": "輸入 建材 で失敗しない判断材料を、建築士が実務目線で届けます輸入玄関ドア・室内ドア・ガレージドアは、見た目の美しさだけで選ぶと、寸法・納まり・施工条件で失敗することがあります。VictoryAgentでは、建築士の視点から、輸入 建材 の選び方、 価格 の考え方、設計段階で確認すべきポイントをわかりや",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLSP7nBfechHjVb2cSmD7uqQ1iA3KApFZ6Exo4wbPeE0vAHCYPtJJpveMd2qoXM0viEOSEBPtbAJx8wHUxM8bdAvOFbpDnJi2qCl7HXooq2uJJeNtH-sCHpoXGA45Jt69JNswdPPfEWZG7PAfuhqFAtS0IYc7E6rQi70iLMGys1OpS4AlV2wZ0z0X-InFa_EJo",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-14-social-建材-価格-2065926263475470733",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 【資材高騰と見積もりの限界】 ​ 建材 や工具の値上がりが続く中、どこまで見積もりに反映できていますか？ ​「これ…",
+      "source": "Yahoo!リアルタイム検索 / kentikubou",
+      "url": "https://x.com/kentikubou/status/2065926263475470733?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-13T22:36:18.000Z",
+      "summary": "【資材高騰と見積もりの限界】 ​ 建材 や工具の値上がりが続く中、どこまで見積もりに反映できていますか？ ​「これ以上上げると仕事が取れない、でも呑むと利益が残らない」というジレン。 皆さんは元請けや施主さんとの 価格 交渉、どう乗り切っていますか？ ​#建設業 #工務店 # 価格 交渉 #職人",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLg3XLDkaYT-k3uGVWNidH9BXwUj3KZtSl5E6OjTSgs-uIKnembby1PIOQBjqypDmjfkCbsD01kHurosluOFdKo0wT5PrPnESqscYUe2yvrE5BA9crJPS5D4gh4hPqkH6JjFUBSe0PBMvUXFcVa8-p_alDgyZvZ-OB3RNV80RmpvHx_oiuoSx9MmAg5mPAVQ8Q",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-14-social-建材-価格-2065872905238634705",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 塗装用*ラッカー*メラミン* アクリル樹脂*ウレタン樹脂* エポキシ樹脂*プラスチック用 各シンナー FRP素材屋…",
+      "source": "Yahoo!リアルタイム検索 / takarakuji_9",
+      "url": "https://x.com/takarakuji_9/status/2065872905238634705?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-13T19:04:17.000Z",
+      "summary": "塗装用*ラッカー*メラミン* アクリル樹脂*ウレタン樹脂* エポキシ樹脂*プラスチック用 各シンナー FRP素材屋さん本店 https://t.co/vyAHqeSnhs 建材価格 表 | 商品情報 トマト工業株式会社 https://t.co/5jg57PrG7d トマト工業株式会社 の会社概要 製品情報 | Metoree https://t.co/ZPW5EkOGOQ https://t.co/1Lyg2xJlop",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLuDXNRO2y7ixTb4zVyHX6lqTsypY-XzK8q7EF5zPbYC-fpwBYQWLg2BgBzvr39VYrOJpeuybxF2dc_v7OLTtrvki0PsBSWCGtDFs1ABt1GDSguII8QEV3KP2SKarsJ_T7Gpq0-08FR05BWyY23Que2_eeFMpXkaFcvsH5SkP0-cKOMOUHaUoodpsoqxGUg15l",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-14-social-建材-価格-2065812114858811400",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 客間と人から見えないようにする壁考えると、土地込みでそのくらいはいってしまうんじゃないのかなって思ってます😅 多…",
+      "source": "Yahoo!リアルタイム検索 / Fire127241",
+      "url": "https://x.com/Fire127241/status/2065812114858811400?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-13T15:02:43.000Z",
+      "summary": "客間と人から見えないようにする壁考えると、土地込みでそのくらいはいってしまうんじゃないのかなって思ってます😅 多分、latecoさんの建てた時より 建材 費も土地 価格 もかなり上がってるとこ多いと思うので、注文住宅にするとびっくりする値段になると思いますよ！😭",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLFar9ar3-ws8LR0CbFRMaY_DgahfKgiKVaIMLO8gWskwLhcMME_FyV-V9pwaicZZMyx7-p3eyTURsxy0UdUO6wiqeCh_wK93gHo1nvyNTMihYGts75mKSgq0YvzV4oie3Wy-tRZQq5G3cYkqDd412rnUrXbJcWJGxAz-noGq2pi5vEtWZ7X-gZIUTUZ6WRFHY",
+      "imageLabel": "SNS投稿"
+    }
+  ]
+}
