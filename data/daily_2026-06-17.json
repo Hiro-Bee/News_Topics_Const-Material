@@ -1,7 +1,7 @@
 {
   "date": "2026-06-17",
   "label": "2026年06月17日号",
-  "generatedAt": "2026-06-16T16:10:52.237Z",
+  "generatedAt": "2026-06-17T12:56:59.734Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -342,5 +342,74 @@
       "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
     }
   ],
-  "articles": []
+  "articles": [
+    {
+      "id": "2026-06-17-官公庁-公的統計-1",
+      "category": "官公庁・公的統計",
+      "title": "国交省、ナフサ建材の追加費用を設計変更対応 既契約含む直轄全工事で",
+      "source": "建設通信新聞Digital",
+      "url": "https://www.kensetsunews.com/sokuho/1244975",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE96V2R4Zm16anJXOW85UmFkYmM4OUF4N2t3SHIxb3JiMThvR1dDd2d0RnRoYTVvMjQ2Q012MDBoY0Z5anlVRXRPb0dTcjFUd3NtQjhqMklB?oc=5",
+      "publishedAt": "2026-06-17T10:12:52.000Z",
+      "summary": "中東情勢の影響で供給不安が続くナフサ由来の建設資材について、国土交通省は代替品の調達や、調達経路の見直しなどで発生した追加費用を設計変更で対応する運用を１６日から全ての直轄工事で始めた。これでスライド条項の適用が難しい場合でも、資材高騰分が請負金額に反映されるようになる。金子恭之国交相は同日の閣議後会見で「国交省直轄工事の現場ではナフサを由来とする建設資材の調達に当たり、代替品の調達や流通経路の見直しなどが生じていることから、受注者が柔軟に資材を調達できる環境を整え、安心して施工できるようにする」と述べ、建設資材の対応に万全を期す考えを示した。",
+      "analysis": "この内容は建材市場に関わる変化を示していますが、単独で読むよりも、対象品目、発生時期、価格・納期・仕様への影響を分けて見る必要があります。 本文から読み取れる対象は ナフサ で、きりいーねでは商品マスタ、在庫表示、代替提案、FAQのどこに反映すべきかを確認する価値があります。 特にニュース本文に出ているメーカー名・品目名をそのまま社内確認リストに落とし、仕入れ先確認と商品ページ改善につなげるべきです。",
+      "action": "1. ナフサ に該当する商品・カテゴリを抽出し、価格、納期、在庫、代替可否を確認する。 2. 記事内のメーカー名・品目名を商品マスタ、FAQ、営業問い合わせテンプレートに反映する。 3. 顧客が判断に迷う点を商品ページに追加し、必要ならカテゴリページやメルマガで注意喚起する。",
+      "imageUrl": "https://www.kensetsunews.com/PB5001H/wp-content/uploads/2026/06/26844639_s-1.jpg",
+      "imageLabel": "官公庁・公的統計"
+    },
+    {
+      "id": "2026-06-17-social-建材-価格-2067046127854375104",
+      "category": "お客様SNS",
+      "title": "SNS投稿: ナフサ高騰で 建材 の 価格 が跳ね上がっている。クロスの張替え、少し前まで30万だったのが今は60万。 価格 転…",
+      "source": "Yahoo!リアルタイム検索 / yoshihitokagami",
+      "url": "https://x.com/yoshihitokagami/status/2067046127854375104?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-17T00:46:15.000Z",
+      "summary": "ナフサ高騰で 建材 の 価格 が跳ね上がっている。クロスの張替え、少し前まで30万だったのが今は60万。 価格 転嫁できない工務店から順に厳しくなっている。「現場を動かさない方がマシ」という声まで出てきた。",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では ナフサ に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. ナフサ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLDUFw7rc4cOH8zXGYT0s-fLGxGLAvXDpxsVWqEOxQTsKDV9Ltw8gBwT6g3CoK-CT8DZvLeeTZvzQlr_jT2_2sxy4aa1y8lRaIg8f_pXfdnDaUIx2Itu7AX6tGAJSlm2uzWE5A7A06K73YGQljCB3bxjom0itH2ax9e-HygOht9gHIy3uWDF4_cJuOqMsMQ_bo",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-17-social-建材-価格-2067040984001872156",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 打ち合わせと見積もり３件回って今日はしごおわ 建材価格 の爆上がりとか諸々で地方ハウスメーカーどこも新築キャンセル…",
+      "source": "Yahoo!リアルタイム検索 / deepstriker_GG",
+      "url": "https://x.com/deepstriker_GG/status/2067040984001872156?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-17T00:25:49.000Z",
+      "summary": "打ち合わせと見積もり３件回って今日はしごおわ 建材価格 の爆上がりとか諸々で地方ハウスメーカーどこも新築キャンセルで悲鳴上げてる",
+      "analysis": "この投稿は、建材高騰が専門業者だけでなく、一般消費者の住宅取得心理にも浸透していることを示しています。 新築価格への不安が強くなると、リフォーム、部分改修、DIY寄りの補修需要へ流れる可能性があります。 きりいーねでは、プロ向け建材ECであっても、工務店が施主に説明しやすい価格上昇背景や、予算内で提案できる代替材・部分改修材の見せ方が重要になります。",
+      "action": "1. 工務店が施主説明に使えるよう、値上げ背景、代替材、部分改修で費用を抑える考え方をカテゴリ記事にまとめる。 2. 新築向けだけでなく、補修、リフォーム、部分交換で使える建材・副資材の導線を強化する。 3. 高騰局面でも提案しやすい価格帯の商品を抽出し、比較表やセット提案として見せる。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLVTEJckqPVTkVjnM4L5gNcx6mB5mhMTWYwA7VTxF8ZsS-v_nONwvb4hZzkOx2nRTNIZ0-C0VJ_okkbKw8D3hNcJkLUVleG-flV7Sz6OT_IbB9q9hw_xP8j9Ly11RTsxJrTYRT4thscQ9p_hCC6OapJnFC2cs4WwdExO8OCFMJ3YksRf_EPsN827iictNnVIiR",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-17-チャッピーおすすめ-1",
+      "category": "チャッピーおすすめ",
+      "title": "建材価格高騰で配管取替を断念する建物が増加、既存管を壊さず“パイプの中にパイプをつくる”特許技術を展示",
+      "source": "PR TIMES",
+      "url": "https://prtimes.jp/main/html/rd/p/000000013.000151953.html",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41dmhlMEdUNTFLcmZNc1JocHVyTFBJLWVQZHg3R2FaY01aRFA3anZCeFc4UWQtcUpsbWdaU01jSVljTWxBS0EtdlNZQXI2anBYNlJycV96M0lsN0E5TWVtODA4WldXcnplS1E?oc=5",
+      "publishedAt": "2026-06-17T08:30:40.000Z",
+      "summary": "現在、建設業界では鋼管や樹脂管などの管材価格が上昇し続けており、マンションやビルの配管更新工事（全交換）の予算が、当初の計画を大幅に上回るケースが相次いでいます。歴史的な円安や原材料価格の高騰に加え、人手不足による人件費の上昇、さらにトラックドライバーの残業時間規制による物流費の増加などを背景に、建設資材の価格は高止まりしています。使用する原材料を最小限に抑えることで、建材マーケットの価格変動リスクを回避します。FRPライニングは、壁や床の解体を最小限に抑えて施工可能です。解体・廃材処理・内装復旧にかかる人件費と資材費をまとめて削減できます。",
+      "analysis": "この内容は建材市場に関わる変化を示していますが、単独で読むよりも、対象品目、発生時期、価格・納期・仕様への影響を分けて見る必要があります。 本文から読み取れる対象は 配管 で、きりいーねでは商品マスタ、在庫表示、代替提案、FAQのどこに反映すべきかを確認する価値があります。 特にニュース本文に出ているメーカー名・品目名をそのまま社内確認リストに落とし、仕入れ先確認と商品ページ改善につなげるべきです。",
+      "action": "1. 配管 に該当する商品・カテゴリを抽出し、価格、納期、在庫、代替可否を確認する。 2. 記事内のメーカー名・品目名を商品マスタ、FAQ、営業問い合わせテンプレートに反映する。 3. 顧客が判断に迷う点を商品ページに追加し、必要ならカテゴリページやメルマガで注意喚起する。",
+      "imageUrl": "https://prcdn.freetls.fastly.net/release_image/151953/13/151953-13-5efbda83495fd8cee77c6ddce709adaf-773x579.png?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+      "imageLabel": "チャッピーおすすめ"
+    },
+    {
+      "id": "2026-06-17-チャッピーおすすめ-2",
+      "category": "チャッピーおすすめ",
+      "title": "「工期延長の可能性も想定している」山形市新市民会館 中東情勢で資材高騰や遅延懸念",
+      "source": "日テレNEWS NNN",
+      "url": "https://news.ntv.co.jp/n/ybc/category/society/ybf60a01af779848f7b875b3c428a97e9e",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbEtYMWpBX1EyTno0MXV0RTVOSWpJX0FCOGdRWmxUSE1vLVVvdmVRbDB4TlZmYktpZ3VoalZwTHVudXkwcmtDSDJTZlJsVzFvR1prcXEteGJJRTQ2TTdvQUVFMF9kdWN4Y285VG9QZHkybjZ3WFFtTUJEYnJBdVZPYzl3dzVSeWc?oc=5",
+      "publishedAt": "2026-06-17T08:24:00.000Z",
+      "summary": "佐藤市長は、中東情勢によって全国的に建設資材などの高騰や工期の遅延などがある中、市民会館についても工期延長の可能性を想定していることを明らかにしました。佐藤孝弘山形市長「事業者からの聞き取りでは現在施工している他の工事で遅延や停止も出てきているため工期延長の可能性も想定しているところです」 また、建築資材が高騰している状況から事業費の増加も見込んでいるということです。その対応策として採用する設備自体の見直しや汎用性の高い資材の活用などによってコスト削減に務めるということです。",
+      "analysis": "この内容は建材市場に関わる変化を示していますが、単独で読むよりも、対象品目、発生時期、価格・納期・仕様への影響を分けて見る必要があります。 本文から読み取れる対象は 関連する建材・住宅設備 で、きりいーねでは商品マスタ、在庫表示、代替提案、FAQのどこに反映すべきかを確認する価値があります。 特にニュース本文に出ているメーカー名・品目名をそのまま社内確認リストに落とし、仕入れ先確認と商品ページ改善につなげるべきです。",
+      "action": "1. 該当カテゴリ に該当する商品・カテゴリを抽出し、価格、納期、在庫、代替可否を確認する。 2. 記事内のメーカー名・品目名を商品マスタ、FAQ、営業問い合わせテンプレートに反映する。 3. 顧客が判断に迷う点を商品ページに追加し、必要ならカテゴリページやメルマガで注意喚起する。",
+      "imageUrl": "https://image.gallery.play.jp/ybc-news/articles/bd6a0c65548643d58472d52b9d6c8fcc/e521f09b-cae0-4520-9652-3257ea19a646.jpg?w=1200",
+      "imageLabel": "チャッピーおすすめ"
+    }
+  ]
 }
