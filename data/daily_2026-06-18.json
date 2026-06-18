@@ -1,0 +1,412 @@
+{
+  "date": "2026-06-18",
+  "label": "2026年06月18日号",
+  "generatedAt": "2026-06-18T11:59:33.320Z",
+  "timezone": "Asia/Tokyo",
+  "sources": [
+    {
+      "category": "官公庁・公的統計",
+      "query": "建設資材 供給 国土交通省"
+    },
+    {
+      "category": "業界団体・技術団体",
+      "query": "建設資材 高騰 全建総連"
+    },
+    {
+      "category": "競合メーカー",
+      "query": "LIXIL 建材 値上げ OR 永大産業 建材 値上げ"
+    },
+    {
+      "category": "競合EC",
+      "query": "モノタロウ 建材 納期 OR AUN WORKS 建材 OR 建デポ 建材"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰"
+    },
+    {
+      "category": "チャッピーおすすめ",
+      "query": "ナフサ 建材 価格 OR 住宅資材 納期"
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 報道発表",
+      "url": "https://www.mlit.go.jp/report/press/",
+      "keywords": [
+        "建設",
+        "建築",
+        "住宅",
+        "資材",
+        "建材",
+        "工事",
+        "公共工事",
+        "建設業",
+        "不動産",
+        "省エネ",
+        "木材"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "経済産業省 ニュースリリース",
+      "url": "https://www.meti.go.jp/press/",
+      "keywords": [
+        "資材",
+        "建材",
+        "ナフサ",
+        "化学",
+        "原材料",
+        "価格",
+        "供給",
+        "物流",
+        "中小企業",
+        "石油",
+        "プラスチック",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "農林水産省 報道発表",
+      "url": "https://www.maff.go.jp/j/press/",
+      "keywords": [
+        "木材",
+        "林業",
+        "建築物木材",
+        "資材",
+        "価格",
+        "供給",
+        "原材料",
+        "住宅",
+        "建設"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本建設業連合会",
+      "url": "https://www.nikkenren.com/news/",
+      "keywords": [
+        "建設",
+        "建築",
+        "資材",
+        "価格",
+        "供給",
+        "労務",
+        "公共工事",
+        "要望",
+        "提言"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "日本耐震天井施工協同組合",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "施工",
+        "技術",
+        "建築",
+        "資材",
+        "部材"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "DAIKEN ニュース",
+      "url": "https://www.daiken.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "中東",
+        "原材料",
+        "床",
+        "壁",
+        "天井",
+        "ドア"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "ノダ ニュース",
+      "url": "https://www.noda-co.jp/news/",
+      "keywords": [
+        "建材",
+        "製品",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建具",
+        "収納",
+        "造作材",
+        "階段",
+        "框"
+      ]
+    },
+    {
+      "category": "競合メーカー",
+      "name": "サンゲツ ニュース",
+      "url": "https://www.sangetsu.co.jp/information/",
+      "keywords": [
+        "壁装材",
+        "床材",
+        "副資材",
+        "価格改定",
+        "値上げ",
+        "供給",
+        "納期",
+        "建材",
+        "製品"
+      ]
+    },
+    {
+      "category": "官公庁・公的統計",
+      "name": "国土交通省 建築",
+      "url": "https://www.mlit.go.jp/jutakukentiku/build/",
+      "keywords": [
+        "建築",
+        "省エネ",
+        "建材",
+        "住宅",
+        "制度",
+        "基準"
+      ]
+    },
+    {
+      "category": "業界団体・技術団体",
+      "name": "JACCA",
+      "url": "https://www.jacca.or.jp/",
+      "keywords": [
+        "天井",
+        "耐震",
+        "下地",
+        "技術",
+        "施工",
+        "資料"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "AUN WORKS",
+      "url": "https://www.aunworks.jp/",
+      "keywords": [
+        "建材",
+        "内装",
+        "工具",
+        "特集",
+        "新商品",
+        "キャンペーン"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "モノタロウ",
+      "url": "https://www.monotaro.com/",
+      "keywords": [
+        "建材",
+        "資材",
+        "現場",
+        "工具",
+        "価格",
+        "納期"
+      ]
+    },
+    {
+      "category": "競合EC",
+      "name": "建デポ",
+      "url": "https://kendepot.co.jp/",
+      "keywords": [
+        "建材",
+        "店舗",
+        "資材",
+        "キャンペーン",
+        "新着"
+      ]
+    }
+  ],
+  "categories": [
+    "すべて",
+    "官公庁・公的統計",
+    "業界団体・技術団体",
+    "競合メーカー",
+    "競合EC",
+    "お客様SNS",
+    "チャッピーおすすめ"
+  ],
+  "trafficRows": [
+    {
+      "site": "モノタロウ",
+      "domain": "monotaro.com",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 16920000,
+      "pagesPerVisit": 3.92,
+      "visits": [
+        3350000,
+        3480000,
+        3620000,
+        3570000,
+        3740000,
+        3890000,
+        3820000,
+        3970000,
+        3900000
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 16.92M、pages/visit 3.92 を起点に週次換算。"
+    },
+    {
+      "site": "AUN WORKS",
+      "domain": "aunworks.jp",
+      "source": "Semrush公開推定 + 60日週次予測",
+      "confidence": "公開推定",
+      "monthlyVisits": 185550,
+      "pagesPerVisit": 3.07,
+      "visits": [
+        28500,
+        30200,
+        31800,
+        33500,
+        36100,
+        38400,
+        40200,
+        42700,
+        43800
+      ],
+      "note": "Semrush公開推定値 March 2026 visits 185.55K、pages/visit 3.07 を起点に週次換算。"
+    },
+    {
+      "site": "建デポ",
+      "domain": "kendepot.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 420000,
+      "pagesPerVisit": 2.4,
+      "visits": [
+        83000,
+        86500,
+        89000,
+        92200,
+        94800,
+        97100,
+        100500,
+        97300,
+        96200
+      ],
+      "note": "店舗検索、キャンペーン閲覧、ブランド指名検索を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "ミラタップ",
+      "domain": "miratap.co.jp",
+      "source": "予測モデル",
+      "confidence": "予測",
+      "monthlyVisits": 1250000,
+      "pagesPerVisit": 3.1,
+      "visits": [
+        246000,
+        258000,
+        271000,
+        289000,
+        301000,
+        296000,
+        310000,
+        322000,
+        316000
+      ],
+      "note": "住宅設備・建材ECとしての指名検索、商品閲覧、カタログ閲覧を想定した予測値。実測ではありません。"
+    },
+    {
+      "site": "きりいーね",
+      "domain": "kirii-net.jp",
+      "source": "予測モデル / GA4差替推奨",
+      "confidence": "予測",
+      "monthlyVisits": 32000,
+      "pagesPerVisit": 2.2,
+      "visits": [
+        6100,
+        6450,
+        6900,
+        7200,
+        7350,
+        7600,
+        7900,
+        8200,
+        8050
+      ],
+      "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
+    }
+  ],
+  "articles": [
+    {
+      "id": "2026-06-18-social-建材-価格-2067550646883295738",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 4月初め、政府はナフサの供給について「全体量は確保している」と発表していたが、住宅 建材 やプラスチック製品などの…",
+      "source": "Yahoo!リアルタイム検索 / robinsonmanana",
+      "url": "https://x.com/robinsonmanana/status/2067550646883295738?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-18T10:11:02.000Z",
+      "summary": "4月初め、政府はナフサの供給について「全体量は確保している」と発表していたが、住宅 建材 やプラスチック製品などのメーカーについて出荷や受注の停止が相次いで報道された。塗装業界も早期に供給が足りていないことがわかった業界の一つだ。 価格 の急騰も深刻だ。",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では ナフサ に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. ナフサ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OL4Uy91iNpad9OmWaWSorWI3buwczVuvqEOex4M6QJT2CdW6y8i67hxogNGrCNAEzIngG6NKuuG7p_vZ-8TVKpf-hxD80mIUTN0uKpHde7gROpG8a68mRfLYPgT0KuD2kj08z8gco058uVnT5MrnE9v7o6O3ywCTvaH1QbcE9XfW60iS3N4NDUyWUgBSMtC0j8",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-18-social-建材-価格-2067527712378654916",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 「総量は足りてる」って言われても、現場じゃ塗料も 建材 も届かなくて工事が止まってる中小企業が続出してるよな…。 …",
+      "source": "Yahoo!リアルタイム検索 / sakana20220824",
+      "url": "https://x.com/sakana20220824/status/2067527712378654916?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-18T08:39:54.000Z",
+      "summary": "「総量は足りてる」って言われても、現場じゃ塗料も 建材 も届かなくて工事が止まってる中小企業が続出してるよな…。 20年社畜やってて痛感するのは、大企業は在庫持てるけど中小は即死ってこと。 価格 転嫁できず資金ショート→倒産の連鎖が一番怖い。 https://t.co/I53ISaAr7l",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLpBhoQSQAzIRtHqh1TC4SEi4jU6E6s6BPaSqN9mpbV4FYpRO8-OZN2dNq2jQoT9WF3POas9htvT_bqmQDaQJUsvb9RW3frAV866km9o35PY3C28a07LT-JpvwqlbZUR0SeKWMGdvDfkek8wZQN-9F-ib7clwnFSlR7-dPstE0wy0ONoRPpxRId0iYNlgFKJfk",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-18-social-建材-価格-2067482198111125628",
+      "category": "お客様SNS",
+      "title": "SNS投稿: さて、ひとまず60日間はホルムズ海峡が解放されそうだな。ナフサの 価格 も3月頭水準。2月以前の 価格 にはすぐ戻…",
+      "source": "Yahoo!リアルタイム検索 / showaHouseRenov",
+      "url": "https://x.com/showaHouseRenov/status/2067482198111125628?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-18T05:39:02.000Z",
+      "summary": "さて、ひとまず60日間はホルムズ海峡が解放されそうだな。ナフサの 価格 も3月頭水準。2月以前の 価格 にはすぐ戻らないとしても、原油はかなり下がっているので、60日間で米国とイランがうまくやってくれれば… で、その期間に家の改修が進む我が家は、やはり 建材 が高い状態で買わなきゃならんのか…と。",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では ナフサ に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. ナフサ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLIaG8Nnw2qSwl5m_Hl_usxMfBNMcwO9qZNtLbex2kwxNXbPUzDk2pHjI1SB_h9HzrYAlUUX7BhEAT4QzIALAwG9pZ-76HpqnnveSifwCWDjYjFfBCoCLXPJhNoYRX5APr1J2yRACzx8zMtvk68ADmrNKxAc_4HRFj5HQALurmQszrFoE3Z1bDKC-xdaak9hji",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-18-social-建材-価格-2067461671552225598",
+      "category": "お客様SNS",
+      "title": "SNS投稿: ホルムズ海峡解放されても、お米見てると、 価格 が以前の様に下がるには時間かかりそうだなぁ。 建材 、資材の入手も…",
+      "source": "Yahoo!リアルタイム検索 / MimiPonT32",
+      "url": "https://x.com/MimiPonT32/status/2067461671552225598?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-18T04:17:28.000Z",
+      "summary": "ホルムズ海峡解放されても、お米見てると、 価格 が以前の様に下がるには時間かかりそうだなぁ。 建材 、資材の入手もすぐには回復しなさそう… すぐに下がって買い占めた大手企業が痛い目見るといいのにな、なんて思っちゃう（性格悪！😅） 税金も物価も、上がるのは早くて下がるのは非常に遅い😩感覚",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLflK0YeOvYg5nc3df380r2dduD8DBhUfFoC2Xo4kG9JTaDzXFW6Td-fngn4LekcGPAu8EOJi4JOYvrD5FNAmXUnfeCAQLp-m7WShmHlE0wf8d_a2xmlhTxxSKTqaHyaNTfKqWx1lvo99iYQBcnh7drjAl5uYGa0Qfzeo7CENdHW3apKT7ph03zt6d5kF4UhS8",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-18-social-建材-価格-2067424282570113187",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 渡邉先生の見てると、最新状況がわかりますね。 75ドルまで下がって来たけど、 建材価格 は上げた奴は中々下げないだ…",
+      "source": "Yahoo!リアルタイム検索 / fudosan_jin",
+      "url": "https://x.com/fudosan_jin/status/2067424282570113187?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-18T01:48:54.000Z",
+      "summary": "渡邉先生の見てると、最新状況がわかりますね。 75ドルまで下がって来たけど、 建材価格 は上げた奴は中々下げないだろうな。結果、大幅な着工減になるでしょう。 https://t.co/5i9XrFvp5X",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLCRqZPxFyycfKB3l1eGkAD0IWDzZY7-of9KW_1vILItpMLLe3mjghKFX6_dcxi8zcE-EAsQbuvsUlaUPGyKDMe3rQAU9OgnlVNmMFffrGeaIC2KGXup8Kz5KCb6nIIEbYf3Bim6OGZzY5eaMoLthM10AxJJHMAhQoHK4e0CmpIs6Jy27-Wxlh0bfVwdDB2_qu",
+      "imageLabel": "SNS投稿"
+    }
+  ]
+}
