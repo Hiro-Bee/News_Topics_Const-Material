@@ -1,7 +1,7 @@
 {
   "date": "2026-06-25",
   "label": "2026年06月25日号",
-  "generatedAt": "2026-06-24T22:58:39.682Z",
+  "generatedAt": "2026-06-25T04:14:47.865Z",
   "timezone": "Asia/Tokyo",
   "sources": [
     {
@@ -342,5 +342,32 @@
       "note": "自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"
     }
   ],
-  "articles": []
+  "articles": [
+    {
+      "id": "2026-06-25-social-建材-価格-2069967600868855826",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 石化 建材 のひっ迫・ 価格 上昇続く――建設物価調査会調べ https://t.co/NWErLk7phL",
+      "source": "Yahoo!リアルタイム検索 / shinken_housing",
+      "url": "https://x.com/shinken_housing/status/2069967600868855826?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-25T02:15:08.000Z",
+      "summary": "石化 建材 のひっ迫・ 価格 上昇続く――建設物価調査会調べ https://t.co/NWErLk7phL",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLRo_Re_Ce_OIN-ig2FpUYzQ0MJBB7Ekv9JEi_bWY1vCz_1lO7Xhrfi0jfKutyEgAqPtvwO2uN15q-f9SYmDwamdPiIfQxKaJuie8VGSiFQ-2rw1ynyoRZFF4ea7LL1PbJjG8JPydaajFmnvxzi7bVpZaMKSNaFZJbfWtrer5yR0QeS-W1Q5X47d3k9Svq67nt",
+      "imageLabel": "SNS投稿"
+    },
+    {
+      "id": "2026-06-25-social-建材-価格-2069918498529431968",
+      "category": "お客様SNS",
+      "title": "SNS投稿: 住宅が高くなった原因を「ウッドショックや中東情勢のせい」だと思っていませんか。 物流の現場にいる人間として、本当の…",
+      "source": "Yahoo!リアルタイム検索 / house_recommend",
+      "url": "https://x.com/house_recommend/status/2069918498529431968?utm_source=yjrealtime&utm_medium=search",
+      "publishedAt": "2026-06-24T23:00:01.000Z",
+      "summary": "住宅が高くなった原因を「ウッドショックや中東情勢のせい」だと思っていませんか。 物流の現場にいる人間として、本当の話をします。 価格 高騰の隠れた要因は「物流費」です。 建材 は、工場から現場まで運ばれて初めて使えます。 この「運ぶコスト」が、ここ数年で大きく上がりました。",
+      "analysis": "このSNS投稿は、顧客や市場参加者が建材不足・価格上昇をどの言葉で認識しているかを拾うための材料です。 投稿内では 関連する建材・住宅設備 に関する不安が示されており、公式ニュースよりも現場に近い表現で納期・価格への警戒感が出ています。 きりいーねでは、この種の投稿をFAQ、商品ページ内の注意文、検索キーワード、メール件名に転用すると、顧客が実際に抱えている不安に近い言葉で接客できます。",
+      "action": "1. 投稿内の顧客表現を検索キーワードとして登録し、同種投稿を週次で確認する。 2. 該当カテゴリ に関する商品ページへ、納期確認、価格改定、代替品、関連副資材の導線を追加する。 3. SNSで出ている不安をFAQ化し、「いつ届くか」「値上げ前に買えるか」「代替できるか」に答えるコンテンツへ展開する。",
+      "imageUrl": "https://rts-pctr.c.yimg.jp/BgIFgYJGVIVv8u0nVJvw8B2FauAYMF4jOP5zFJAV4i5e72TLbER0xQeK1l8ZZ0OLEM7hzHOGZ1g7oBb7FKOGz8ovRAckStbDJAWGtE99kck-J_Vns-rg9nVbBNpVTI9TcEZAGo4E1Vn1HeVpCDZj02KxBfz4Z3OGrC5gsPSFIVgqe8BjEsynSkO__mU27oh1UGR3HRZr7I0Sd_VTDpjtJ2SpIldziQhjRqDWa8w-svzkMe0X84y7JgvX3KYbVHXW",
+      "imageLabel": "SNS投稿"
+    }
+  ]
 }
