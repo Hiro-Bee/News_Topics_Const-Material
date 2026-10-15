@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirii Daily News 2026-10-15</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #17466e;
+      --primary-soft: #e8f1f8;
+      --accent: #0f766e;
+      --accent-soft: #e7f8f5;
+      --danger: #b45309;
+      --danger-soft: #fff7ed;
+      --pink: #be185d;
+      --pink-soft: #fce7f3;
+      --shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #0f2f4d, #17466e 54%, #0f766e);
+      color: #fff;
+      padding: 34px 24px 42px;
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .eyebrow {
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: 12px;
+      opacity: .86;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .lead {
+      margin: 0;
+      max-width: 860px;
+      opacity: .93;
+      font-size: 15px;
+    }
+    .control-card {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+    .control-card label { display: block; font-size: 12px; opacity: .88; margin-bottom: 6px; }
+    .control-card select, .control-card a {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      background: #fff;
+    }
+    .control-card a {
+      display: inline-flex;
+      justify-content: center;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    main {
+      max-width: 1280px;
+      margin: -22px auto 64px;
+      padding: 0 22px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      min-height: 112px;
+    }
+    .kpi-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .kpi-value { font-size: 30px; line-height: 1; font-weight: 900; color: var(--primary); }
+    .kpi-note { margin-top: 8px; color: var(--muted); font-size: 12px; }
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    h2, h3 { margin: 0; letter-spacing: 0; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    button, .link-button {
+      border: none;
+      cursor: pointer;
+      border-radius: 11px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+    }
+    .category-tabs button { background: #fff; color: #374151; border: 1px solid var(--line); }
+    .category-tabs button.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .article-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #fff;
+    }
+    .article-card.no-thumb { grid-template-columns: 1fr; }
+    .article-card.liked {
+      border: 2px solid var(--pink);
+      background: linear-gradient(180deg, #fff, #fff7fb);
+    }
+    .photo {
+      min-height: 180px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 18px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #17466e, #0f766e);
+      overflow: hidden;
+    }
+    .photo.has-image { padding: 0; background: #e5e7eb; }
+    .photo.has-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .photo .icon { display: block; font-size: 28px; margin-bottom: 8px; }
+    .photo .sub { display: block; opacity: .9; font-size: 12px; margin-top: 4px; }
+    .meta-row { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tag {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .tag.cat { background: var(--accent-soft); color: var(--accent); }
+    .tag.hot { background: var(--danger-soft); color: var(--danger); }
+    .source-name { color: var(--muted); font-size: 12px; margin: 6px 0 10px; }
+    .source-summary-box {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .source-summary-box strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+    .analysis-box, .action-box {
+      border-radius: 14px;
+      padding: 11px 13px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .analysis-box { background: #f8fafc; border-left: 4px solid var(--primary); }
+    .action-box { background: var(--danger-soft); border-left: 4px solid var(--danger); }
+    .analysis-box strong, .action-box strong { display: block; margin-bottom: 4px; }
+    .button-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .btn-like { background: var(--pink-soft); color: var(--pink); border: 1px solid #fbcfe8; }
+    .btn-like.active { background: var(--pink); color: #fff; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-muted { background: #f3f4f6; color: #374151; border: 1px solid var(--line); }
+    .link-button { background: var(--accent); color: #fff; }
+    .side-list { list-style: none; padding: 0; margin: 0; }
+    .side-list li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .side-list li:last-child { border-bottom: none; }
+    .side-list strong { display: block; margin-bottom: 4px; }
+    .side-list span { color: var(--muted); font-size: 13px; }
+    .liked-list { display: grid; gap: 10px; }
+    .liked-item { border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: #fff; font-size: 13px; }
+    .liked-item strong { display: block; margin-bottom: 4px; }
+    .traffic-wrap { overflow-x: auto; }
+    .chart-box { min-width: 760px; }
+    svg { max-width: 100%; height: auto; display: block; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      padding: 9px;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: var(--muted); background: #f8fafc; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
+    @media (max-width: 980px) {
+      .header-inner, .layout, .kpi-grid, .article-card { grid-template-columns: 1fr; }
+      main { margin-top: -14px; }
+    }
+    @media print {
+      header, .kpi-grid, .category-tabs, aside, .button-row, .footer { display: none !important; }
+      body { background: #fff; }
+      main { margin: 0; max-width: none; }
+      .section { box-shadow: none; border: none; padding: 0; }
+      .article-card { break-inside: avoid; grid-template-columns: 1fr; }
+      .photo { display: none; }
+      body.print-liked .article-card:not(.liked) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="eyebrow">Daily Market Intelligence for Kirii / Kiriine</div>
+        <h1>桐井製作所・きりいーね<br />建材市場デイリーニュース</h1>
+        <p class="lead">官公庁、公的統計、業界団体、競合メーカー、競合EC、SNS、顧客投稿、その他おすすめ記事を毎日収集し、サマリー、分析コメント、アクションプラン、情報元リンク付きで保存します。</p>
+      </div>
+      <div class="control-card">
+        <label for="issueSelect">バックナンバー</label>
+        <select id="issueSelect"><option value="daily_2026-10-15.html" selected>2026年10月15日号</option><option value="daily_2026-10-14.html">2026年10月14日号</option><option value="daily_2026-10-13.html">2026年10月13日号</option><option value="daily_2026-10-12.html">2026年10月12日号</option><option value="daily_2026-10-11.html">2026年10月11日号</option><option value="daily_2026-10-10.html">2026年10月10日号</option><option value="daily_2026-10-09.html">2026年10月09日号</option><option value="daily_2026-10-08.html">2026年10月08日号</option><option value="daily_2026-10-07.html">2026年10月07日号</option><option value="daily_2026-10-06.html">2026年10月06日号</option><option value="daily_2026-10-05.html">2026年10月05日号</option><option value="daily_2026-10-04.html">2026年10月04日号</option><option value="daily_2026-10-03.html">2026年10月03日号</option><option value="daily_2026-10-02.html">2026年10月02日号</option><option value="daily_2026-10-01.html">2026年10月01日号</option><option value="daily_2026-09-30.html">2026年09月30日号</option><option value="daily_2026-09-29.html">2026年09月29日号</option><option value="daily_2026-09-28.html">2026年09月28日号</option><option value="daily_2026-09-27.html">2026年09月27日号</option><option value="daily_2026-09-26.html">2026年09月26日号</option><option value="daily_2026-09-25.html">2026年09月25日号</option><option value="daily_2026-09-24.html">2026年09月24日号</option><option value="daily_2026-09-23.html">2026年09月23日号</option><option value="daily_2026-09-22.html">2026年09月22日号</option><option value="daily_2026-09-21.html">2026年09月21日号</option><option value="daily_2026-09-20.html">2026年09月20日号</option><option value="daily_2026-09-19.html">2026年09月19日号</option><option value="daily_2026-09-18.html">2026年09月18日号</option><option value="daily_2026-09-17.html">2026年09月17日号</option><option value="daily_2026-09-16.html">2026年09月16日号</option><option value="daily_2026-09-15.html">2026年09月15日号</option><option value="daily_2026-09-14.html">2026年09月14日号</option><option value="daily_2026-09-13.html">2026年09月13日号</option><option value="daily_2026-09-12.html">2026年09月12日号</option><option value="daily_2026-09-11.html">2026年09月11日号</option><option value="daily_2026-09-10.html">2026年09月10日号</option><option value="daily_2026-09-09.html">2026年09月09日号</option><option value="daily_2026-09-08.html">2026年09月08日号</option><option value="daily_2026-09-07.html">2026年09月07日号</option><option value="daily_2026-09-06.html">2026年09月06日号</option><option value="daily_2026-09-05.html">2026年09月05日号</option><option value="daily_2026-09-04.html">2026年09月04日号</option><option value="daily_2026-09-03.html">2026年09月03日号</option><option value="daily_2026-09-02.html">2026年09月02日号</option><option value="daily_2026-09-01.html">2026年09月01日号</option><option value="daily_2026-08-31.html">2026年08月31日号</option><option value="daily_2026-08-30.html">2026年08月30日号</option><option value="daily_2026-08-29.html">2026年08月29日号</option><option value="daily_2026-08-28.html">2026年08月28日号</option><option value="daily_2026-08-27.html">2026年08月27日号</option><option value="daily_2026-08-26.html">2026年08月26日号</option><option value="daily_2026-08-25.html">2026年08月25日号</option><option value="daily_2026-08-24.html">2026年08月24日号</option><option value="daily_2026-08-23.html">2026年08月23日号</option><option value="daily_2026-08-22.html">2026年08月22日号</option><option value="daily_2026-08-21.html">2026年08月21日号</option><option value="daily_2026-08-20.html">2026年08月20日号</option><option value="daily_2026-08-19.html">2026年08月19日号</option><option value="daily_2026-08-18.html">2026年08月18日号</option><option value="daily_2026-08-17.html">2026年08月17日号</option><option value="daily_2026-08-16.html">2026年08月16日号</option><option value="daily_2026-08-15.html">2026年08月15日号</option><option value="daily_2026-08-14.html">2026年08月14日号</option><option value="daily_2026-08-13.html">2026年08月13日号</option><option value="daily_2026-08-12.html">2026年08月12日号</option><option value="daily_2026-08-11.html">2026年08月11日号</option><option value="daily_2026-08-10.html">2026年08月10日号</option><option value="daily_2026-08-09.html">2026年08月09日号</option><option value="daily_2026-08-08.html">2026年08月08日号</option><option value="daily_2026-08-07.html">2026年08月07日号</option><option value="daily_2026-08-06.html">2026年08月06日号</option><option value="daily_2026-08-05.html">2026年08月05日号</option><option value="daily_2026-08-04.html">2026年08月04日号</option><option value="daily_2026-08-03.html">2026年08月03日号</option><option value="daily_2026-08-02.html">2026年08月02日号</option><option value="daily_2026-08-01.html">2026年08月01日号</option><option value="daily_2026-07-31.html">2026年07月31日号</option><option value="daily_2026-07-30.html">2026年07月30日号</option><option value="daily_2026-07-29.html">2026年07月29日号</option><option value="daily_2026-07-28.html">2026年07月28日号</option><option value="daily_2026-07-27.html">2026年07月27日号</option><option value="daily_2026-07-26.html">2026年07月26日号</option><option value="daily_2026-07-25.html">2026年07月25日号</option><option value="daily_2026-07-24.html">2026年07月24日号</option><option value="daily_2026-07-23.html">2026年07月23日号</option><option value="daily_2026-07-22.html">2026年07月22日号</option><option value="daily_2026-07-21.html">2026年07月21日号</option><option value="daily_2026-07-20.html">2026年07月20日号</option><option value="daily_2026-07-19.html">2026年07月19日号</option><option value="daily_2026-07-18.html">2026年07月18日号</option><option value="daily_2026-07-17.html">2026年07月17日号</option><option value="daily_2026-07-16.html">2026年07月16日号</option><option value="daily_2026-07-15.html">2026年07月15日号</option><option value="daily_2026-07-14.html">2026年07月14日号</option><option value="daily_2026-07-13.html">2026年07月13日号</option><option value="daily_2026-07-12.html">2026年07月12日号</option><option value="daily_2026-07-11.html">2026年07月11日号</option><option value="daily_2026-07-10.html">2026年07月10日号</option><option value="daily_2026-07-09.html">2026年07月09日号</option><option value="daily_2026-07-08.html">2026年07月08日号</option><option value="daily_2026-07-07.html">2026年07月07日号</option><option value="daily_2026-07-06.html">2026年07月06日号</option><option value="daily_2026-07-05.html">2026年07月05日号</option><option value="daily_2026-07-04.html">2026年07月04日号</option><option value="daily_2026-07-03.html">2026年07月03日号</option><option value="daily_2026-07-02.html">2026年07月02日号</option><option value="daily_2026-07-01.html">2026年07月01日号</option><option value="daily_2026-06-30.html">2026年06月30日号</option><option value="daily_2026-06-29.html">2026年06月29日号</option><option value="daily_2026-06-28.html">2026年06月28日号</option><option value="daily_2026-06-27.html">2026年06月27日号</option><option value="daily_2026-06-26.html">2026年06月26日号</option><option value="daily_2026-06-25.html">2026年06月25日号</option><option value="daily_2026-06-24.html">2026年06月24日号</option><option value="daily_2026-06-23.html">2026年06月23日号</option><option value="daily_2026-06-21.html">2026年06月21日号</option><option value="daily_2026-06-20.html">2026年06月20日号</option><option value="daily_2026-06-19.html">2026年06月19日号</option><option value="daily_2026-06-18.html">2026年06月18日号</option><option value="daily_2026-06-17.html">2026年06月17日号</option><option value="daily_2026-06-16.html">2026年06月16日号</option><option value="daily_2026-06-14.html">2026年06月14日号</option><option value="daily_2026-06-13.html">2026年06月13日号</option><option value="daily_2026-06-12.html">2026年06月12日号</option><option value="daily_2026-06-11.html">2026年06月11日号</option><option value="daily_2026-06-10.html">2026年06月10日号</option><option value="daily_2026-06-09.html">2026年06月09日号</option><option value="daily_2026-06-08.html">2026年06月08日号</option><option value="daily_2026-06-07.html">2026年06月07日号</option><option value="daily_2026-06-06.html">2026年06月06日号</option><option value="daily_2026-06-05.html">2026年06月05日号</option><option value="daily_2026-06-04.html">2026年06月04日号</option><option value="daily_2026-06-02.html">2026年06月02日号</option><option value="daily_2026-06-01.html">2026年06月01日号</option><option value="daily_2026-05-31.html">2026年05月31日号</option><option value="daily_2026-05-30.html">2026年05月30日号</option><option value="daily_2026-05-29.html">2026年05月29日号</option><option value="daily_2026-05-28.html">2026年05月28日号</option><option value="daily_2026-05-27.html">2026年05月27日号</option><option value="daily_2026-05-26.html">2026年05月26日号</option><option value="daily_2026-05-25.html">2026年05月25日号</option><option value="daily_2026-05-24.html">2026年05月24日号</option><option value="daily_2026-05-23.html">2026年05月23日号</option><option value="daily_2026-05-22.html">2026年05月22日号</option><option value="daily_2026-05-21.html">2026年05月21日号</option><option value="daily_2026-05-20.html">2026年05月20日号</option><option value="daily_2026-05-19.html">2026年05月19日号</option><option value="daily_2026-05-18.html">2026年05月18日号</option><option value="daily_2026-05-17.html">2026年05月17日号</option><option value="daily_2026-05-16.html">2026年05月16日号</option><option value="daily_2026-05-15.html">2026年05月15日号</option><option value="daily_2026-05-14.html">2026年05月14日号</option><option value="daily_2026-05-13.html">2026年05月13日号</option><option value="daily_2026-05-12.html">2026年05月12日号</option><option value="daily_2026-05-11.html">2026年05月11日号</option><option value="daily_2026-05-10.html">2026年05月10日号</option><option value="daily_2026-05-09.html">2026年05月09日号</option><option value="daily_2026-05-08.html">2026年05月08日号</option><option value="daily_2026-05-07.html">2026年05月07日号</option><option value="daily_2026-05-06.html">2026年05月06日号</option><option value="daily_2026-05-05.html">2026年05月05日号</option><option value="daily_2026-05-04.html">2026年05月04日号</option><option value="daily_2026-05-03.html">2026年05月03日号</option><option value="daily_2026-05-02.html">2026年05月02日号</option><option value="daily_2026-05-01.html">2026年05月01日号</option><option value="daily_2026-04-30.html">2026年04月30日号</option><option value="daily_2026-04-29.html">2026年04月29日号</option><option value="daily_2026-04-28.html">2026年04月28日号</option><option value="daily_2026-04-27.html">2026年04月27日号</option><option value="daily_2026-04-26.html">2026年04月26日号</option><option value="daily_2026-04-25.html">2026年04月25日号</option><option value="daily_2026-04-24.html">2026年04月24日号</option><option value="daily_2026-04-23.html">2026年04月23日号</option><option value="daily_2026-04-22.html">2026年04月22日号</option><option value="daily_2026-04-21.html">2026年04月21日号</option><option value="daily_2026-04-20.html">2026年04月20日号</option><option value="daily_2026-04-19.html">2026年04月19日号</option><option value="daily_2026-04-18.html">2026年04月18日号</option><option value="daily_2026-04-17.html">2026年04月17日号</option><option value="daily_2026-04-16.html">2026年04月16日号</option><option value="daily_2026-04-15.html">2026年04月15日号</option><option value="daily_2026-04-14.html">2026年04月14日号</option><option value="daily_2026-04-13.html">2026年04月13日号</option><option value="daily_2026-04-12.html">2026年04月12日号</option><option value="daily_2026-04-11.html">2026年04月11日号</option><option value="daily_2026-04-10.html">2026年04月10日号</option><option value="daily_2026-04-09.html">2026年04月09日号</option><option value="daily_2026-04-08.html">2026年04月08日号</option><option value="daily_2026-04-07.html">2026年04月07日号</option><option value="daily_2026-04-06.html">2026年04月06日号</option><option value="daily_2026-04-05.html">2026年04月05日号</option><option value="daily_2026-04-04.html">2026年04月04日号</option><option value="daily_2026-04-03.html">2026年04月03日号</option><option value="daily_2026-04-02.html">2026年04月02日号</option><option value="daily_2026-04-01.html">2026年04月01日号</option><option value="daily_2026-03-31.html">2026年03月31日号</option><option value="daily_2026-03-30.html">2026年03月30日号</option><option value="daily_2026-03-29.html">2026年03月29日号</option><option value="daily_2026-03-28.html">2026年03月28日号</option><option value="daily_2026-03-27.html">2026年03月27日号</option><option value="daily_2026-03-26.html">2026年03月26日号</option></select>
+        <a href="data/daily_2026-10-15.json">JSONを開く</a>
+        <div class="note" style="color:#fff;opacity:.9;">毎朝7時に daily_YYYY-MM-DD.html と JSON を生成します。</div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-label">本日の記事数</div><div class="kpi-value" id="articleCount">0</div><div class="kpi-note">カテゴリ別に整理</div></div>
+      <div class="kpi"><div class="kpi-label">いいね済み</div><div class="kpi-value" id="likedCount">0</div><div class="kpi-note">PDF出力対象</div></div>
+      <div class="kpi"><div class="kpi-label">収集カテゴリ</div><div class="kpi-value">6</div><div class="kpi-note">公的情報からSNSまで</div></div>
+      <div class="kpi"><div class="kpi-label">更新時刻</div><div class="kpi-value">7:00</div><div class="kpi-note">JST / GitHub Actions</div></div>
+      <div class="kpi"><div class="kpi-label">PDF出力</div><div class="kpi-value">OK</div><div class="kpi-note">いいね記事を保存</div></div>
+    </section>
+    <div class="layout">
+      <div>
+        <section class="section">
+          <div class="section-title"><h2>カテゴリ別ニュース</h2><span class="badge">2026-10-15</span></div>
+          <div class="category-tabs" id="categoryTabs"></div>
+          <div id="articleList"></div>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>競合EC 来訪ボリューム</h2><span class="badge">公開推定値</span></div>
+          <div class="traffic-wrap"><div class="chart-box" id="trafficChart"></div></div>
+          <div id="trafficTable"></div>
+          <div class="note">公開で確認できるSemrush等の推定値を表示します。競合他社の実PV、実セッション、実ユーザー数は通常公開されないため、数値は方向感の把握用です。きりいーねはGA4/Search Console連携で実数に差し替えてください。</div>
+        </section>
+      </div>
+      <aside>
+        <section class="section">
+          <div class="section-title"><h2>いいね記事</h2><span class="badge">PDF対象</span></div>
+          <div id="likedList" class="liked-list"></div>
+          <div class="button-row">
+            <button class="btn-primary" id="exportPdfButton">いいね記事をPDF出力</button>
+            <button class="btn-muted" id="clearLikesButton">いいねを全解除</button>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>収集カテゴリ</h2></div>
+          <ul class="side-list" id="categoryList"></ul>
+        </section>
+        <section class="section">
+          <div class="section-title"><h2>運用メモ</h2></div>
+          <ul class="side-list">
+            <li><strong>GitHub Pages</strong><span>index.html は最新号、daily_YYYY-MM-DD.html は日次保存版です。</span></li>
+            <li><strong>自動生成</strong><span>Actions が RSS を取得し、JSON と HTML をコミットします。</span></li>
+            <li><strong>PDF</strong><span>ハートを押した記事だけを印刷画面から PDF 保存できます。</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+    <div class="footer">Generated at 2026-10-15T00:10:34.439Z / Asia/Tokyo</div>
+  </main>
+  <script id="dailyData" type="application/json">{"date":"2026-10-15","label":"2026年10月15日号","generatedAt":"2026-10-15T00:10:34.439Z","timezone":"Asia/Tokyo","sources":[{"category":"官公庁・公的統計","query":"建設資材 供給 国土交通省"},{"category":"業界団体・技術団体","query":"建設資材 高騰 全建総連"},{"category":"競合メーカー","query":"LIXIL 建材 値上げ OR 永大産業 建材 値上げ"},{"category":"競合EC","query":"モノタロウ 建材 納期 OR AUN WORKS 建材 OR 建デポ 建材"},{"category":"チャッピーおすすめ","query":"建築資材 目詰まり OR 建設資材 不足 OR 住宅資材 高騰"},{"category":"チャッピーおすすめ","query":"ナフサ 建材 価格 OR 住宅資材 納期"},{"category":"官公庁・公的統計","name":"国土交通省 報道発表","url":"https://www.mlit.go.jp/report/press/","keywords":["建設","建築","住宅","資材","建材","工事","公共工事","建設業","不動産","省エネ","木材"]},{"category":"官公庁・公的統計","name":"経済産業省 ニュースリリース","url":"https://www.meti.go.jp/press/","keywords":["資材","建材","ナフサ","化学","原材料","価格","供給","物流","中小企業","石油","プラスチック","住宅","建設"]},{"category":"官公庁・公的統計","name":"農林水産省 報道発表","url":"https://www.maff.go.jp/j/press/","keywords":["木材","林業","建築物木材","資材","価格","供給","原材料","住宅","建設"]},{"category":"業界団体・技術団体","name":"日本建設業連合会","url":"https://www.nikkenren.com/news/","keywords":["建設","建築","資材","価格","供給","労務","公共工事","要望","提言"]},{"category":"業界団体・技術団体","name":"日本耐震天井施工協同組合","url":"https://www.jacca.or.jp/","keywords":["天井","耐震","下地","施工","技術","建築","資材","部材"]},{"category":"競合メーカー","name":"DAIKEN ニュース","url":"https://www.daiken.jp/news/","keywords":["建材","製品","価格改定","値上げ","供給","納期","中東","原材料","床","壁","天井","ドア"]},{"category":"競合メーカー","name":"ノダ ニュース","url":"https://www.noda-co.jp/news/","keywords":["建材","製品","価格改定","値上げ","供給","納期","建具","収納","造作材","階段","框"]},{"category":"競合メーカー","name":"サンゲツ ニュース","url":"https://www.sangetsu.co.jp/information/","keywords":["壁装材","床材","副資材","価格改定","値上げ","供給","納期","建材","製品"]},{"category":"官公庁・公的統計","name":"国土交通省 建築","url":"https://www.mlit.go.jp/jutakukentiku/build/","keywords":["建築","省エネ","建材","住宅","制度","基準"]},{"category":"業界団体・技術団体","name":"JACCA","url":"https://www.jacca.or.jp/","keywords":["天井","耐震","下地","技術","施工","資料"]},{"category":"競合EC","name":"AUN WORKS","url":"https://www.aunworks.jp/","keywords":["建材","内装","工具","特集","新商品","キャンペーン"]},{"category":"競合EC","name":"モノタロウ","url":"https://www.monotaro.com/","keywords":["建材","資材","現場","工具","価格","納期"]},{"category":"競合EC","name":"建デポ","url":"https://kendepot.co.jp/","keywords":["建材","店舗","資材","キャンペーン","新着"]}],"categories":["すべて","官公庁・公的統計","業界団体・技術団体","競合メーカー","競合EC","お客様SNS","チャッピーおすすめ"],"trafficRows":[{"site":"モノタロウ","domain":"monotaro.com","source":"Semrush公開推定 + 60日週次予測","confidence":"公開推定","monthlyVisits":16920000,"pagesPerVisit":3.92,"visits":[3350000,3480000,3620000,3570000,3740000,3890000,3820000,3970000,3900000],"note":"Semrush公開推定値 March 2026 visits 16.92M、pages/visit 3.92 を起点に週次換算。"},{"site":"AUN WORKS","domain":"aunworks.jp","source":"Semrush公開推定 + 60日週次予測","confidence":"公開推定","monthlyVisits":185550,"pagesPerVisit":3.07,"visits":[28500,30200,31800,33500,36100,38400,40200,42700,43800],"note":"Semrush公開推定値 March 2026 visits 185.55K、pages/visit 3.07 を起点に週次換算。"},{"site":"建デポ","domain":"kendepot.co.jp","source":"予測モデル","confidence":"予測","monthlyVisits":420000,"pagesPerVisit":2.4,"visits":[83000,86500,89000,92200,94800,97100,100500,97300,96200],"note":"店舗検索、キャンペーン閲覧、ブランド指名検索を想定した予測値。実測ではありません。"},{"site":"ミラタップ","domain":"miratap.co.jp","source":"予測モデル","confidence":"予測","monthlyVisits":1250000,"pagesPerVisit":3.1,"visits":[246000,258000,271000,289000,301000,296000,310000,322000,316000],"note":"住宅設備・建材ECとしての指名検索、商品閲覧、カタログ閲覧を想定した予測値。実測ではありません。"},{"site":"きりいーね","domain":"kirii-net.jp","source":"予測モデル / GA4差替推奨","confidence":"予測","monthlyVisits":32000,"pagesPerVisit":2.2,"visits":[6100,6450,6900,7200,7350,7600,7900,8200,8050],"note":"自社GA4/Search Console未連携時の仮予測値。GA4値を入れると正確な実績グラフに置換できます。"}],"articles":[]}</script>
+  <script>
+    (function () {
+      "use strict";
+      const issue = JSON.parse(document.getElementById("dailyData").textContent);
+      const categories = ["すべて","官公庁・公的統計","業界団体・技術団体","競合メーカー","競合EC","お客様SNS","チャッピーおすすめ"];
+      const likeKey = "kirii-daily-liked";
+      let selectedCategory = "すべて";
+      function byId(id) { return document.getElementById(id); }
+      function createEl(tag, className, text) {
+        const el = document.createElement(tag);
+        if (className) el.className = className;
+        if (text !== undefined) el.textContent = text;
+        return el;
+      }
+      function getLikes() { return JSON.parse(localStorage.getItem(likeKey) || "[]"); }
+      function saveLikes(likes) { localStorage.setItem(likeKey, JSON.stringify(likes)); }
+      function escapeHtml(text) {
+        return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      }
+      function renderCategoryTabs() {
+        const wrap = byId("categoryTabs");
+        wrap.replaceChildren();
+        categories.forEach(function (category) {
+          const button = createEl("button", selectedCategory === category ? "active" : "", category);
+          button.addEventListener("click", function () { selectedCategory = category; renderArticles(); });
+          wrap.appendChild(button);
+        });
+        const list = byId("categoryList");
+        list.replaceChildren();
+        categories.filter(function (category) { return category !== "すべて"; }).forEach(function (category) {
+          const count = issue.articles.filter(function (article) { return article.category === category; }).length;
+          const item = createEl("li");
+          item.append(createEl("strong", "", category), createEl("span", "", count + "件"));
+          list.appendChild(item);
+        });
+      }
+      function renderArticles() {
+        const likes = getLikes();
+        const articles = issue.articles.filter(function (article) {
+          return selectedCategory === "すべて" || article.category === selectedCategory;
+        });
+        byId("articleCount").textContent = String(issue.articles.length);
+        const list = byId("articleList");
+        list.replaceChildren();
+        articles.forEach(function (article) { list.appendChild(renderArticle(article, likes.includes(article.id))); });
+        renderLikedList();
+      }
+      function renderArticle(article, liked) {
+        const card = createEl("article", (liked ? "article-card liked" : "article-card") + (article.imageUrl ? "" : " no-thumb"));
+        if (article.imageUrl) {
+          const photo = createEl("div", "photo has-image");
+          const img = document.createElement("img");
+          img.src = article.imageUrl;
+          img.alt = article.title;
+          img.loading = "lazy";
+          img.referrerPolicy = "no-referrer";
+          img.addEventListener("error", function () {
+            card.classList.add("no-thumb");
+            photo.remove();
+          });
+          photo.appendChild(img);
+          card.appendChild(photo);
+        }
+        const body = document.createElement("div");
+        const meta = createEl("div", "meta-row");
+        meta.append(createEl("span", "tag cat", article.category), createEl("span", "tag hot", article.source));
+        body.appendChild(meta);
+        body.appendChild(createEl("h3", "", article.title));
+        body.appendChild(createEl("div", "source-name", "情報元：" + article.source));
+        const sourceSummary = createEl("div", "source-summary-box");
+        sourceSummary.append(createEl("strong", "", "記事サマリー"), document.createTextNode(article.summary || ""));
+        body.appendChild(sourceSummary);
+        const analysis = createEl("div", "analysis-box");
+        analysis.append(createEl("strong", "", "分析コメント"), document.createTextNode(article.analysis || ""));
+        body.appendChild(analysis);
+        const action = createEl("div", "action-box");
+        action.append(createEl("strong", "", "アクションプラン"), document.createTextNode(article.action || ""));
+        body.appendChild(action);
+        const row = createEl("div", "button-row");
+        const link = createEl("a", "link-button", "情報元リンク");
+        link.href = article.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        const like = createEl("button", liked ? "btn-like active" : "btn-like", liked ? "いいね解除" : "いいね！");
+        like.addEventListener("click", function () { toggleLike(article.id); });
+        row.append(link, like);
+        body.appendChild(row);
+        card.appendChild(body);
+        return card;
+      }
+      function toggleLike(id) {
+        let likes = getLikes();
+        likes = likes.includes(id) ? likes.filter(function (value) { return value !== id; }) : likes.concat(id);
+        saveLikes(likes);
+        renderArticles();
+      }
+      function renderLikedList() {
+        const likes = getLikes();
+        const liked = issue.articles.filter(function (article) { return likes.includes(article.id); });
+        byId("likedCount").textContent = String(liked.length);
+        const list = byId("likedList");
+        list.replaceChildren();
+        if (liked.length === 0) {
+          list.appendChild(createEl("div", "liked-item", "まだいいね記事はありません。"));
+          return;
+        }
+        liked.forEach(function (article) {
+          const item = createEl("div", "liked-item");
+          item.append(createEl("strong", "", article.title), createEl("div", "", article.category + " / " + article.source), createEl("div", "", article.summary));
+          list.appendChild(item);
+        });
+      }
+      function formatVolume(value) {
+        if (value === null || value === undefined) return "未取得";
+        if (value >= 1000000) return (value / 1000000).toFixed(2) + "M";
+        if (value >= 1000) return (value / 1000).toFixed(1) + "K";
+        return String(value);
+      }
+      function renderTraffic() {
+        const rows = issue.trafficRows || [];
+        const chart = byId("trafficChart");
+        const width = 960;
+        const height = 380;
+        const colors = ["#17466e", "#0f766e", "#b45309", "#6d28d9", "#be185d"];
+        const values = rows.flatMap(function (row) { return row.visits || []; }).filter(function (value) { return typeof value === "number"; });
+        const maxValue = Math.max(1, ...values);
+        const minValue = Math.max(1, Math.min(...values));
+        const yTicks = [10000, 50000, 100000, 500000, 1000000, 5000000, 20000000].filter(function (value) {
+          return value >= minValue * 0.7 && value <= maxValue * 1.2;
+        });
+        const left = 104;
+        const right = 815;
+        const top = 42;
+        const bottom = 300;
+        const logMin = Math.log10(Math.max(1000, minValue * 0.6));
+        const logMax = Math.log10(maxValue * 1.35);
+        function xFor(index, length) {
+          return left + index * ((right - left) / Math.max(1, length - 1));
+        }
+        function yFor(value) {
+          return bottom - ((Math.log10(value) - logMin) / (logMax - logMin)) * (bottom - top);
+        }
+        let svg = "<svg viewBox='0 0 " + width + " " + height + "' role='img' aria-label='競合EC来訪ボリューム'>";
+        svg += "<rect x='0' y='0' width='" + width + "' height='" + height + "' rx='18' fill='#f8fafc'></rect>";
+        yTicks.forEach(function (tick) {
+          const y = yFor(tick);
+          svg += "<line x1='" + left + "' y1='" + y + "' x2='" + right + "' y2='" + y + "' stroke='#e5e7eb'></line>";
+          svg += "<text x='" + (left - 12) + "' y='" + (y + 4) + "' text-anchor='end' fill='#6b7280' font-size='14' font-weight='700'>" + formatVolume(tick) + "</text>";
+        });
+        const xLabels = ["60日前", "45日前", "30日前", "15日前", "直近"];
+        const xIndexes = [0, 2, 4, 6, 8];
+        xLabels.forEach(function (label, index) {
+          const x = xFor(xIndexes[index], 9);
+          svg += "<line x1='" + x + "' y1='" + top + "' x2='" + x + "' y2='" + bottom + "' stroke='#eef2f7'></line>";
+          svg += "<text x='" + x + "' y='340' text-anchor='middle' fill='#374151' font-size='17' font-weight='900'>" + label + "</text>";
+        });
+        svg += "<line x1='" + left + "' y1='" + top + "' x2='" + left + "' y2='" + bottom + "' stroke='#94a3b8' stroke-width='2'></line>";
+        svg += "<line x1='" + left + "' y1='" + bottom + "' x2='" + right + "' y2='" + bottom + "' stroke='#94a3b8' stroke-width='2'></line>";
+        svg += "<text x='18' y='32' fill='#374151' font-size='14' font-weight='900'>訪問数 / 週</text>";
+        svg += "<text x='390' y='368' fill='#374151' font-size='15' font-weight='900'>過去60日間の推定推移</text>";
+        if (yTicks.length === 0) {
+          svg += "<text x='120' y='190' fill='#6b7280' font-size='16'>表示できる訪問数データがありません</text>";
+        }
+        rows.forEach(function (row, rowIndex) {
+          const usable = (row.visits || []).map(function (value, index) { return { value: value, index: index }; }).filter(function (point) { return typeof point.value === "number"; });
+          const points = usable.map(function (point) {
+            const x = xFor(point.index, usable.length);
+            const y = yFor(point.value);
+            return x + "," + y;
+          }).join(" ");
+          svg += "<polyline points='" + points + "' fill='none' stroke='" + colors[rowIndex % colors.length] + "' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'></polyline>";
+          usable.forEach(function (point) {
+            svg += "<circle cx='" + xFor(point.index, usable.length) + "' cy='" + yFor(point.value) + "' r='4' fill='" + colors[rowIndex % colors.length] + "'></circle>";
+          });
+          const latest = usable[usable.length - 1];
+          if (latest) {
+            svg += "<text x='" + (right + 12) + "' y='" + (yFor(latest.value) + 4) + "' fill='" + colors[rowIndex % colors.length] + "' font-size='13' font-weight='900'>" + escapeHtml(row.site) + " " + formatVolume(latest.value) + "</text>";
+          }
+          svg += "<text x='126' y='" + (24 + rowIndex * 17) + "' fill='" + colors[rowIndex % colors.length] + "' font-size='13' font-weight='800'>" + escapeHtml(row.site + " / " + row.confidence) + "</text>";
+        });
+        svg += "</svg>";
+        chart.innerHTML = svg;
+
+        const table = document.createElement("table");
+        table.innerHTML = "<thead><tr><th>サイト</th><th>ドメイン</th><th>月間訪問</th><th>直近週</th><th>Pages/Visit</th><th>区分</th><th>出典</th></tr></thead>";
+        const tbody = document.createElement("tbody");
+        rows.forEach(function (row) {
+          const tr = document.createElement("tr");
+          const latest = (row.visits || []).filter(function (value) { return typeof value === "number"; }).slice(-1)[0];
+          tr.innerHTML = "<td>" + escapeHtml(row.site) + "</td><td>" + escapeHtml(row.domain) + "</td><td>" + formatVolume(row.monthlyVisits) + "</td><td>" + formatVolume(latest) + "</td><td>" + (row.pagesPerVisit || "未取得") + "</td><td>" + escapeHtml(row.confidence || "推定") + "</td><td>" + escapeHtml(row.source) + "</td>";
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        byId("trafficTable").replaceChildren(table);
+      }
+      function exportLikedPdf() {
+        const likes = getLikes();
+        const liked = issue.articles.filter(function (article) { return likes.includes(article.id); });
+        if (liked.length === 0) { alert("PDF出力するいいね記事がありません。"); return; }
+        const win = window.open("", "_blank");
+        if (!win) { alert("ポップアップがブロックされました。ブラウザ設定を確認してください。"); return; }
+        const doc = win.document;
+        doc.open();
+        doc.write("<!DOCTYPE html><html lang='ja'><head><meta charset='UTF-8'><title>いいね記事PDF</title><style>body{font-family:sans-serif;line-height:1.7;padding:28px;color:#1f2937}h1{font-size:24px}.item{border-bottom:1px solid #ddd;padding:14px 0}.meta{color:#666;font-size:12px}a{color:#0f766e}</style></head><body>");
+        doc.write("<h1>桐井製作所・きりいーね いいね記事まとめ</h1>");
+        liked.forEach(function (article) {
+          doc.write("<div class='item'>");
+          doc.write("<h2>" + escapeHtml(article.title) + "</h2>");
+          doc.write("<div class='meta'>" + escapeHtml(issue.label + " / " + article.category + " / " + article.source) + "</div>");
+          doc.write("<p><strong>サマリー：</strong>" + escapeHtml(article.summary || "") + "</p>");
+          doc.write("<p><strong>分析：</strong>" + escapeHtml(article.analysis || "") + "</p>");
+          doc.write("<p><strong>アクション：</strong>" + escapeHtml(article.action || "") + "</p>");
+          doc.write("<p><a href='" + encodeURI(article.url) + "'>情報元リンク</a></p>");
+          doc.write("</div>");
+        });
+        doc.write("</body></html>");
+        doc.close();
+        win.focus();
+        win.print();
+      }
+      function clearLikes() { saveLikes([]); renderArticles(); }
+      byId("exportPdfButton").addEventListener("click", exportLikedPdf);
+      byId("clearLikesButton").addEventListener("click", clearLikes);
+      byId("issueSelect").addEventListener("change", function (event) {
+        if (event.target.value) window.location.href = event.target.value;
+      });
+      renderCategoryTabs();
+      renderArticles();
+      renderTraffic();
+    }());
+  </script>
+</body>
+</html>
